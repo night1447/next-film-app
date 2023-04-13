@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  reactStrictMode: true,
+  i18n: {
+    locales: ['en', 'ru'],
+    defaultLocale: 'ru',
+    localeDetection: true,
+  }
 }
 
 module.exports = nextConfig
