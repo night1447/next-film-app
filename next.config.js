@@ -1,10 +1,22 @@
 /** @type {import('next').NextConfig} */
-const nextTranslate = require('next-translate-plugin');
+// const nextConfig = {
+//     reactStrictMode: true,
+//     i18n: {
+//         locales: ['en', 'ru'],
+//         defaultLocale: 'ru',
+//         localeDetection: true,
+//     }
+// }
+//
+// module.exports = nextConfig
 
-const nextConfig = nextTranslate({
-	experimental: {
-		appDir: true,
-	},
-});
+const nextTranslate = require('next-translate-plugin')
 
-module.exports = nextConfig;
+module.exports = nextTranslate({
+    reactStrictMode: true,
+    i18n: {
+        locales: ['en', 'ru'],
+        defaultLocale: 'ru',
+        localeDetection: true,
+    }
+})
