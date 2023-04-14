@@ -1,13 +1,12 @@
 import React, { FC } from 'react';
 import styles from './Button.module.scss';
+import Link from 'next/link';
 
 export interface ButtonProps {
 	children: React.ReactElement | React.ReactNode | string;
-	width: number;
-	height: number;
 	link?: boolean;
 	href?: string;
-	radius?: 'circle' | 'basic';
+	circle?: boolean;
 	onClick?: () => void;
 	id?: string;
 }
@@ -16,42 +15,22 @@ const Button: FC<ButtonProps> = ({
 	children,
 	href,
 	link = false,
-	radius = 'basic',
-	width,
-	height,
+	circle = false,
 	onClick,
 	id,
 }) => {
-	if (link) {
-		return (
-			<div
-				onClick={() => onClick!()}
-				className={
-					radius === 'basic'
-						? styles.Button
-						: [styles.Button, styles.circle].join(' ')
-				}
-				style={{ width, height }}
-				id={id}
-			>
-				<a href={href}>{children}</a>
-			</div>
-		);
-	}
+
 
 	return (
-		<div
-			onClick={() => onClick!()}
-			className={
-				radius === 'basic'
-					? styles.Button
-					: [styles.Button, styles.circle].join(' ')
-			}
-			style={{ width, height }}
+		<button onClick={() => onClick!()} 
+			className={`${styles.Button } ${circle && styles.circle}`}
 			id={id}
 		>
-			{children}
-		</div>
+			{link
+				?<Link href={href!}>{children}</Link>
+				: children
+			}
+		</button>
 	);
 };
 

@@ -17,15 +17,13 @@ export const Basic: any = Template.bind({});
 
 Basic.args = {
 	children: <p>Hello</p>,
-	width: 70,
-	height: 40,
+	id:'gh'
 };
 
 export const Circle: any = Template.bind({});
 
 Circle.args = {
 	children: <p>Hello</p>,
-	width: 50,
-	height: 50,
+	id:'gh',
 	radius: 'circle',
 };
