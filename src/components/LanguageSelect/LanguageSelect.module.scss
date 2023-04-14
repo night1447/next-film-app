@@ -1,0 +1,65 @@
+.select {
+  display: flex;
+  align-items: center;
+  background-color: #312b45;
+  padding: 8px 16px;
+  border-radius: 4px;
+  gap: 10px;
+  cursor: pointer;
+}
+.header {
+  margin: 0;
+  font-size: 12px;
+  user-select: none;
+}
+.arrow::before {
+  content: "\25BC";
+  color: white;
+  font-size: 12px;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.selectContent {
+  background-color: #312b45;
+  padding: 16px;
+  border-radius: 4px;
+  position: absolute;
+  width: 132.47px;
+  margin-top: 10px;
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkbox::after,
+.checkbox::before {
+  content: "";
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.checkbox::after {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+}
+.checkbox::before {
+  width: 12px;
+  height: 12px;
+  display: flex;
+}
+.label {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  p {
+    user-select: none;
+  }
+}
