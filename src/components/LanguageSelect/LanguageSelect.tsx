@@ -19,14 +19,14 @@ interface LanguageSelect {}
 export const LanguageSelect = () => {
   const [show, setShow] = useState(false);
   const router = useRouter();
-  const { lang } = useTranslation();
+  const { t, lang } = useTranslation("Home");
   const handleLanguageChange = (language: string) => {
     router.push("/", "/", { locale: language });
   };
   return (
     <div>
       <div className={styles.select} onClick={() => setShow(!show)}>
-        <h1 className={styles.header}>Выбрать язык</h1>
+        <h1 className={styles.header}>{t("selectLanguage")}</h1>
         <div className={`${styles.arrow} ${show && styles.rotate}`} />
       </div>
       {show && (
