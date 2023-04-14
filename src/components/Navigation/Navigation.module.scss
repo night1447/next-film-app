@@ -1,0 +1,35 @@
+.navigation {
+	line-height: 20px;
+	font-style: normal;
+	a {
+		transition: all 0.4s ease;
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.flex {
+	font-size: 15px;
+	font-weight: 500;
+	a {
+		padding: 10px 0;
+	}
+	ul {
+		display: flex;
+		align-items: center;
+		& > :not(:last-child) {
+			margin-right: 16px;
+		}
+	}
+}
+
+.block {
+	font-weight: 400;
+	font-size: 100%;
+	ul {
+		& > :not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+}
