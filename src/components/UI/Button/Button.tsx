@@ -4,34 +4,9 @@ import Link from 'next/link';
 import { routes } from '@/routes/routes';
 import Image from 'next/image';
 import { SrOnly } from '@/components/UI/SrOnly/SrOnly';
+import { ButtonProps } from '@/components/UI/Button/types';
 
-type VariantButton = 'accent' | 'border' | 'gray-opacity' | 'accent-transparent' | 'transparent' | 'violet';
-type ButtonProps = {
-    iconSettings: {
-        hasIcon: boolean,
-        classIcon?: string,
-        iconCode?: string,
-        imageUrl?: string,
-        width?: number,
-        height?: number,
-        altImage?: string,
-        srOnlyTitle?: string,
-    }
-    titleSettings: {
-        hasTitle: boolean,
-        title?: string,
-        isBig?: boolean,
-    }
-    linkSettings?: {
-        href: string,
-    }
-    variants: VariantButton,
-    children?: React.ReactNode,
-    className?: string,
-    isCircle?: boolean,
-    type?: 'button' | 'submit' | 'reset',
-    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void,
-};
+
 export const Button: FC<ButtonProps> = (props) => {
     const iconCode = parseInt(props.iconSettings.iconCode || '', 16);
     const icon = String.fromCharCode(iconCode);
