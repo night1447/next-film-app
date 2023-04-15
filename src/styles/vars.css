@@ -16,5 +16,6 @@
     --shadow-icon: 0 4px 16px rgba(255, 255, 255, .24);
     --gray-opacity: hsla(0, 0%, 100%, .08);
     --gray-opacity-active: hsla(0, 0%, 100%, .16);
-    --btn-text: rgba(255,255,255,.72);
+    --btn-text: rgba(255, 255, 255, .72);
+    --arrow-title: "\E048";
 }

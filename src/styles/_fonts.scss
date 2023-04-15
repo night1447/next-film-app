@@ -33,3 +33,25 @@
   font-weight: 500;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Icons';
+  src: url('/fonts/ivi-icons.woff');
+  src: local('Icons'), local('Icons'),
+  url('/fonts/ivi-icons.woff2') format('woff2'),
+  url('/fonts/ivi-icons.woff') format('woff'),
+  url('/fonts/ivi-icons.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'QualityIcons';
+  src: url('/fonts/iconfont.woff');
+  src: local('QualityIcons'), local('QualityIcons'),
+  url('/fonts/iconfont.woff2') format('woff2'),
+  url('/fonts/iconfont.woff') format('woff'),
+  url('/fonts/iconfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
