@@ -1,0 +1,30 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: IviSans, Arial, Helvetica, Helvetica Neue, FreeSans, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+.sr-only {
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
