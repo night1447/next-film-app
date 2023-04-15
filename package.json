@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "component": "generate-react component",
+    "ui": "generate-react component --type=ui",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -22,6 +24,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "generate-react-cli": "^8.3.0",
     "prettier": "2.8.7"
   }
 }

@@ -1,6 +1,7 @@
 import { Meta } from '@/seo/Meta';
 import Container from '@/components/UI/Container/Container';
 import Title from '@/components/UI/Title/Title';
+import { Button } from '@/components/UI/Button/Button';
 
 export default function Home() {
     return (
@@ -31,10 +32,16 @@ export default function Home() {
                                isLink: false,
                            }}
                            title={' h3'} /> <Title htmlTagName={'h3'}
-                           linkSettings={{
-                               isLink: false,
-                           }}
-                           title={' h4'} />
+                                                   linkSettings={{
+                                                       isLink: false,
+                                                   }}
+                                                   title={' h4'} />
+
+                    <Button titleSettings={{ hasTitle: false}}
+                            iconSettings={{ hasIcon: true, imageUrl: './next.svg' }} variants={'accent-transparent'}
+                            isCircle={true}
+                            linkSettings={{ href: '/' }} />
+
                 </Container>
             </main>
         </Meta>
