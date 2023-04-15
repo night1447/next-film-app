@@ -1,0 +1,20 @@
+:root {
+    --white: #ffffff;
+    --bg: #100e19;
+    --accent: #ea003d;
+    --accent-light: #ff0f4d;
+    --secondary: #d9d7e0;
+    --secondary-dark: #a5a1b2;
+    --green: #73a330;
+    --orange: #ff542e;
+    --violet: #1f1b2e;
+    --violet-active: #231f34;
+    --violet-light: #7e798f;
+    --text: #a5a1b2;
+    --mobile-menu: rgba(31, 27, 46, .88);
+    --gray: #828188;
+    --shadow-icon: 0 4px 16px rgba(255, 255, 255, .24);
+    --gray-opacity: hsla(0, 0%, 100%, .08);
+    --gray-opacity-active: hsla(0, 0%, 100%, .16);
+    --btn-text: rgba(255,255,255,.72);
+}
