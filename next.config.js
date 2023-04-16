@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextTranslate = require('next-translate-plugin')
 
+const nextTranslate = require('next-translate-plugin')
 module.exports = nextTranslate({
     reactStrictMode: true,
     i18n: {

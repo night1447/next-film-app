@@ -3,8 +3,11 @@ import { Meta } from '@/seo/Meta';
 import Container from '@/components/UI/Container/Container';
 import Title from '@/components/UI/Title/Title';
 import { Button } from '@/components/UI/Button/Button';
+import { LanguageSelect } from '@/components/LanguageSelect/LanguageSelect';
+import useTranslation from 'next-translate/useTranslation';
 
 export default function Home() {
+    const { t, lang } = useTranslation('Home');
     return (
         <Meta title={''}>
             <main>
@@ -19,7 +22,7 @@ export default function Home() {
                                decorating: 'arrow',
                                isWholeTitle: true,
                            }}
-                           title={'Lorem'} />
+                           title={`${t('title')}`} />
                     <Title htmlTagName={'h2'}
                            linkSettings={{
                                isLink: true,
@@ -38,11 +41,11 @@ export default function Home() {
                                                    }}
                                                    title={' h4'} />
 
-                    <Button titleSettings={{ hasTitle: false}}
+                    <Button titleSettings={{ hasTitle: false }}
                             iconSettings={{ hasIcon: true, imageUrl: './next.svg' }} variants={'accent-transparent'}
                             isCircle={true}
                             linkSettings={{ href: '/' }} />
-
+                    <LanguageSelect />
                 </Container>
             </main>
         </Meta>
