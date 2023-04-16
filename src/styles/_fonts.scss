@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'IviSans';
+  src: url('/fonts/iviSans-Regular.eot');
+  src: local('IviSans Regular'), local('IviSans-Regular'),
+  url('/fonts/iviSans-Regular.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/iviSans-Regular.woff2') format('woff2'),
+  url('/fonts/iviSans-Regular.woff') format('woff'),
+  url('/fonts/iviSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IviSans';
+  src: url('/fonts/iviSans-Bold.eot');
+  src: local('IviSans Bold'), local('IviSans-Bold'),
+  url('/fonts/iviSans-Bold.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/iviSans-Bold.woff2') format('woff2'),
+  url('/fonts/iviSans-Bold.woff') format('woff'),
+  url('/fonts/iviSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IviSans';
+  src: url('/fonts/iviSans-Medium.eot');
+  src: local('IviSans Medium'), local('IviSans-Medium'),
+  url('/fonts/iviSans-Medium.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/iviSans-Medium.woff2') format('woff2'),
+  url('/fonts/iviSans-Medium.woff') format('woff'),
+  url('/fonts/iviSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Icons';
+  src: url('/fonts/ivi-icons.woff');
+  src: local('Icons'), local('Icons'),
+  url('/fonts/ivi-icons.woff2') format('woff2'),
+  url('/fonts/ivi-icons.woff') format('woff'),
+  url('/fonts/ivi-icons.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'QualityIcons';
+  src: url('/fonts/iconfont.woff');
+  src: local('QualityIcons'), local('QualityIcons'),
+  url('/fonts/iconfont.woff') format('woff'),
+  url('/fonts/iconfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

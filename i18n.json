@@ -1,7 +1,15 @@
 {
-    "locales": ["en", "ru"],
-    "defaultLocale": "ru",
-    "pages": {
-      "*": ["Home"]
-    }
+  "locales": [
+    "en",
+    "ru"
+  ],
+  "defaultLocale": "ru",
+  "pages": {
+    "*": [
+      "common"
+    ],
+    "/": [
+      "Home"
+    ]
   }
+}
