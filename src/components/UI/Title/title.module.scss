@@ -1,0 +1,45 @@
+.title {
+  color: var(--white);
+}
+
+h1.title {
+  font-size: 42px;
+  line-height: 44px;
+}
+
+h2.title {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+h3.title {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 900;
+}
+
+h4.title {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+
+.arrow {
+  &::after {
+    font-family: Icons;
+    font-size: 16px;
+    margin-left: 5px;
+    content: var(--arrow-title);
+  }
+}
+
+.underline {
+  box-shadow: 0 1px 0 var(--gray-opacity-active), inset 0 0 0 var(--gray-opacity-active);
+  transition: box-shadow 0.5s;
+  background-color: inherit;
+
+  &:hover {
+    box-shadow: 0 1px 0 var(--white), inset 0 0 0 var(--white);
+  }
+}
