@@ -1,3 +1,4 @@
+
 import '@/styles/vars.css'
 import '@/styles/style.scss'
 import type { AppProps } from 'next/app'
