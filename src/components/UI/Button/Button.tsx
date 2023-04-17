@@ -1,7 +1,5 @@
 import React, { FC, useCallback } from 'react';
 import styles from './button.module.scss';
-import Link from 'next/link';
-import { routes } from '@/routes/routes';
 import Image from 'next/image';
 import { SrOnly } from '@/components/UI/SrOnly/SrOnly';
 import { ButtonProps } from '@/components/UI/Button/types';
@@ -30,13 +28,6 @@ export const Button: FC<ButtonProps> = (props) => {
             {props.titleSettings.hasTitle ? getTitle() : <></>}
         </>
     ), [getTitle, props.iconSettings, props.titleSettings.hasTitle]);
-
-    if (props.linkSettings) {
-        return <Link href={props.linkSettings?.href || routes.MAIN}
-                     className={`${styles.button} ${props.titleSettings.isBig ? styles.big : ''} ${props.isCircle ? styles.rounded : ''} ${styles[props.variants]} ${props.className || ''}`}>
-            {getContent()}
-        </Link>;
-    }
 
     return (
         <button className={`${styles.button} ${styles[props.variants]} ${props.className || ''}`}
