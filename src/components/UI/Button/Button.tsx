@@ -1,6 +1,7 @@
 import React, { FC, PropsWithChildren } from 'react';
 import styles from './button.module.scss';
 import { ButtonProps } from '@/components/UI/Button/types';
+import Link from 'next/link';
 
 
 export const Button: FC<PropsWithChildren<ButtonProps>> = ({
@@ -10,12 +11,19 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
                                                                onClick,
                                                                isCircle,
                                                                variants,
+                                                               href,
                                                            }) => {
     return (
-        <button className={`${styles.button} ${styles[variants] || ''} ${className || ''}`}
-                type={type || 'button'}
-                onClick={onClick}>
-            {children}
-        </button>
+        href ?
+            <Link className={`${styles.button} ${styles[variants] || ''} ${className || ''}`}
+                  href={href} onClick={onClick}>
+                {children}
+            </Link>
+            :
+            <button className={`${styles.button} ${styles[variants] || ''} ${className || ''}`}
+                    type={type || 'button'}
+                    onClick={onClick}>
+                {children}
+            </button>
     );
 };
