@@ -1,4 +1,3 @@
-
 import { Meta } from '@/seo/Meta';
 import Container from '@/components/UI/Container/Container';
 import Title from '@/components/UI/Title/Title';
@@ -38,10 +37,11 @@ export default function Home() {
                                                    }}
                                                    title={' h4'} />
 
-                    <Button titleSettings={{ hasTitle: false}}
-                            iconSettings={{ hasIcon: true, imageUrl: './next.svg' }} variants={'accent-transparent'}
-                            isCircle={true}
-                            linkSettings={{ href: '/' }} />
+                    <Button titleSettings={{ hasTitle: false }}
+                            type={'button'}
+                            iconSettings={{ hasIcon: true, imageUrl: './next.svg' }}
+                            variants={'accent-transparent'}
+                            isCircle={true} />
 
                 </Container>
             </main>
