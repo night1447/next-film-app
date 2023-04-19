@@ -1,0 +1,115 @@
+.container {
+    margin-left: auto;
+    & > :last-child {
+        margin-top: 15px;
+        height: 40px;
+        color: var(--white);
+        width: 100%;
+        div {
+            font-family: QualityIcons;
+            font-size: 20px;
+            line-height: 20px;
+            &::before {
+                content: '\E35C';
+                margin-right: 10px;
+            }
+        }
+    }
+}
+.subscription {
+    max-width: 240px;
+    height: 280px;
+    overflow: hidden;
+    background: var(--gray-opacity);
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.4s;
+    div {
+        display: flex;
+        width: 840px;
+        span {
+            display: flex;
+            width: 420px;
+            a {
+                margin: 5px;
+            }
+            img {
+                border-radius: 10px;
+            }
+        }
+    }
+    .row__one {
+        margin-top: -50px;
+        animation: row__one 20s linear infinite;
+    }
+    .row__two {
+        animation: row__two 20s linear infinite;
+    }
+    .row__three {
+        animation: row__one 20s linear infinite;
+    }
+    .offer {
+        position: absolute;
+        bottom: 0;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 8px;
+        background: hsla(274, 21%, 19%, 0.921);
+        box-shadow: 0 -20px 30px 10px hsl(274, 21%, 19%);
+        transition: all 0.4s;
+        div {
+            margin-left: 10px;
+            display: block;
+            h2 {
+                font-size: 1.2rem;
+                color: var(--white);
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .btn__subscribe {
+        width: 100%;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+        transition: all 0.4s;
+        a {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 10px;
+        }
+    }
+    &:hover {
+        .offer {
+            position: absolute;
+            bottom: 70px;
+        }
+        .btn__subscribe {
+            margin-top: 0;
+        }
+    }
+}
+
+@keyframes row__one {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@keyframes row__two {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

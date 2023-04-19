@@ -1,0 +1,19 @@
+.card{
+    background: #312b45;
+    padding: 15px;
+    border-radius: 8px;
+    width: 179px;
+    height: 108px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--gray-opacity);
+    color: var(--btn-text);
+    h3{
+        font-size: 15px;
+        margin: 0;
+    }
+    &:hover {
+      background-color: var(--gray-opacity-active);
+    }
+}

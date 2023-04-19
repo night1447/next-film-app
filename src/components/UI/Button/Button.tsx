@@ -1,20 +1,35 @@
 import React, { FC, PropsWithChildren } from 'react';
 import styles from './button.module.scss';
 import { ButtonProps } from '@/components/UI/Button/types';
-
+import Link from 'next/link';
 
 export const Button: FC<PropsWithChildren<ButtonProps>> = ({
-                                                               className,
-                                                               children,
-                                                               type,
-                                                               onClick,
-                                                               isCircle,
-                                                               variants,
-                                                           }) => {
-    return (
-        <button className={`${styles.button} ${styles[variants] || ''} ${className || ''}`}
-                type={type || 'button'}
-                onClick={onClick}>
+    className,
+    children,
+    type,
+    onClick,
+    isCircle,
+    variants,
+    href,
+}) => {
+    return href ? (
+        <Link
+            className={`${styles.button} ${styles[variants] || ''} ${
+                className || ''
+            }`}
+            href={href}
+            onClick={onClick}
+        >
+            {children}
+        </Link>
+    ) : (
+        <button
+            className={`${styles.button} ${styles[variants] || ''} ${
+                className || ''
+            }`}
+            type={type || 'button'}
+            onClick={onClick}
+        >
             {children}
         </button>
     );

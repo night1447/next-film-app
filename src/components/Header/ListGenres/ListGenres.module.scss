@@ -1,0 +1,13 @@
+.genres{
+    height: 340px;
+    width: 400px;
+    ul{
+        display: flex;
+        height: 320px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        li{
+            width: 120px;
+        }
+    }
+}
