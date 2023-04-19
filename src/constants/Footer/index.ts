@@ -12,4 +12,29 @@ export const images = {
     googlePlay: googlePlay,
 };
 
-export const socials = [vk, ok, twitter, viber, ld, tg];
+export const socials = [
+    {
+        img: vk,
+        url: 'https://vk.com/iviru?crc=fa4448c13e06e69ba9e814e8743c7e2e',
+    },
+    {
+        img: ok,
+        url: 'https://ok.ru/ivi.ru',
+    },
+    {
+        img: twitter,
+        url: 'https://twitter.com/ivi_ru',
+    },
+    {
+        img: viber,
+        url: 'https://invite.viber.com/?g2=AQAN5HwJ109AW0tMEtqcQ1MwRvpATF2umOpstVEvZ4phfQicwxYucW5izsa0J5qi&lang=ru',
+    },
+    {
+        img: ld,
+        url: 'https://www.linkedin.com/company/2543415/',
+    },
+    {
+        img: tg,
+        url: 'https://t.me/official_iviru',
+    },
+];

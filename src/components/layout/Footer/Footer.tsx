@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import styles from './Footer.module.scss';
 import ru from '@/constants/Footer/ru.json';
 import en from '@/constants/Footer/en.json';
@@ -7,18 +7,18 @@ import { Button } from '@/components/UI/Button/Button';
 import { images, socials } from '@/constants/Footer';
 import Image from 'next/image';
 import Container from '@/components/UI/Container/Container';
-import { FooterProps, Translate } from './types';
+import { Translate } from './types';
 import Title from '@/components/UI/Title/Title';
 import Link from 'next/link';
 
-const Footer: FC<FooterProps> = () => {
+const Footer = () => {
     const { lang } = useTranslation();
     const translate = (lang === 'ru' ? ru : en) as Translate;
     return (
         <div className={styles.Footer}>
             <Container>
-                <div className={styles.top}>
-                    <div className={styles.block}>
+                <div className={`${styles.content} ${styles.lines}`}>
+                    <div className={styles.column}>
                         <Title
                             htmlTagName={'h4'}
                             linkSettings={{
@@ -30,15 +30,13 @@ const Footer: FC<FooterProps> = () => {
                             {translate.about.links.map(({ title, url }) => {
                                 return (
                                     <li key={url}>
-                                        <Link key={url} href={url}>
-                                            {title}
-                                        </Link>
+                                        <Link href={url}>{title}</Link>
                                     </li>
                                 );
                             })}
                         </ul>
                     </div>
-                    <div className={styles.block}>
+                    <div className={styles.column}>
                         <Title
                             htmlTagName={'h4'}
                             linkSettings={{
@@ -50,9 +48,7 @@ const Footer: FC<FooterProps> = () => {
                             {translate.sections.links.map(({ title, url }) => {
                                 return (
                                     <li key={url}>
-                                        <Link key={url} href={url}>
-                                            {title}
-                                        </Link>
+                                        <Link href={url}>{title}</Link>
                                     </li>
                                 );
                             })}
@@ -64,7 +60,7 @@ const Footer: FC<FooterProps> = () => {
                             {translate.сertificateText}
                         </Link>
                     </div>
-                    <div className={styles.block}>
+                    <div className={styles.column}>
                         <Title
                             htmlTagName={'h4'}
                             linkSettings={{
@@ -79,16 +75,16 @@ const Footer: FC<FooterProps> = () => {
                             variants="violet"
                             type="button"
                             className={styles.button}
+                            href="https://www.ivi.ru/profile"
                         >
-                            <Link href="https://www.ivi.ru/profile">
-                                {translate.service.button}
-                            </Link>
+                            {translate.service.button}
                         </Button>
                         <div>
                             <Button
                                 variants="violet"
                                 type="button"
                                 className={styles.icons}
+                                href="mailto:support@ivi.ru"
                             >
                                 <div
                                     className={styles.icon}
@@ -101,6 +97,7 @@ const Footer: FC<FooterProps> = () => {
                                 variants="violet"
                                 type="button"
                                 className={styles.icons}
+                                href="tel:88002344923"
                             >
                                 <div
                                     className={styles.icon}
@@ -117,7 +114,7 @@ const Footer: FC<FooterProps> = () => {
                             <p>{translate.service.linkText}</p>
                         </div>
                     </div>
-                    <div className={styles.block}>
+                    <div className={styles.column}>
                         <Link href="https://www.ivi.ru/subscribe?redirect_url=%2F">
                             <div className={styles.widget}>
                                 <div className={styles.widgetIcon} />
@@ -126,8 +123,8 @@ const Footer: FC<FooterProps> = () => {
                         </Link>
                     </div>
                 </div>
-                <div className={styles.bot}>
-                    <div className={styles.buttonGroups}>
+                <div className={styles.content}>
+                    <div>
                         <div className={styles.watch}>
                             {translate.buttonGroup.map(
                                 ({ light, bold, url, img }) => {
@@ -137,6 +134,7 @@ const Footer: FC<FooterProps> = () => {
                                             variants="violet"
                                             type="button"
                                             className={styles.button}
+                                            href={url}
                                         >
                                             {img === 'appStore' ||
                                             img === 'googlePlay' ? (
@@ -161,33 +159,34 @@ const Footer: FC<FooterProps> = () => {
                                 },
                             )}
                         </div>
-                        <div>
-                            {socials.map((img) => {
-                                return (
-                                    <Button
-                                        key={img}
-                                        variants="violet"
-                                        type="button"
-                                        isCircle
-                                        className={styles.socials}
-                                    >
-                                        <Image
-                                            src={img}
-                                            alt=""
-                                            width={16}
-                                            height={16}
-                                        />
-                                    </Button>
-                                );
-                            })}
+                        <div className={styles.copyright}>
+                            <p>{translate.copyright}</p>
+                            <p>
+                                HBO ® and related service marks are the property
+                                of Home Box Office, Inc
+                            </p>
                         </div>
                     </div>
-                    <div className={styles.copyright}>
-                        <p>{translate.copyright}</p>
-                        <p>
-                            HBO ® and related service marks are the property of
-                            Home Box Office, Inc
-                        </p>
+                    <div>
+                        {socials.map((social, index) => {
+                            return (
+                                <Button
+                                    key={index}
+                                    variants="violet"
+                                    type="button"
+                                    isCircle
+                                    className={styles.socials}
+                                    href={social.url}
+                                >
+                                    <Image
+                                        src={social.img}
+                                        alt=""
+                                        width={16}
+                                        height={16}
+                                    />
+                                </Button>
+                            );
+                        })}
                     </div>
                 </div>
             </Container>

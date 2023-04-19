@@ -1,5 +1,3 @@
-export interface FooterProps {}
-
 interface Buttons {
     light: string;
     bold: string;
