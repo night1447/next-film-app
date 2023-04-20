@@ -2,7 +2,7 @@
     --white: #ffffff;
     --bg: #100e19;
     --accent: #ea003d;
-    --acent-transparent: rgba(234,0,61,.8);
+    --acent-transparent: rgba(234, 0, 61, 0.8);
     --accent-light: #ff0f4d;
     --secondary: #d9d7e0;
     --secondary-dark: #a5a1b2;
@@ -12,12 +12,15 @@
     --violet-active: #231f34;
     --violet-light: #7e798f;
     --text: #a5a1b2;
-    --mobile-menu: rgba(31, 27, 46, .88);
+    --mobile-menu: rgba(31, 27, 46, 0.88);
     --gray: #828188;
-    --border: rgba(255,255,255,.32);
-    --shadow-icon: 0 4px 16px rgba(255, 255, 255, .24);
-    --gray-opacity: hsla(0, 0%, 100%, .08);
-    --gray-opacity-active: hsla(0, 0%, 100%, .16);
-    --btn-text: rgba(255, 255, 255, .72);
-    --arrow-title: "\E048";
+    --border: rgba(255, 255, 255, 0.32);
+    --shadow-icon: 0 4px 16px rgba(255, 255, 255, 0.24);
+    --gray-opacity: hsla(0, 0%, 100%, 0.08);
+    --gray-opacity-active: hsla(0, 0%, 100%, 0.16);
+    --btn-text: rgba(255, 255, 255, 0.72);
+    --arrow-title: '\E048';
+    --start-gradient-color: #a869f0;
+    --end-gradient-color: #834cc2;
+    --shadow-color: #a869f0;
 }
