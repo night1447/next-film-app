@@ -57,7 +57,7 @@ const Footer = () => {
                             href="https://www.ivi.ru/cert"
                             className={styles.certificate}
                         >
-                            {translate.сertificateText}
+                            {translate.certificateText}
                         </Link>
                     </div>
                     <div className={styles.column}>

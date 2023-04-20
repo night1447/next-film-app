@@ -18,7 +18,7 @@ export interface Translate {
         title: string;
         links: Links[];
     };
-    сertificateText: string;
+    certificateText: string;
     service: {
         title: string;
         text: string;
