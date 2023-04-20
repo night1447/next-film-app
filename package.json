@@ -14,20 +14,23 @@
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
+    "@types/uuid": "^9.0.1",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "next": "13.3.0",
     "next-translate": "^2.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-responsive-carousel": "^3.2.23",
     "sass": "^1.62.0",
-    "typescript": "5.0.4"
+    "swiper": "^9.2.3",
+    "typescript": "5.0.4",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "next-translate-plugin": "^2.0.5",
-    "swiper": "^9.2.2",
-    "typescript": "5.0.4",
+    "@types/react-slick": "^0.23.10",
     "generate-react-cli": "^8.3.0",
+    "next-translate-plugin": "^2.0.5",
     "prettier": "2.8.7"
   }
 }
