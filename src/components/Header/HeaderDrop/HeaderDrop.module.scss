@@ -1,6 +1,9 @@
 .modal {
+    position: absolute;
+    left: 0;
+    right: 0;
     background: var(--violet);
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
     height: auto;
     padding: 30px 20px;
     display: flex;

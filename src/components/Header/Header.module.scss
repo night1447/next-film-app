@@ -1,5 +1,7 @@
 .header {
+    position: relative;
     margin-top: 5px;
+    transition: all 0.4s;
     & > :first-child {
         display: flex;
         height: 72px;
@@ -29,7 +31,7 @@
 }
 .modal {
     background: var(--violet);
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     & > :first-child {
         border-bottom: 1px solid var(--border);
     }
