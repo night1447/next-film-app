@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, MouseEvent, useState } from 'react';
 import style from './Header.module.scss';
 import Container from '../UI/Container/Container';
 import { Logo } from '../UI/Logo/Logo';
@@ -9,22 +9,23 @@ import { HeaderDrop } from './HeaderDrop/HeaderDrop';
 
 export const Header: FC = () => {
     const { t } = useTranslation();
-    const [stateHeaderDrop, useStateHeaderDrop] = useState(false);
-    const [tupeModal, useTypeModal] = useState('');
+    const [stateHeaderDrop, setStateHeaderDrop] = useState(false);
+    const [typeModal, setTypeModal] = useState('');
 
-    const hover = (ev: any) => {
-        const type = ev.target.innerHTML;
-        useStateHeaderDrop(true);
-        if (type === t('common:header.movies')) useTypeModal('movies');
-        if (type === t('common:header.series')) useTypeModal('series');
-        if (type === t('common:header.cartoons')) useTypeModal('cartoons');
-        if (type === t('common:header.tv')) useTypeModal('tv');
-        if (ev.target.dataset.notifications) useTypeModal('notifications');
-        if (ev.target.dataset.auth) useTypeModal('auth');
+    const hover = (ev: MouseEvent<HTMLElement>) => {
+        const target = ev.target as HTMLElement;
+        const type = target.innerHTML;
+        setStateHeaderDrop(true);
+        if (type === t('common:header.movies')) setTypeModal('movies');
+        if (type === t('common:header.series')) setTypeModal('series');
+        if (type === t('common:header.cartoons')) setTypeModal('cartoons');
+        if (type === t('common:header.tv')) setTypeModal('tv');
+        if (target.dataset.notifications) setTypeModal('notifications');
+        if (target.dataset.auth) setTypeModal('auth');
     };
 
-    const hideHeadrBottm = () => useStateHeaderDrop(false);
-    const showHeaderBottom = () => useStateHeaderDrop(true);
+    const hideHeadrBottom = () => setStateHeaderDrop(false);
+    const showHeaderBottom = () => setStateHeaderDrop(true);
 
     return (
         <header className={`${style.header} ${stateHeaderDrop && style.modal}`}>
@@ -42,38 +43,38 @@ export const Header: FC = () => {
                             href: '/',
                             value: 'common:header.movies',
                             onHover: hover,
-                            onEver: hideHeadrBottm,
+                            onEver: hideHeadrBottom,
                         },
                         {
                             href: '/',
                             value: 'common:header.series',
                             onHover: hover,
-                            onEver: hideHeadrBottm,
+                            onEver: hideHeadrBottom,
                         },
                         {
                             href: '/',
                             value: 'common:header.cartoons',
                             onHover: hover,
-                            onEver: hideHeadrBottm,
+                            onEver: hideHeadrBottom,
                         },
                         {
                             href: 'https://www.ivi.ru/tvplus',
                             value: 'common:header.tv',
                             onHover: hover,
-                            onEver: hideHeadrBottm,
+                            onEver: hideHeadrBottom,
                         },
                     ]}
                 />
                 <Additionally
-                    onHide={() => hideHeadrBottm()}
+                    onHide={() => hideHeadrBottom()}
                     onHover={(e) => hover(e)}
                 />
             </Container>
             {stateHeaderDrop && (
                 <HeaderDrop
-                    type={tupeModal}
+                    type={typeModal}
                     onHover={() => showHeaderBottom()}
-                    onEver={() => hideHeadrBottm()}
+                    onEver={() => hideHeadrBottom()}
                 ></HeaderDrop>
             )}
         </header>

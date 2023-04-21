@@ -4,6 +4,7 @@ import { SliderImages } from '../SliderImages/SliderImages';
 import Image from 'next/image';
 import { Button } from '@/components/UI/Button/Button';
 import useTranslation from 'next-translate/useTranslation';
+import Title from '@/components/UI/Title/Title';
 
 interface ISubscription {
     type: string;
@@ -15,9 +16,9 @@ export const Subscription: FC<ISubscription> = ({ type }) => {
     return (
         <div className={style.container}>
             <div className={style.subscription}>
-                <SliderImages type={type} className={style.row__one} />
-                <SliderImages type={type} className={style.row__two} />
-                <SliderImages type={type} className={style.row__three} />
+                <SliderImages type={type} direction="left" />
+                <SliderImages type={type} direction="rigth" />
+                <SliderImages type={type} direction="left" />
                 <div className={style.offer}>
                     <Image
                         src="/favicon.png"
@@ -26,11 +27,15 @@ export const Subscription: FC<ISubscription> = ({ type }) => {
                         height={60}
                     />
                     <div>
-                        <h2>{t('common:header.iviSubscription')}</h2>
+                        <Title
+                            htmlTagName="h3"
+                            title={t('common:header.iviSubscription')}
+                            linkSettings={{ isLink: false }}
+                        />
                         <p>{t('common:header.price')}</p>
                     </div>
                 </div>
-                <div className={style.btn__subscribe}>
+                <div className={style.button}>
                     <Button
                         type="button"
                         variants="accent-transparent"

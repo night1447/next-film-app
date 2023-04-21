@@ -6,43 +6,43 @@ export const CardsAuth: FC = () => {
     const items = [
         {
             href: 'https://www.ivi.ru/profile/purchases',
-            titel: 'common:header.purchases',
-            className: style.purchases,
+            title: 'common:header.purchases',
+            className: "purchases",
         },
         {
             href: 'https://www.ivi.ru/profile/favorites',
-            titel: 'common:header.watchLater',
-            className: style.watch,
+            title: 'common:header.watchLater',
+            className: "watch",
         },
         {
             href: 'https://www.ivi.ru/profile/watched',
-            titel: 'common:header.browsingHistory',
-            className: style.story,
+            title: 'common:header.browsingHistory',
+            className: "story",
         },
         {
             href: 'https://www.ivi.ru/profile/subscriptions',
-            titel: 'common:header.subscriptions',
-            className: style.subscriptions,
+            title: 'common:header.subscriptions',
+            className: "subscriptions",
         },
         {
             href: 'https://www.ivi.ru/profile/watched',
-            titel: 'common:header.certificateActivation',
-            className: style.certificate,
+            title: 'common:header.certificateActivation',
+            className: "certificate",
         },
         {
             href: 'https://www.ivi.ru/profile/purchases',
-            titel: 'common:header.loginByCode',
-            className: style.entrance,
+            title: 'common:header.loginByCode',
+            className: "entrance",
         },
         {
             href: 'https://www.ivi.ru/profile/cards',
-            titel: 'common:header.paymentMethods',
-            className: style.payment,
+            title: 'common:header.paymentMethods',
+            className: "payment",
         },
         {
             href: 'https://www.ivi.ru/profile/referral',
-            titel: 'common:header.inviteFriends',
-            className: style.friends,
+            title: 'common:header.inviteFriends',
+            className: "friends",
         },
     ];
 
@@ -50,11 +50,11 @@ export const CardsAuth: FC = () => {
         <div className={style.container}>
             {items.map((item) => (
                 <CardInHeaderDropAuth
-                    key={item.titel}
+                    key={item.title}
                     href={item.href}
-                    titel={item.titel}
+                    title={item.title}
                 >
-                    <div className={item.className}></div>
+                    <div className={style[item.className]}></div>
                 </CardInHeaderDropAuth>
             ))}
         </div>

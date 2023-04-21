@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { FC, MouseEvent } from 'react';
 import style from './Additionally.module.scss';
 import { Button } from '../../UI/Button/Button';
 import useTranslation from 'next-translate/useTranslation';
 
 interface IAdditionally {
-    onHover: (e: any) => void;
+    onHover: (e: MouseEvent<HTMLElement>) => void;
     onHide: () => void;
 }
 
@@ -21,7 +21,7 @@ export const Additionally: FC<IAdditionally> = ({ onHover, onHide }) => {
                 {t('common:header.advertising')}
             </Button>
             <Button type="button" variants="transparent">
-                <div className={style.btn__primaryText}>
+                <div className={style.button}>
                     <div></div>
                     {t('common:header.search')}
                 </div>

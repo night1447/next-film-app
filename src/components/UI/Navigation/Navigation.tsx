@@ -1,12 +1,12 @@
-import React, { FC } from 'react';
+import React, { FC, MouseEvent } from 'react';
 import styles from './Navigation.module.scss';
 import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
 
 interface IItemsList {
     href: string;
-    value: any;
-    onHover?: (e: any) => void;
+    value: string;
+    onHover?: (e: MouseEvent<HTMLElement>) => void;
     onEver?: () => void;
 }
 
@@ -17,7 +17,7 @@ interface INavication {
 
 const Navigation: FC<INavication> = ({ items, flex = false }) => {
     const { t } = useTranslation();
-    
+
     return (
         <nav
             className={
@@ -29,10 +29,17 @@ const Navigation: FC<INavication> = ({ items, flex = false }) => {
             <ul>
                 {items!.map((item) => (
                     <li key={item.value}>
-                        {item.onHover
-                            ? <Link onMouseLeave={() => item.onEver!()} onMouseEnter={(e) => item.onHover!(e)} href={item.href}>{t(item.value)}</Link>
-                            : <Link href={item.href}>{t(item.value)}</Link>
-                        }
+                        {item.onHover ? (
+                            <Link
+                                onMouseLeave={() => item.onEver!()}
+                                onMouseEnter={(e) => item.onHover!(e)}
+                                href={item.href}
+                            >
+                                {t(item.value)}
+                            </Link>
+                        ) : (
+                            <Link href={item.href}>{t(item.value)}</Link>
+                        )}
                     </li>
                 ))}
             </ul>
