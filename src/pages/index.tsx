@@ -1,42 +1,96 @@
-import { Meta } from '@/seo/Meta';
-import Container from '@/components/UI/Container/Container';
-import Title from '@/components/UI/Title/Title';
+import { Layout } from '@/components/layout/Layout';
+import FirstScreen from '@/components/Screens/FirstScreen/FirstScreen';
+import InteractiveBlock from '@/components/Screens/InteractiveBlock/InteractiveBlock';
+import { InteractiveType } from '@/components/Screens/InteractiveBlock/InteractiveType';
+import { FilmCardMinimize } from '@/models/FilmCardMinimize';
 
 export default function Home() {
-    return (
-        <Meta title={''}>
-            <main>
-                <Container>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Aliquid at blanditiis eligendi eos est expedita fuga fugit
-                    harum id iure libero maxime nostrum, numquam perspiciatis
-                    provident qui repudiandae suscipit velit.
-                    <Title htmlTagName={'h1'}
-                           linkSettings={{
-                               isLink: true,
-                               decorating: 'arrow',
-                               isWholeTitle: true,
-                           }}
-                           title={'Lorem'} />
-                    <Title htmlTagName={'h2'}
-                           linkSettings={{
-                               isLink: true,
-                               decorating: 'underline',
-                               isWholeTitle: false,
-                               linkedPartTitle: 'Record',
-                           }}
-                           title={' Lorem'} />
-                    <Title htmlTagName={'h3'}
-                           linkSettings={{
-                               isLink: false,
-                           }}
-                           title={' h3'} /> <Title htmlTagName={'h3'}
-                                                   linkSettings={{
-                                                       isLink: false,
-                                                   }} title={' h4'} />
+    const interestingInfo: InteractiveType[] = [{
+        href: '/',
+        urlImg: '/example-interactive-card.jpeg',
+        title: 'Сериалы ivi',
+    }, {
+        href: '/',
+        urlImg: '/example-interactive-card.jpeg',
+        title: 'Сериалы ivi',
+    }, {
+        href: '/',
+        urlImg: '/example-interactive-card.jpeg',
+        title: 'Сериалы ivi',
+    }, {
+        href: '/',
+        urlImg: '/example-interactive-card.jpeg',
+        title: 'Сериалы ivi',
+    }, {
+        href: '/',
+        urlImg: '/example-interactive-card.jpeg',
+        title: 'Сериалы ivi',
+    }, {
+        href: '/',
+        urlImg: '/example-interactive-card.jpeg',
+        title: 'Сериалы ivi',
+    }, {
+        href: '/',
+        urlImg: '/example-interactive-card.jpeg',
+        title: 'Сериалы ivi',
+    }, {
+        href: '/',
+        urlImg: '/example-interactive-card.jpeg',
+        title: 'Сериалы ivi',
+    }];
 
-                </Container>
-            </main>
-        </Meta>
+    const filmCards: FilmCardMinimize[] = [
+        {
+            title: 'Лунтик и его друзья',
+            year: 2022,
+            urlImg: '/luntik.jpeg',
+            limitAge: '+0',
+            rating: '7,5',
+            country: 'USA',
+            bestCharacteristic: 'сюжет',
+            isSubscribe: true,
+            duration: 0,
+            isSeries: true,
+            href: '/',
+            mainGenre: 'Для детей',
+            feature: 'choice',
+        }, {
+            title: 'Лунтик и его друзья',
+            year: 2022,
+            urlImg: '/luntik.jpeg',
+            limitAge: '+0',
+            rating: '7,5',
+            country: 'USA',
+            bestCharacteristic: 'сюжет',
+            isSubscribe: false,
+            duration: 8,
+            isSeries: true,
+            href: '/',
+            mainGenre: 'Для детей',
+            feature: 'choice',
+        }, {
+            title: 'Лунтик и его друзья',
+            year: 2022,
+            urlImg: '/luntik.jpeg',
+            limitAge: '+0',
+            rating: '7,5',
+            country: 'USA',
+            bestCharacteristic: 'сюжет',
+            isSubscribe: false,
+            duration: 12,
+            isSeries: false,
+            href: '/',
+            mainGenre: 'Для детей',
+            feature: 'choice',
+        },
+    ];
+
+    return (
+        <Layout title={'Ivi главная страница'}>
+            <FirstScreen />
+            <InteractiveBlock title={'Самое интересное'} isCards={false} info={interestingInfo} />
+            <InteractiveBlock title={'Самое интересное'} isCards={true} href={'/'} info={filmCards} />
+            <InteractiveBlock title={'Самое интересное'} isCards={false} info={interestingInfo} />
+        </Layout>
     );
 }

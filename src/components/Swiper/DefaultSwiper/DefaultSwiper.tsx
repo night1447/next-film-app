@@ -8,6 +8,7 @@ import { Navigation } from 'swiper';
 
 interface DefaultSwiperProps {
     className?: string;
+    wrapperClassName?: string;
     slides: React.ReactNode[];
     isInfinity?: boolean;
     centered?: boolean;
@@ -17,6 +18,8 @@ interface DefaultSwiperProps {
     arrowBackground: boolean;
     prevClass?: string;
     nextClass?: string;
+    isCarousel?: boolean;
+    slideClass?: string;
 }
 
 const DefaultSwiper: FC<DefaultSwiperProps> = ({
@@ -26,12 +29,15 @@ const DefaultSwiper: FC<DefaultSwiperProps> = ({
                                                    isInfinity,
                                                    arrowBackground,
                                                    slidesPerView,
+                                                   wrapperClassName,
                                                    spaceBetween,
                                                    prevClass,
+                                                   slideClass,
                                                    nextClass,
                                                    autoPlay,
+                                                   isCarousel,
                                                }) => {
-    return (<div className={styles.shell}>
+    return (
         <Swiper initialSlide={1}
                 modules={[Navigation]}
                 navigation={{
@@ -46,25 +52,26 @@ const DefaultSwiper: FC<DefaultSwiperProps> = ({
                 centeredSlidesBounds={centered || false}
                 centerInsufficientSlides={centered || false}
                 speed={1500}
+                wrapperClass={`${wrapperClassName || ''} ${isCarousel ? styles.carousel : ''}`}
                 autoplay={autoPlay ? { delay: 2000, waitForTransition: true } : false}
-                className={`${className || ''}`}
+                className={`${className || ''} ${isCarousel ? styles.carouselSwiper : ''}`}
                 loop={isInfinity || false}>
 
 
-            {slides.map(slide => <SwiperSlide key={uuid()}>{slide}</SwiperSlide>)}
+            {slides.map(slide => <SwiperSlide key={uuid()}
+                                              className={`${styles.slide} ${slideClass || ''}`}>{slide}</SwiperSlide>)}
             <button
-                className={`${styles.btn} ${styles.btn_prev} ${arrowBackground ? styles.bg : ''} ${prevClass || ''}`}
+                className={`${styles.btn} ${styles.btn_prev} ${arrowBackground ? styles.bg : ''} ${prevClass || ''} ${isCarousel ? styles.carouselBtn_prev : ''}`}
                 type={'button'}
             >
                 <SrOnly title={'предыдущий слайд'} />
             </button>
             <button
-                className={`${styles.btn} ${styles.btn_next} ${arrowBackground ? styles.bg : ''} ${nextClass || ''}`}
+                className={`${styles.btn} ${styles.btn_next} ${arrowBackground ? styles.bg : ''} ${nextClass || ''} ${isCarousel ? styles.carouselBtn_next : ''}`}
                 type={'button'}
             >
                 <SrOnly title={'следующий слайд'} />
             </button>
-        </Swiper>
-    </div>);
+        </Swiper>);
 };
 export default DefaultSwiper;

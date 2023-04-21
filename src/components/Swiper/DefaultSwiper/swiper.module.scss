@@ -47,10 +47,22 @@
   }
 }
 
-.shell {
-  position: relative;
-  overflow: hidden;
+
+.carouselSwiper {
+  width: 100%;
+  padding: 24px;
 }
-.swiper{
-  overflow: unset!important;
+
+.carouselBtn {
+  &_prev {
+    left: -40px;
+  }
+
+  &_next {
+    right: -40px;
+  }
+}
+
+.slide {
+  border-radius: 8px;
 }

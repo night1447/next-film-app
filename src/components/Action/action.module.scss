@@ -1,7 +1,0 @@
-.action {
-  &::before {
-    content: attr(data-icon);
-    font-size: 32px;
-    font-family: Icons;
-  }
-}

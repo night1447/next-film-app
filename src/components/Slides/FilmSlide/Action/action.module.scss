@@ -1,0 +1,63 @@
+.action {
+  cursor: pointer;
+
+  &::before {
+    font-size: 24px;
+    font-family: QualityIcons;
+  }
+
+  &:hover {
+    .arial {
+      opacity: 1;
+    }
+  }
+}
+
+.favourite {
+  &::before {
+    content: "\E12F";
+  }
+}
+
+.evaluate {
+  &::before {
+    content: "\E35A";
+  }
+}
+
+.similar {
+  &::before {
+    content: "\E311";
+  }
+}
+
+.dislike {
+  &::before {
+    content: "\E0C9";
+  }
+}
+
+.arial {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  background-color: var(--violet);
+  width: max-content;
+  padding: 4px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: -7px;
+    left: 5px;
+    clip-path: polygon(51% 100%, 0 0, 100% 0);
+    width: 10px;
+    height: 8px;
+    background-color: var(--violet);
+    border-radius: 1px;
+  }
+}

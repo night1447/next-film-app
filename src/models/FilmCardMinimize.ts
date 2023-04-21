@@ -7,9 +7,9 @@ export interface FilmCardMinimize {
     country: string;
     mainGenre: string;
     isSeries: boolean;
-    duration: string;
+    duration: number;
     urlImg: string;
     href: string;
     bestCharacteristic: string;
-    feature: 'choice' | 'exclusive' | 'creating';
+    feature?: 'choice' | 'exclusive' | 'creating';
 }

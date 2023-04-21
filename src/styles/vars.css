@@ -23,4 +23,7 @@
     --start-gradient-color: #a869f0;
     --end-gradient-color: #834cc2;
     --shadow-color: #a869f0;
+    --container: 1256;
+    --swiper-container: 1300;
+    --swiper-wrapper-container: 1200;
 }

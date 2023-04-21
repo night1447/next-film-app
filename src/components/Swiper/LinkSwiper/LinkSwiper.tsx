@@ -3,7 +3,6 @@ import DefaultSwiper from '@/components/Swiper/DefaultSwiper/DefaultSwiper';
 import { InteractiveType } from '@/components/Screens/InteractiveBlock/InteractiveType';
 import LinkSlide from '@/components/Slides/LinkSlide/LinkSlide';
 import { v4 as uuid } from 'uuid';
-import styles from './swiper.module.scss';
 
 interface LinkSwiperProps {
     info: InteractiveType[];
@@ -16,10 +15,8 @@ const LinkSwiper: FC<LinkSwiperProps> = ({ info }) => {
         arrowBackground={false}
         spaceBetween={24}
         slidesPerView={4}
-        prevClass={`${styles.prev}`}
-        nextClass={`${styles.next}`}
-        className={styles.shell}
         isInfinity={false}
+        isCarousel={true}
         slides={getSlides(info)} />;
 };
 export default LinkSwiper;
