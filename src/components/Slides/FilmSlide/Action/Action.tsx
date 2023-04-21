@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
 import styles from './action.module.scss';
+import { FilmSlideActionType } from '@/components/Slides/FilmSlide/constant';
 
 interface ActionProps {
     arial: string;
-    role: 'favourite' | 'similar' | 'evaluate' | 'dislike';
+    role: FilmSlideActionType;
 }
 
 const Action: FC<ActionProps> = ({ role, arial }) => {

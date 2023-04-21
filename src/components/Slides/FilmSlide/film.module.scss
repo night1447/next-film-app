@@ -99,6 +99,9 @@
 
 .actions {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   right: 10px;
   opacity: 0;
   transition: opacity 0.5s;

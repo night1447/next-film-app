@@ -4,9 +4,11 @@ import { FilmCardMinimize } from '@/models/FilmCardMinimize';
 import Image from 'next/image';
 import Title from '@/components/UI/Title/Title';
 import Action from '@/components/Slides/FilmSlide/Action/Action';
+import { filmSlideActions } from '@/components/Slides/FilmSlide/constant';
 
 interface FilmSlideProps {
     item: FilmCardMinimize;
+    isFullActions: boolean;
 }
 
 const getStringDuration = (duration: number, isSeries: boolean) => {
@@ -46,7 +48,7 @@ const FilmSlide: FC<FilmSlideProps> = ({ item }) => (
                     <div className={styles.info}>{item.year}, {item.country},{item.mainGenre}</div>
                     <div className={styles.duration}>{getStringDuration(item.duration, item.isSeries)}</div>
                     <ul className={styles.actions}>
-                        <Action arial={'Смотреть позже'} role={'favourite'} />
+                        {filmSlideActions.map(action => <Action key={action} arial={'Смотреть позже'} role={action} />)}
                     </ul>
                 </div>
             </div>

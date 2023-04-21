@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import styles from './linkSlide.module.scss';
-import { InteractiveType } from '@/components/Screens/InteractiveBlock/InteractiveType';
 import Title from '@/components/UI/Title/Title';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SrOnly } from '@/components/UI/SrOnly/SrOnly';
+import { InteractiveType } from '@/models/InteractiveType';
 
 interface LinkSlidesProps {
     info: InteractiveType;

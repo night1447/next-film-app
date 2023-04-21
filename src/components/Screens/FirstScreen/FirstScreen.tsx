@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import Section from '@/components/UI/Section/Section';
-import FirstSwiper from '@/components/Swiper/FirstSwiper/FirstSwiper';
+import { FirstSwiper } from '@/components/Swiper';
 import Container from '@/components/UI/Container/Container';
 import { Button } from '@/components/UI/Button/Button';
 import styles from './FirstScreen.module.scss';

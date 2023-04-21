@@ -16,10 +16,8 @@ interface DefaultSwiperProps {
     spaceBetween: number;
     slidesPerView: number | 'auto';
     arrowBackground: boolean;
-    prevClass?: string;
-    nextClass?: string;
     isCarousel?: boolean;
-    slideClass?: string;
+    initialSlide?: number;
 }
 
 const DefaultSwiper: FC<DefaultSwiperProps> = ({
@@ -31,14 +29,12 @@ const DefaultSwiper: FC<DefaultSwiperProps> = ({
                                                    slidesPerView,
                                                    wrapperClassName,
                                                    spaceBetween,
-                                                   prevClass,
-                                                   slideClass,
-                                                   nextClass,
+                                                   initialSlide,
                                                    autoPlay,
                                                    isCarousel,
                                                }) => {
     return (
-        <Swiper initialSlide={1}
+        <Swiper initialSlide={initialSlide}
                 modules={[Navigation]}
                 navigation={{
                     enabled: true,
@@ -59,15 +55,15 @@ const DefaultSwiper: FC<DefaultSwiperProps> = ({
 
 
             {slides.map(slide => <SwiperSlide key={uuid()}
-                                              className={`${styles.slide} ${slideClass || ''}`}>{slide}</SwiperSlide>)}
+                                              className={`${styles.slide}`}>{slide}</SwiperSlide>)}
             <button
-                className={`${styles.btn} ${styles.btn_prev} ${arrowBackground ? styles.bg : ''} ${prevClass || ''} ${isCarousel ? styles.carouselBtn_prev : ''}`}
+                className={`${styles.btn} ${styles.btn_prev} ${arrowBackground ? styles.bg : ''} ${isCarousel ? styles.carouselBtn_prev : ''}`}
                 type={'button'}
             >
                 <SrOnly title={'предыдущий слайд'} />
             </button>
             <button
-                className={`${styles.btn} ${styles.btn_next} ${arrowBackground ? styles.bg : ''} ${nextClass || ''} ${isCarousel ? styles.carouselBtn_next : ''}`}
+                className={`${styles.btn} ${styles.btn_next} ${arrowBackground ? styles.bg : ''} ${isCarousel ? styles.carouselBtn_next : ''}`}
                 type={'button'}
             >
                 <SrOnly title={'следующий слайд'} />

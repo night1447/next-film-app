@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import DefaultSwiper from '@/components/Swiper/DefaultSwiper/DefaultSwiper';
-import { InteractiveType } from '@/components/Screens/InteractiveBlock/InteractiveType';
-import LinkSlide from '@/components/Slides/LinkSlide/LinkSlide';
 import { v4 as uuid } from 'uuid';
+import { InteractiveType } from '@/models/InteractiveType';
+import { LinkSlide } from '@/components/Slides';
 
 interface LinkSwiperProps {
     info: InteractiveType[];

@@ -1,12 +1,11 @@
 import React, { FC } from 'react';
 import styles from './interactiveBlock.module.scss';
-import { InteractiveType } from '@/components/Screens/InteractiveBlock/InteractiveType';
 import { FilmCardMinimize } from '@/models/FilmCardMinimize';
 import Section from '@/components/UI/Section/Section';
 import Title from '@/components/UI/Title/Title';
-import CardSwiper from '@/components/Swiper/CardSwiper/CardSwiper';
-import LinkSwiper from '@/components/Swiper/LinkSwiper/LinkSwiper';
+import { CardSwiper, LinkSwiper } from '@/components/Swiper';
 import Container from '@/components/UI/Container/Container';
+import { InteractiveType } from '@/models/InteractiveType';
 
 type InteractiveBlockType = InteractiveType | FilmCardMinimize;
 

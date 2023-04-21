@@ -5,8 +5,12 @@ import styles from './swiper.module.scss';
 import { v4 as uuid } from 'uuid';
 import { Button } from '@/components/UI/Button/Button';
 import Link from 'next/link';
-import { Slide } from '@/components/Swiper/types';
 import { SrOnly } from '@/components/UI/SrOnly/SrOnly';
+
+interface Slide {
+    image: string;
+    href: string;
+}
 
 interface FirstSwiperProps {
     className: string;
@@ -51,8 +55,6 @@ const FirstSwiper: FC<FirstSwiperProps> = ({ className }) => {
                           centered={true}
                           isInfinity={true}
                           autoPlay={true}
-                          prevClass={styles.prev}
-                          nextClass={styles.next}
                           arrowBackground={true}
                           slidesPerView={1.2}
                           spaceBetween={30}

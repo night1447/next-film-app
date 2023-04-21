@@ -1,8 +1,7 @@
 import { Layout } from '@/components/layout/Layout';
-import FirstScreen from '@/components/Screens/FirstScreen/FirstScreen';
-import InteractiveBlock from '@/components/Screens/InteractiveBlock/InteractiveBlock';
-import { InteractiveType } from '@/components/Screens/InteractiveBlock/InteractiveType';
 import { FilmCardMinimize } from '@/models/FilmCardMinimize';
+import { FirstScreen, InteractiveBlock } from '@/components/Screens';
+import { InteractiveType } from '@/models/InteractiveType';
 
 export default function Home() {
     const interestingInfo: InteractiveType[] = [{
@@ -88,9 +87,21 @@ export default function Home() {
     return (
         <Layout title={'Ivi главная страница'}>
             <FirstScreen />
+            <InteractiveBlock title={'Рекомендую посмотреть'} isCards={true} href={'/'} info={filmCards} />
+            <InteractiveBlock title={'Сериалы с высоким рейтингом по подписке'} isCards={true} href={'/'} info={filmCards} />
+            <InteractiveBlock title={'Современные мультфильмы'} isCards={true} href={'/'} info={filmCards} />
+            <InteractiveBlock title={'Сериалы Amediateka'} isCards={true} href={'/'} info={filmCards} />
+            <InteractiveBlock title={'Поймать преступника'} isCards={true} href={'/'} info={filmCards} />
+            <InteractiveBlock title={'Добрые мультсериалы'} isCards={true} href={'/'} info={filmCards} />
+            <InteractiveBlock title={'Российские детективные сериалы'} isCards={true} href={'/'} info={filmCards} />
+            <InteractiveBlock title={'Романтическое кино'} isCards={true} href={'/'} info={filmCards} />
+            <InteractiveBlock title={'Криминальные драмы'} isCards={true} href={'/'} info={filmCards} />
+            <InteractiveBlock title={'Про любовь и не только'} isCards={true} href={'/'} info={filmCards} />
             <InteractiveBlock title={'Самое интересное'} isCards={false} info={interestingInfo} />
-            <InteractiveBlock title={'Самое интересное'} isCards={true} href={'/'} info={filmCards} />
-            <InteractiveBlock title={'Самое интересное'} isCards={false} info={interestingInfo} />
+            <InteractiveBlock title={'Зарубежные мультфильмы'} isCards={true} href={'/'} info={filmCards} />
+            <InteractiveBlock title={'Лучшие фильмы в подписке'} isCards={true} href={'/'} info={filmCards} />
+            <InteractiveBlock title={'Мультфильмы о храбрости'} isCards={true} href={'/'} info={filmCards} />
+            <InteractiveBlock title={'Криминальные триллеры'} isCards={true} href={'/'} info={filmCards} />
         </Layout>
     );
 }
