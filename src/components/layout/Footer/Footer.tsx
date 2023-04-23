@@ -15,7 +15,7 @@ const Footer = () => {
     const { lang } = useTranslation();
     const translate = (lang === 'ru' ? ru : en) as Translate;
     return (
-        <div className={styles.Footer}>
+        <footer className={styles.Footer}>
             <Container>
                 <div className={`${styles.content} ${styles.lines}`}>
                     <div className={styles.column}>
@@ -180,7 +180,7 @@ const Footer = () => {
                                 >
                                     <Image
                                         src={social.img}
-                                        alt=""
+                                        alt=''
                                         width={16}
                                         height={16}
                                     />
@@ -190,7 +190,7 @@ const Footer = () => {
                     </div>
                 </div>
             </Container>
-        </div>
+        </footer>
     );
 };
 
