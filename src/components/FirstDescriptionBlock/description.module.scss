@@ -1,0 +1,29 @@
+@import "@/styles/vars";
+
+.paragraph {
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+
+  &::marker {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.title {
+  margin-bottom: 12px;
+}
+
+.list {
+  list-style: initial;
+  padding-left: 25px;
+}
+
+.wrapper {
+  width: 75%;
+  @include adpt($tab-r) {
+    width: 100%;
+  }
+}

@@ -6,9 +6,6 @@ type InteractiveTypeBlock = {
 export const interactiveBlocks: InteractiveTypeBlock[] = [
     {
         href: '/',
-        block: 'recommended',
-    }, {
-        href: '/',
         block: 'highRates',
     }, {
         href: '/',
