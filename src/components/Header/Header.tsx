@@ -30,45 +30,46 @@ export const Header: FC = () => {
     const showHeaderBottomHandler = () => setShowHeaderDrop(true);
 
     return (
-        <header className={`${style.header} ${showHeaderDrop && style.modal}`}>
+        <header className={`${style.header}`}>
             <Container>
-                <Logo />
-                <Navigation
-                    flex={true}
-                    items={[
-                        { href: '/', value: 'common:header.ivi' },
-                        {
-                            href: 'https://www.ivi.ru/new',
-                            value: 'common:header.new',
-                        },
-                        {
-                            href: '/',
-                            value: 'common:header.movies',
-                            onHover: hoverHandler,
-                            onEver: hideHeaderBottomHandler,
-                        },
-                        {
-                            href: '/',
-                            value: 'common:header.series',
-                            onHover: hoverHandler,
-                            onEver: hideHeaderBottomHandler,
-                        },
-                        {
-                            href: '/',
-                            value: 'common:header.cartoons',
-                            onHover: hoverHandler,
-                            onEver: hideHeaderBottomHandler,
-                        },
-                        {
-                            href: 'https://www.ivi.ru/tvplus',
-                            value: 'common:header.tv',
-                            onHover: hoverHandler,
-                            onEver: hideHeaderBottomHandler,
-                        },
-                    ]} />
-                <Additionally
-                    onHide={hideHeaderBottomHandler}
-                    onHover={hoverHandler} />
+                <div className={`${style.wrapper} ${showHeaderDrop && style.modal}`}>
+                    <Logo />
+                    <Navigation
+                        flex={true}
+                        items={[
+                            { href: '/', value: 'common:header.ivi' },
+                            {
+                                href: 'https://www.ivi.ru/new',
+                                value: 'common:header.new',
+                            },
+                            {
+                                href: '/',
+                                value: 'common:header.movies',
+                                onHover: hoverHandler,
+                                onEver: hideHeaderBottomHandler,
+                            },
+                            {
+                                href: '/',
+                                value: 'common:header.series',
+                                onHover: hoverHandler,
+                                onEver: hideHeaderBottomHandler,
+                            },
+                            {
+                                href: '/',
+                                value: 'common:header.cartoons',
+                                onHover: hoverHandler,
+                                onEver: hideHeaderBottomHandler,
+                            },
+                            {
+                                href: 'https://www.ivi.ru/tvplus',
+                                value: 'common:header.tv',
+                                onHover: hoverHandler,
+                                onEver: hideHeaderBottomHandler,
+                            },
+                        ]} />
+                    <Additionally
+                        onHide={hideHeaderBottomHandler}
+                        onHover={hoverHandler} /></div>
             </Container>
             {showHeaderDrop && (
                 <HeaderDrop

@@ -15,7 +15,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
     return href ? (
         <Link
             className={`${styles.button} ${styles[variants] || ''} 
-            ${className || ''} ${isCircle && styles.rounded}`}
+            ${className || ''} ${isCircle ? styles.rounded : ''}`}
             href={href}
             onClick={onClick}
         >
@@ -24,7 +24,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
     ) : (
         <button
             className={`${styles.button} ${styles[variants] || ''} 
-            ${className || ''} ${isCircle && styles.rounded}`}
+            ${className || ''} ${isCircle ? styles.rounded : ''}`}
             type={type || 'button'}
             onClick={onClick}
         >

@@ -40,8 +40,9 @@ export const HeaderDrop: FC<IHeaderBottom> = ({ onHover, onEver, type }) => {
                 onMouseLeave={() => onEver()}
             >
                 <div className={style.TVprog}>
-                    <List type={type} listType={'genres'} />
+                    <List type={type} listType={'genres'} className={style.tvList} />
                     <Button
+                        className={style.tvButton}
                         type='button'
                         variants='gray-opacity'
                         href='https://www.ivi.ru/tvplus/tv-schedule-today'
@@ -61,8 +62,8 @@ export const HeaderDrop: FC<IHeaderBottom> = ({ onHover, onEver, type }) => {
                 onMouseEnter={() => onHover()}
                 onMouseLeave={() => onEver()}
             >
-                <div></div>
-                <p>{t('common:header.messages')}</p>
+                <div className={style.notificationIcon}></div>
+                <p className={style.notificationParagraph}>{t('common:header.messages')}</p>
             </div>
         );
     }
@@ -74,24 +75,28 @@ export const HeaderDrop: FC<IHeaderBottom> = ({ onHover, onEver, type }) => {
             onMouseLeave={() => onEver()}
         >
             <CardsAuth />
-            <div>
-                <Button type="button" variants="accent-transparent">
+            <div className={style.authButtons}>
+                <Button type='button' variants='accent-transparent'>
                     {t('common:header.enterOrRegister')}
                 </Button>
-                <Button
-                    type="button"
-                    variants="transparent"
-                    href="https://www.ivi.ru/profile/settings"
-                >
-                    {t('common:header.settings')}
-                </Button>
-                <Button
-                    type="button"
-                    variants="transparent"
-                    href="https://ask.ivi.ru/"
-                >
-                    {t('common:header.help')}
-                </Button>
+                <div className={style.authShell}>
+                    <Button
+                        className={style.authButton}
+
+                        type='button'
+                        variants='transparent'
+                        href='https://www.ivi.ru/profile/settings'
+                    >
+                        {t('common:header.settings')}
+                    </Button>
+                    <Button
+                        className={style.authButton}
+                        type='button'
+                        variants='transparent'
+                        href='https://ask.ivi.ru/'
+                    >
+                        {t('common:header.help')}
+                    </Button></div>
             </div>
         </div>
     );

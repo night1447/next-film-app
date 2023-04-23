@@ -33,3 +33,14 @@
     }
   }
 }
+
+.title {
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.countries {
+  width: 190px;
+  padding-right: 30px;
+  border-right: 1px solid var(--border);
+}

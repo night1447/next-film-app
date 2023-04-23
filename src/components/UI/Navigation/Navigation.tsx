@@ -1,7 +1,7 @@
 import React, { FC, MouseEvent } from 'react';
 import styles from './Navigation.module.scss';
-import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
+import Link from 'next/link';
 
 interface IItemsList {
     href: string;
@@ -11,7 +11,7 @@ interface IItemsList {
 }
 
 interface NavigationProps {
-    items?: IItemsList[];
+    items: IItemsList[];
     flex?: boolean;
 }
 
@@ -21,9 +21,7 @@ const Navigation: FC<NavigationProps> = ({ items, flex = false }) => {
     return (
         <nav
             className={
-                flex
-                    ? `${styles.navigation} ${styles.flex}`
-                    : `${styles.navigation} ${styles.block}`
+                `${styles.navigation} ${flex ? styles.flex : styles.block}`
             }
         >
             <ul>
