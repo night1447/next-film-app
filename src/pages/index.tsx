@@ -5,6 +5,7 @@ import useTranslation from 'next-translate/useTranslation';
 import { InteractiveType } from '@/models/InteractiveType';
 import { v4 as uuid } from 'uuid';
 import { interactiveBlocks } from '@/constants/Index';
+import FirstDescriptionBlock from '@/components/FirstDescriptionBlock/FirstDescriptionBlock';
 
 export default function Home() {
     const { t } = useTranslation();
@@ -146,6 +147,11 @@ export default function Home() {
     return (
         <Layout title={t('common:titles.index')}>
             <FirstScreen />
+            <InteractiveBlock title={t('index:recommended.title')}
+                              info={filmCards}
+                              isCards={true}
+                              moreHref={'/'} />
+            <FirstDescriptionBlock />
             {interactiveBlocks.map(block => <InteractiveBlock
                 key={uuid()}
                 title={t(`index:${block.block}.title`)}
