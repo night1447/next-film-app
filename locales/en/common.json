@@ -7,7 +7,9 @@
         "cartoons": "Cartoons",
         "tv": "TV+",
         "advertising": "Watch 30 days for 1 ₽",
-        "years": "Years",
+        "years": {
+            "title": "Years"
+        },
         "search": "Search",
         "purchases": "Purchases",
         "watchLater": "Watch later",
@@ -28,7 +30,7 @@
         "disable": "You can turn it off at any time",
         "watchOnSmartTV": "Watch on smart TV",
         "genres": {
-            "genres": "Genres",
+            "title": "Genres",
             "arthouse": "Arthouse",
             "biography": "Biography",
             "militants": "Militants",
@@ -65,7 +67,7 @@
             "medical": "Medical"
         },
         "countries": {
-            "countries": "Countries",
+            "title": "Countries",
             "Russians": "Russians",
             "Foreign": "Foreign",
             "American": "American",

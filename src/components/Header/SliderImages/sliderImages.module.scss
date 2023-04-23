@@ -16,8 +16,8 @@
 .left {
     animation: left 40s linear infinite;
 }
-.rigth {
-    animation: rigth 40s linear infinite;
+.right {
+    animation: right 40s linear infinite;
 }
 
 @keyframes left {
@@ -29,7 +29,7 @@
     }
 }
 
-@keyframes rigth {
+@keyframes right {
     0% {
         transform: translateX(-50%);
     }

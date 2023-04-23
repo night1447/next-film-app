@@ -1,22 +1,18 @@
 import React, { FC } from 'react';
-import styles from './ListLinks.module.scss';
+import styles from './links.module.scss';
 import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
+import { IGeneralItem } from '@/components/Header/types';
 
-interface IItemsList {
-    href: string;
-    value: string;
+
+
+interface ListLinkProps {
+    items: IGeneralItem[],
 }
 
-interface IListLinks {
-    items: IItemsList[],
-}
-
-const ListLinks: FC<IListLinks> = ({items}) => {
+const ListLinks: FC<ListLinkProps> = ({items}) => {
     const { t } = useTranslation();
-
     return (
-        <>
             <ul className={styles.list}>
                 {items.map((item) => (
                     <li key={item.value}>
@@ -24,7 +20,6 @@ const ListLinks: FC<IListLinks> = ({items}) => {
                     </li>
                 ))}
             </ul>
-        </>
     );
 };
 

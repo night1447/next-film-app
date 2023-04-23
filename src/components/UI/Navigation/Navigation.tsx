@@ -10,12 +10,12 @@ interface IItemsList {
     onEver?: () => void;
 }
 
-interface INavication {
+interface NavigationProps {
     items?: IItemsList[];
     flex?: boolean;
 }
 
-const Navigation: FC<INavication> = ({ items, flex = false }) => {
+const Navigation: FC<NavigationProps> = ({ items, flex = false }) => {
     const { t } = useTranslation();
 
     return (
@@ -27,12 +27,12 @@ const Navigation: FC<INavication> = ({ items, flex = false }) => {
             }
         >
             <ul>
-                {items!.map((item) => (
+                {items?.map((item) => (
                     <li key={item.value}>
                         {item.onHover ? (
                             <Link
                                 onMouseLeave={() => item.onEver!()}
-                                onMouseEnter={(e) => item.onHover!(e)}
+                                onMouseEnter={(e) => item.onHover ? item.onHover(e) : ''}
                                 href={item.href}
                             >
                                 {t(item.value)}

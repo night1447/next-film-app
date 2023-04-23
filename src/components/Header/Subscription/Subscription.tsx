@@ -1,4 +1,4 @@
-import style from './Subscription.module.scss';
+import style from './subscription.module.scss';
 import React, { FC } from 'react';
 import { SliderImages } from '../SliderImages/SliderImages';
 import Image from 'next/image';
@@ -6,18 +6,18 @@ import { Button } from '@/components/UI/Button/Button';
 import useTranslation from 'next-translate/useTranslation';
 import Title from '@/components/UI/Title/Title';
 
-interface ISubscription {
+interface SubscriptionProps {
     type: string;
 }
 
-export const Subscription: FC<ISubscription> = ({ type }) => {
+export const Subscription: FC<SubscriptionProps> = ({ type }) => {
     const { t } = useTranslation();
 
     return (
         <div className={style.container}>
             <div className={style.subscription}>
                 <SliderImages type={type} direction="left" />
-                <SliderImages type={type} direction="rigth" />
+                <SliderImages type={type} direction="right" />
                 <SliderImages type={type} direction="left" />
                 <div className={style.offer}>
                     <Image

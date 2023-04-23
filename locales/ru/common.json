@@ -7,7 +7,9 @@
         "cartoons": "Мультфильмы",
         "tv": "TV+",
         "advertising": "Смотреть 30 дней за 1 ₽",
-        "years": "Годы",
+        "years": {
+            "title": "Годы"
+        },
         "search": "Поиск",
         "purchases": "Покупки",
         "watchLater": "Cмотреть позже",
@@ -28,7 +30,7 @@
         "disable": "Отключить можно в любой момент",
         "watchOnSmartTV": "Cмотреть на смарт TV",
         "genres": {
-            "genres": "Жанры",
+            "title": "Жанры",
             "arthouse": "Артхаус",
             "biography": "Биография",
             "militants": "Боевики",
@@ -65,7 +67,7 @@
             "medical": "Медицинские"
         },
         "countries": {
-            "countries": "Страны",
+            "title": "Страны",
             "Russians": "Русские",
             "Foreign": "Зарубежные",
             "American": "Американские",

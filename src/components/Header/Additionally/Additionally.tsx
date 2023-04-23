@@ -1,5 +1,5 @@
 import { FC, MouseEvent } from 'react';
-import style from './Additionally.module.scss';
+import style from './additionally.module.scss';
 import { Button } from '../../UI/Button/Button';
 import useTranslation from 'next-translate/useTranslation';
 

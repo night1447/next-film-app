@@ -1,21 +1,23 @@
 import { FC, MouseEvent, useState } from 'react';
-import style from './Header.module.scss';
+import style from './header.module.scss';
 import Container from '../UI/Container/Container';
 import { Logo } from '../UI/Logo/Logo';
 import Navigation from '../UI/Navigation/Navigation';
 import useTranslation from 'next-translate/useTranslation';
 import { Additionally } from './Additionally/Additionally';
 import { HeaderDrop } from './HeaderDrop/HeaderDrop';
+import { IHeaderDrop } from '@/components/Header/types';
 
+let initialType: IHeaderDrop = '';
 export const Header: FC = () => {
     const { t } = useTranslation();
-    const [stateHeaderDrop, setStateHeaderDrop] = useState(false);
-    const [typeModal, setTypeModal] = useState('');
+    const [showHeaderDrop, setShowHeaderDrop] = useState(false);
+    const [typeModal, setTypeModal] = useState(initialType);
 
-    const hover = (ev: MouseEvent<HTMLElement>) => {
+    const hoverHandler = (ev: MouseEvent<HTMLElement>) => {
         const target = ev.target as HTMLElement;
         const type = target.innerHTML;
-        setStateHeaderDrop(true);
+        setShowHeaderDrop(true);
         if (type === t('common:header.movies')) setTypeModal('movies');
         if (type === t('common:header.series')) setTypeModal('series');
         if (type === t('common:header.cartoons')) setTypeModal('cartoons');
@@ -24,11 +26,11 @@ export const Header: FC = () => {
         if (target.dataset.auth) setTypeModal('auth');
     };
 
-    const hideHeadrBottom = () => setStateHeaderDrop(false);
-    const showHeaderBottom = () => setStateHeaderDrop(true);
+    const hideHeaderBottomHandler = () => setShowHeaderDrop(false);
+    const showHeaderBottomHandler = () => setShowHeaderDrop(true);
 
     return (
-        <header className={`${style.header} ${stateHeaderDrop && style.modal}`}>
+        <header className={`${style.header} ${showHeaderDrop && style.modal}`}>
             <Container>
                 <Logo />
                 <Navigation
@@ -42,40 +44,38 @@ export const Header: FC = () => {
                         {
                             href: '/',
                             value: 'common:header.movies',
-                            onHover: hover,
-                            onEver: hideHeadrBottom,
+                            onHover: hoverHandler,
+                            onEver: hideHeaderBottomHandler,
                         },
                         {
                             href: '/',
                             value: 'common:header.series',
-                            onHover: hover,
-                            onEver: hideHeadrBottom,
+                            onHover: hoverHandler,
+                            onEver: hideHeaderBottomHandler,
                         },
                         {
                             href: '/',
                             value: 'common:header.cartoons',
-                            onHover: hover,
-                            onEver: hideHeadrBottom,
+                            onHover: hoverHandler,
+                            onEver: hideHeaderBottomHandler,
                         },
                         {
                             href: 'https://www.ivi.ru/tvplus',
                             value: 'common:header.tv',
-                            onHover: hover,
-                            onEver: hideHeadrBottom,
+                            onHover: hoverHandler,
+                            onEver: hideHeaderBottomHandler,
                         },
-                    ]}
-                />
+                    ]} />
                 <Additionally
-                    onHide={() => hideHeadrBottom()}
-                    onHover={(e) => hover(e)}
-                />
+                    onHide={hideHeaderBottomHandler}
+                    onHover={hoverHandler} />
             </Container>
-            {stateHeaderDrop && (
+            {showHeaderDrop && (
                 <HeaderDrop
                     type={typeModal}
-                    onHover={() => showHeaderBottom()}
-                    onEver={() => hideHeadrBottom()}
-                ></HeaderDrop>
+                    onHover={showHeaderBottomHandler}
+                    onEver={hideHeaderBottomHandler}
+                />
             )}
         </header>
     );

@@ -1,31 +1,31 @@
 import Image from 'next/image';
-import style from './SliderImages.module.scss';
+import style from './sliderImages.module.scss';
 import React, { FC } from 'react';
 import Link from 'next/link';
 import { getTypeForHeaderDrop } from '@/utils/getTypeForHeaderDrop';
 
-interface ISliderImages {
+interface SliderImageProps {
     type: string;
-    direction: 'left' | 'rigth';
+    direction: 'left' | 'right';
 }
 
-interface Iitem {
+interface ISLide {
     href: string;
     src: string;
 }
 
-export const SliderImages: FC<ISliderImages> = ({ type, direction }) => {
-    let items: Iitem[] = getTypeForHeaderDrop(type, 'images');
+export const SliderImages: FC<SliderImageProps> = ({ type, direction }) => {
+    let items: ISLide[] = getTypeForHeaderDrop(type, 'images');
     items = direction === 'left' ? items.slice(0, 3) : items.slice(3, 6);
 
     return (
         <div
             className={`${style.container} ${
-                direction === 'left' ? style.left : style.rigth
+                direction === 'left' ? style.left : style.right
             }`}
         >
             <span>
-                {items.map((item: Iitem) => (
+                {items.map((item: ISLide) => (
                     <Link key={item.src} href={item.href}>
                         <Image
                             src={item.src}

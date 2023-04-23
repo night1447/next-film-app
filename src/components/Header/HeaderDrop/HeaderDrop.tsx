@@ -1,18 +1,16 @@
-import style from './HeaderDrop.module.scss';
+import style from './headerDrop.module.scss';
 import React, { FC } from 'react';
-import { ListGenres } from '../ListGenres/ListGenres';
-import { ListCountries } from '../ListCountries/ListCountries';
-import { ListYears } from '../ListYears/ListYears';
-import { ListSelections } from '../ListSelections/ListSelections';
 import { Subscription } from '../Subscription/Subscription';
 import useTranslation from 'next-translate/useTranslation';
 import { Button } from '@/components/UI/Button/Button';
 import { CardsAuth } from '../CardsAuth/CardsAuth';
+import List from '@/components/Header/List/List';
+import { IHeaderDrop } from '@/components/Header/types';
 
 interface IHeaderBottom {
     onHover: () => void;
     onEver: () => void;
-    type: string;
+    type: IHeaderDrop;
 }
 
 export const HeaderDrop: FC<IHeaderBottom> = ({ onHover, onEver, type }) => {
@@ -22,14 +20,13 @@ export const HeaderDrop: FC<IHeaderBottom> = ({ onHover, onEver, type }) => {
             <div
                 className={style.modal}
                 onMouseEnter={() => onHover()}
-                onMouseLeave={() => onEver()}
-            >
-                <ListGenres type={type} />
+                onMouseLeave={() => onEver()}>
+                <List type={type} listType={'genres'} />
                 <div className={style.countries}>
-                    <ListCountries type={type} />
-                    <ListYears type={type} />
+                    <List type={type} listType={'countries'} />
+                    <List type={type} listType={'years'} />
                 </div>
-                <ListSelections type={type} />
+                <List type={type} listType={'selections'} />
                 <Subscription type={type} />
             </div>
         );
@@ -43,11 +40,11 @@ export const HeaderDrop: FC<IHeaderBottom> = ({ onHover, onEver, type }) => {
                 onMouseLeave={() => onEver()}
             >
                 <div className={style.TVprog}>
-                    <ListGenres type={type} />
+                    <List type={type} listType={'genres'} />
                     <Button
-                        type="button"
-                        variants="gray-opacity"
-                        href="https://www.ivi.ru/tvplus/tv-schedule-today"
+                        type='button'
+                        variants='gray-opacity'
+                        href='https://www.ivi.ru/tvplus/tv-schedule-today'
                     >
                         {t('common:header.TVprogram')}
                     </Button>

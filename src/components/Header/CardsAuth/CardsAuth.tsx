@@ -1,62 +1,19 @@
-import style from './CardsAuth.module.scss';
+import style from './cardsAuth.module.scss';
 import React, { FC } from 'react';
-import { CardInHeaderDropAuth } from '../CardInHeaderDropAuth/CardInHeaderDropAuth';
+import { CardDropAuth } from '@/components/Header/CardDropAuth/CardDropAuth';
+import { cardItems } from '@/components/Header/constants';
 
-export const CardsAuth: FC = () => {
-    const items = [
-        {
-            href: 'https://www.ivi.ru/profile/purchases',
-            title: 'common:header.purchases',
-            className: "purchases",
-        },
-        {
-            href: 'https://www.ivi.ru/profile/favorites',
-            title: 'common:header.watchLater',
-            className: "watch",
-        },
-        {
-            href: 'https://www.ivi.ru/profile/watched',
-            title: 'common:header.browsingHistory',
-            className: "story",
-        },
-        {
-            href: 'https://www.ivi.ru/profile/subscriptions',
-            title: 'common:header.subscriptions',
-            className: "subscriptions",
-        },
-        {
-            href: 'https://www.ivi.ru/profile/watched',
-            title: 'common:header.certificateActivation',
-            className: "certificate",
-        },
-        {
-            href: 'https://www.ivi.ru/profile/purchases',
-            title: 'common:header.loginByCode',
-            className: "entrance",
-        },
-        {
-            href: 'https://www.ivi.ru/profile/cards',
-            title: 'common:header.paymentMethods',
-            className: "payment",
-        },
-        {
-            href: 'https://www.ivi.ru/profile/referral',
-            title: 'common:header.inviteFriends',
-            className: "friends",
-        },
-    ];
 
-    return (
-        <div className={style.container}>
-            {items.map((item) => (
-                <CardInHeaderDropAuth
-                    key={item.title}
-                    href={item.href}
-                    title={item.title}
-                >
-                    <div className={style[item.className]}></div>
-                </CardInHeaderDropAuth>
-            ))}
-        </div>
-    );
-};
+export const CardsAuth: FC = () => (
+    <div className={style.container}>
+        {cardItems.map((item) => (
+            <CardDropAuth
+                key={item.title}
+                href={item.href}
+                title={item.title}
+            >
+                <div className={style[item.className]}></div>
+            </CardDropAuth>
+        ))}
+    </div>
+);
