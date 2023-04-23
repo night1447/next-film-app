@@ -1,0 +1,35 @@
+.genres {
+  height: 340px;
+  width: 400px;
+
+  ul {
+    display: flex;
+    height: 320px;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    li {
+      width: 120px;
+    }
+  }
+}
+
+.years {
+  margin-top: 25px;
+}
+
+.selections {
+  height: 100%;
+
+  ul {
+    li {
+      padding-left: 25px;
+      transition: all 0.4s;
+
+      &:hover {
+        color: var(--white);
+        border-left: 1px solid var(--white);
+      }
+    }
+  }
+}

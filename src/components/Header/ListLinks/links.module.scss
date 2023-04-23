@@ -1,0 +1,13 @@
+.list {
+    line-height: 20px;
+    color: var(--border);
+    & > :not(:last-child) {
+        margin-bottom: 8px;
+    }
+    a {
+        transition: color 0.4s;
+        &:hover {
+            color: white;
+        }
+    }
+}
