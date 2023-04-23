@@ -1,7 +1,7 @@
 .film {
   position: relative;
   min-height: 250px;
-
+  max-width: 300px;
 }
 
 .imageWrapper {
@@ -27,6 +27,10 @@
   &:hover {
     .img {
       transform: scale(1.05) translate(0, -5px);
+    }
+
+    .feature {
+      top: -8px;
     }
 
     .inner {
@@ -78,7 +82,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   left: 0;
   top: 0;
 }
@@ -103,6 +107,7 @@
   flex-direction: column;
   gap: 5px;
   right: 10px;
+  z-index: 10;
   opacity: 0;
   transition: opacity 0.5s;
   top: 10px;

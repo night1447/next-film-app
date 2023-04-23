@@ -1,51 +1,51 @@
 {
-  "altForBgButton": "button background",
-  "decoration": "lightning-decoration",
-  "watchFree": "Watch 30 days for free",
-  "slideButtonText": "Watch by subscription",
+  "altForBgButton": "задний фон кнопки",
+  "decoration": "молния-декорация",
+  "watchFree": "Смотреть 30 дней бесплатно",
+  "slideButtonText": "Смотреть по подписке",
   "recommended": {
-    "title": "Recommend to see"
+    "title": "Рекомендую посмотреть"
   },
   "highRates": {
-    "title": "Highly rated series by subscription"
+    "title": "Сериалы с высоким рейтингом по подписке"
   },
   "modernCartoons": {
-    "title": "Modern cartoons"
+    "title": "Современные мультфильмы"
   },
   "seriesAmediateka": {
-    "title": "TV series Amediateka"
+    "title": "Сериалы Amediateka"
   },
   "catchCriminal": {
-    "title": "Catch the criminal"
+    "title": "Поймать преступника"
   },
   "goodAnimatedSeries": {
-    "title": "Good animated series"
+    "title": "Добрые мультсериалы"
   },
   "russianDetective": {
-    "title": "Russian detective series"
+    "title": "Российские детективные сериалы"
   },
   "romanticCinema": {
-    "title": "Romantic cinema"
+    "title": "Романтическое кино"
   },
   "crimeDramas": {
-    "title": "Crime dramas"
+    "title": "Криминальные драмы"
   },
   "loveAndMore": {
-    "title": "About love and more"
+    "title": "Про любовь и не только"
   },
   "mostInteresting": {
-    "title": "The most interesting"
+    "title": "Самое интересное"
   },
   "foreignCartoons": {
-    "title": "Foreign cartoons"
+    "title": "Зарубежные мультфильмы"
   },
   "bestMoviesInSubscription": {
-    "title": "Best movies in subscription"
+    "title": "Лучшие фильмы в подписке"
   },
   "courageCartoons": {
-    "title": "Courage cartoons"
+    "title": "Мультфильмы о храбрости"
   },
   "criminalThrillers": {
-    "title": "Crime thrillers"
+    "title": "Криминальные триллеры"
   }
 }

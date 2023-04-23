@@ -1,6 +1,8 @@
 .action {
   position: relative;
   cursor: pointer;
+  width: max-content;
+  height: max-content;
 
   &::before {
     font-size: 24px;
@@ -10,6 +12,7 @@
   &:hover {
     .arial {
       opacity: 1;
+      z-index: 10!important;
     }
   }
 }
@@ -45,9 +48,11 @@
   transform: translateY(-100%);
   background-color: var(--violet);
   width: max-content;
-  padding: 4px;
-  border-radius: 3px;
+  padding: 2px 8px;
+  color: var(--white);
+  border-radius: 5px;
   opacity: 0;
+  z-index: -1;
   transition: opacity 0.5s;
 
   &::before {

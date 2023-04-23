@@ -1,3 +1,5 @@
+export type IFilmFeature = 'choice' | 'exclusive' | 'creating' | 'all';
+
 export interface FilmCardMinimize {
     title: string;
     isSubscribe?: boolean;
@@ -11,5 +13,6 @@ export interface FilmCardMinimize {
     urlImg: string;
     href: string;
     bestCharacteristic: string;
-    feature?: 'choice' | 'exclusive' | 'creating';
+    feature?: IFilmFeature;
 }
+

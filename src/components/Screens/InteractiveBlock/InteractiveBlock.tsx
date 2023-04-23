@@ -14,9 +14,10 @@ interface InteractiveBlockProps {
     title: string;
     href?: string;
     info: InteractiveBlockType[];
+    moreHref?: string;
 }
 
-const InteractiveBlock: FC<InteractiveBlockProps> = ({ title, href, isCards, info }) => (
+const InteractiveBlock: FC<InteractiveBlockProps> = ({ title, href, isCards, moreHref, info }) => (
     <Section className={styles.interactiveBlock} hasContainer={false}>
         <Container swiperContainer={true}>
             <Title title={title} htmlTagName={'h2'}
@@ -26,7 +27,7 @@ const InteractiveBlock: FC<InteractiveBlockProps> = ({ title, href, isCards, inf
                        isWholeTitle: true,
                        decorating: href ? 'arrow' : false,
                    }} className={styles.title} />
-            {isCards ? <CardSwiper info={info as FilmCardMinimize[]} /> :
+            {isCards ? <CardSwiper info={info as FilmCardMinimize[]} moreHref={moreHref || ''} /> :
                 <LinkSwiper info={info as InteractiveType[]} />}
         </Container>
     </Section>

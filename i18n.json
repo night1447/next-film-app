@@ -6,8 +6,7 @@
   "defaultLocale": "ru",
   "pages": {
     "/": [
-      "FirstScreen",
-      "InteractiveBlock"
+      "index"
     ],
     "*": [
       "common"

@@ -3,8 +3,9 @@ import styles from './film.module.scss';
 import { FilmCardMinimize } from '@/models/FilmCardMinimize';
 import Image from 'next/image';
 import Title from '@/components/UI/Title/Title';
-import Action from '@/components/Slides/FilmSlide/Action/Action';
-import { filmSlideActions } from '@/components/Slides/FilmSlide/constant';
+import useTranslation from 'next-translate/useTranslation';
+import Actions from '@/components/Slides/FilmSlide/Actions/Actions';
+import Feature from '@/components/Slides/FilmSlide/Feature/Feature';
 
 interface FilmSlideProps {
     item: FilmCardMinimize;
@@ -29,10 +30,12 @@ const getStringDuration = (duration: number, isSeries: boolean) => {
     return `${duration}  ${isSeries ? createCorrectWord(suffixSeries) : createCorrectWord(suffixMinutes)}`;
 };
 
-const FilmSlide: FC<FilmSlideProps> = ({ item }) => (
-    <div className={styles.film}>
+const FilmSlide: FC<FilmSlideProps> = ({ item }) => {
+    const { t } = useTranslation();
+    return (<div className={styles.film}>
         <div className={styles.imageWrapper}>
-            <Image alt={'картинка фильма'} src={item.urlImg} fill className={styles.img} />
+            {item.feature ? <Feature feature={item.feature} className={styles.feature} /> : <></>}
+            <Image alt={t('common:filmSlide.image')} src={item.urlImg} fill className={styles.img} />
             <div className={styles.ageLimit}>
                 {item.limitAge}
             </div>
@@ -47,18 +50,16 @@ const FilmSlide: FC<FilmSlideProps> = ({ item }) => (
                     </div>
                     <div className={styles.info}>{item.year}, {item.country},{item.mainGenre}</div>
                     <div className={styles.duration}>{getStringDuration(item.duration, item.isSeries)}</div>
-                    <ul className={styles.actions}>
-                        {filmSlideActions.map(action => <Action key={action} arial={'Смотреть позже'} role={action} />)}
-                    </ul>
+                    <Actions />
                 </div>
             </div>
         </div>
         <Title title={item.title} htmlTagName={'h4'} linkSettings={{ isLink: false }} />
         <p className={`${styles.subscribe} ${item.isSubscribe ? styles.subscribe_active : ''}`}>
-            {item.isSubscribe ? 'Подписка' : 'Бесплатно'}
+            {t(`common:filmSlide.subscription.${item.isSubscribe}`)}
         </p>
 
-    </div>
-);
+    </div>);
+};
 
 export default FilmSlide;

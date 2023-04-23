@@ -5,6 +5,7 @@ import { v4 as uuid } from 'uuid';
 import styles from './swiper.module.scss';
 import { SrOnly } from '@/components/UI/SrOnly/SrOnly';
 import { Navigation } from 'swiper';
+import useTranslation from 'next-translate/useTranslation';
 
 interface DefaultSwiperProps {
     className?: string;
@@ -33,6 +34,7 @@ const DefaultSwiper: FC<DefaultSwiperProps> = ({
                                                    autoPlay,
                                                    isCarousel,
                                                }) => {
+    const {t} = useTranslation();
     return (
         <Swiper initialSlide={initialSlide}
                 modules={[Navigation]}
@@ -60,13 +62,13 @@ const DefaultSwiper: FC<DefaultSwiperProps> = ({
                 className={`${styles.btn} ${styles.btn_prev} ${arrowBackground ? styles.bg : ''} ${isCarousel ? styles.carouselBtn_prev : ''}`}
                 type={'button'}
             >
-                <SrOnly title={'предыдущий слайд'} />
+                <SrOnly title={t('common:defaultSwiper.prevSrOnly')} />
             </button>
             <button
                 className={`${styles.btn} ${styles.btn_next} ${arrowBackground ? styles.bg : ''} ${isCarousel ? styles.carouselBtn_next : ''}`}
                 type={'button'}
             >
-                <SrOnly title={'следующий слайд'} />
+                <SrOnly title={t('common:defaultSwiper.nextSrOnly')} />
             </button>
         </Swiper>);
 };

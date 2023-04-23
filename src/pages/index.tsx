@@ -1,11 +1,13 @@
 import { Layout } from '@/components/layout/Layout';
 import { FilmCardMinimize } from '@/models/FilmCardMinimize';
 import { FirstScreen, InteractiveBlock } from '@/components/Screens';
-import { InteractiveType } from '@/models/InteractiveType';
 import useTranslation from 'next-translate/useTranslation';
+import { InteractiveType } from '@/models/InteractiveType';
+import { v4 as uuid } from 'uuid';
+import { interactiveBlocks } from '@/constants/Index';
 
 export default function Home() {
-    const translation = useTranslation();
+    const { t } = useTranslation();
     const interestingInfo: InteractiveType[] = [
         {
             href: '/',
@@ -54,6 +56,20 @@ export default function Home() {
             isSeries: true,
             href: '/',
             mainGenre: 'Для детей',
+            feature: 'all',
+        }, {
+            title: 'Лунтик и его друзья',
+            year: 2022,
+            urlImg: '/luntik.jpeg',
+            limitAge: '+0',
+            rating: '7,5',
+            country: 'USA',
+            bestCharacteristic: 'сюжет',
+            isSubscribe: true,
+            duration: 0,
+            isSeries: true,
+            href: '/',
+            mainGenre: 'Для детей',
             feature: 'choice',
         }, {
             title: 'Лунтик и его друзья',
@@ -68,7 +84,7 @@ export default function Home() {
             isSeries: true,
             href: '/',
             mainGenre: 'Для детей',
-            feature: 'choice',
+            feature: 'exclusive',
         }, {
             title: 'Лунтик и его друзья',
             year: 2022,
@@ -82,29 +98,19 @@ export default function Home() {
             isSeries: false,
             href: '/',
             mainGenre: 'Для детей',
-            feature: 'choice',
+            feature: 'creating',
         },
     ];
     return (
-        <Layout title={translation.t('common:titles.index', {})}>
+        <Layout title={t('common:titles.index')}>
             <FirstScreen />
-            <InteractiveBlock title={translation.t('index:watchFree')} isCards={true} href={'/'}
-                              info={filmCards} />
-            < InteractiveBlock title={'Сериалы с высоким рейтингом по подписке'} isCards={true} href={'/'}
-                               info={filmCards} />
-            <InteractiveBlock title={'Современные мультфильмы'} isCards={true} href={'/'} info={filmCards} />
-            <InteractiveBlock title={'Сериалы Amediateka'} isCards={true} href={'/'} info={filmCards} />
-            <InteractiveBlock title={'Поймать преступника'} isCards={true} href={'/'} info={filmCards} />
-            <InteractiveBlock title={'Добрые мультсериалы'} isCards={true} href={'/'} info={filmCards} />
-            <InteractiveBlock title={'Российские детективные сериалы'} isCards={true} href={'/'} info={filmCards} />
-            <InteractiveBlock title={'Романтическое кино'} isCards={true} href={'/'} info={filmCards} />
-            <InteractiveBlock title={'Криминальные драмы'} isCards={true} href={'/'} info={filmCards} />
-            <InteractiveBlock title={'Про любовь и не только'} isCards={true} href={'/'} info={filmCards} />
-            <InteractiveBlock title={'Самое интересное'} isCards={false} info={interestingInfo} />
-            <InteractiveBlock title={'Зарубежные мультфильмы'} isCards={true} href={'/'} info={filmCards} />
-            <InteractiveBlock title={'Лучшие фильмы в подписке'} isCards={true} href={'/'} info={filmCards} />
-            <InteractiveBlock title={'Мультфильмы о храбрости'} isCards={true} href={'/'} info={filmCards} />
-            <InteractiveBlock title={'Криминальные триллеры'} isCards={true} href={'/'} info={filmCards} />
+            {interactiveBlocks.map(block => <InteractiveBlock
+                key={uuid()}
+                title={t(`index:${block.block}.title`)}
+                isCards={block.isCard !== false} href={'/'}
+                info={block.isCard !== false ? filmCards : interestingInfo}
+                moreHref={'/'}
+            />)}
         </Layout>
     );
 }
