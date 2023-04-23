@@ -1,0 +1,51 @@
+{
+  "altForBgButton": "задний фон кнопки",
+  "decoration": "молния-декорация",
+  "watchFree": "Смотреть 30 дней бесплатно",
+  "slideButtonText": "Смотреть по подписке",
+  "recommended": {
+    "title": "Рекомендую посмотреть"
+  },
+  "highRates": {
+    "title": "Сериалы с высоким рейтингом по подписке"
+  },
+  "modernCartoons": {
+    "title": "Современные мультфильмы"
+  },
+  "seriesAmediateka": {
+    "title": "Сериалы Amediateka"
+  },
+  "catchCriminal": {
+    "title": "Поймать преступника"
+  },
+  "goodAnimatedSeries": {
+    "title": "Добрые мультсериалы"
+  },
+  "russianDetective": {
+    "title": "Российские детективные сериалы"
+  },
+  "romanticCinema": {
+    "title": "Романтическое кино"
+  },
+  "crimeDramas": {
+    "title": "Криминальные драмы"
+  },
+  "loveAndMore": {
+    "title": "Про любовь и не только"
+  },
+  "mostInteresting": {
+    "title": "Самое интересное"
+  },
+  "foreignCartoons": {
+    "title": "Зарубежные мультфильмы"
+  },
+  "bestMoviesInSubscription": {
+    "title": "Лучшие фильмы в подписке"
+  },
+  "courageCartoons": {
+    "title": "Мультфильмы о храбрости"
+  },
+  "criminalThrillers": {
+    "title": "Криминальные триллеры"
+  }
+}

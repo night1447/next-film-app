@@ -1,3 +1,33 @@
 {
-  "title": "Привет мир"
+  "titles": {
+    "index": "Главная страница Ivi"
+  },
+  "filmCard": {
+    "imageAlt": "фильм",
+    "srOnlyHref": "перейти к фильму"
+  },
+  "defaultSwiper": {
+    "prevSrOnly": "предыдущий слайд",
+    "nextSrOnly": "следующий слайд"
+  },
+  "filmSlide": {
+    "image": "картинка фильма",
+    "actions": {
+      "favourite": "Смотреть позже",
+      "similar": "Похожее",
+      "evaluate": "Уже смотрел, оценить",
+      "dislike": "Не нравится такое"
+    },
+    "subscription": {
+      "false": "Бесплатно",
+      "true": "Подписка"
+    },
+    "moreSlideText": "Показать все",
+    "features": {
+      "all": "все серии сразу",
+      "choice": "выбор Иви",
+      "exclusive": "эксклюзив",
+      "creating": "создано с Иви"
+    }
+  }
 }

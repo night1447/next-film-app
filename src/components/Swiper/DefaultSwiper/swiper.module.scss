@@ -1,0 +1,99 @@
+@import "@/styles/vars";
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  width: 8%;
+  font-size: 32px;
+  font-family: Icons;
+  transition: 0.5s color, background 0.5s, opacity 0.5s;
+
+  &::before {
+    content: '\E048';
+  }
+
+  &:disabled {
+    opacity: 0;
+  }
+
+  &_prev {
+    left: 0;
+    transform: rotate(-180deg);
+  }
+
+  &_next {
+    right: 0;
+  }
+
+  &::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    color: var(--white);
+  }
+
+  &.bg {
+    &:hover {
+      background: linear-gradient(-90deg, rgba(31, 27, 46, 0.5) 0%, rgba(31, 27, 46, 0) 60%);
+    }
+  }
+}
+
+
+.carouselSwiper {
+  width: 100%;
+  padding: 24px;
+  @include adpt($desm-r) {
+    padding: 16px;
+  }
+  @include adpt($tab-r) {
+    padding: 10px;
+  }
+}
+
+.carouselBtn {
+  &_prev {
+    left: -40px;
+    @include adpt($desm-r) {
+      left: -30px;
+    }
+    @include adpt($stab-r) {
+      left: -20px;
+    }
+    @include adpt($bmob-r) {
+      left: -10px;
+    }
+    @include adpt(400) {
+      left: -8px;
+    }
+  }
+
+  &_next {
+    right: -40px;
+    @include adpt($desm-r) {
+      right: -30px;
+    }
+    @include adpt($stab-r) {
+      right: -20px;
+    }
+    @include adpt($bmob-r) {
+      right: -10px;
+    }
+    @include adpt(400) {
+      right: -8px;
+    }
+  }
+}
+
+.slide {
+  border-radius: 8px;
+}
