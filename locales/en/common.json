@@ -1,3 +1,13 @@
 {
-  "title": "Hello world"
+  "titles": {
+    "index": "Main page Ivi"
+  },
+  "filmCard": {
+    "imageAlt": "film",
+    "srOnlyHref": "go to film"
+  },
+  "defaultSwiper": {
+    "prevSrOnly": "prev slide",
+    "nextSrOnly": "next slide"
+  }
 }

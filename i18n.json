@@ -5,6 +5,10 @@
   ],
   "defaultLocale": "ru",
   "pages": {
+    "/": [
+      "FirstScreen",
+      "InteractiveBlock"
+    ],
     "*": [
       "common"
     ]

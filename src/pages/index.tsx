@@ -2,19 +2,22 @@ import { Layout } from '@/components/layout/Layout';
 import { FilmCardMinimize } from '@/models/FilmCardMinimize';
 import { FirstScreen, InteractiveBlock } from '@/components/Screens';
 import { InteractiveType } from '@/models/InteractiveType';
+import useTranslation from 'next-translate/useTranslation';
 
 export default function Home() {
-    const interestingInfo: InteractiveType[] = [{
-        href: '/',
-        urlImg: '/example-interactive-card.jpeg',
-        title: 'Сериалы ivi',
-    }, {
-        href: '/',
-        urlImg: '/example-interactive-card.jpeg',
-        title: 'Сериалы ivi',
-    }, {
-        href: '/',
-        urlImg: '/example-interactive-card.jpeg',
+    const translation = useTranslation();
+    const interestingInfo: InteractiveType[] = [
+        {
+            href: '/',
+            urlImg: '/example-interactive-card.jpeg',
+            title: 'Сериалы ivi',
+        }, {
+            href: '/',
+            urlImg: '/example-interactive-card.jpeg',
+            title: 'Сериалы ivi',
+        }, {
+            href: '/',
+            urlImg: '/example-interactive-card.jpeg',
         title: 'Сериалы ivi',
     }, {
         href: '/',
@@ -37,7 +40,6 @@ export default function Home() {
         urlImg: '/example-interactive-card.jpeg',
         title: 'Сериалы ivi',
     }];
-
     const filmCards: FilmCardMinimize[] = [
         {
             title: 'Лунтик и его друзья',
@@ -83,12 +85,13 @@ export default function Home() {
             feature: 'choice',
         },
     ];
-
     return (
-        <Layout title={'Ivi главная страница'}>
+        <Layout title={translation.t('common:titles.index', {})}>
             <FirstScreen />
-            <InteractiveBlock title={'Рекомендую посмотреть'} isCards={true} href={'/'} info={filmCards} />
-            <InteractiveBlock title={'Сериалы с высоким рейтингом по подписке'} isCards={true} href={'/'} info={filmCards} />
+            <InteractiveBlock title={translation.t('index:watchFree')} isCards={true} href={'/'}
+                              info={filmCards} />
+            < InteractiveBlock title={'Сериалы с высоким рейтингом по подписке'} isCards={true} href={'/'}
+                               info={filmCards} />
             <InteractiveBlock title={'Современные мультфильмы'} isCards={true} href={'/'} info={filmCards} />
             <InteractiveBlock title={'Сериалы Amediateka'} isCards={true} href={'/'} info={filmCards} />
             <InteractiveBlock title={'Поймать преступника'} isCards={true} href={'/'} info={filmCards} />

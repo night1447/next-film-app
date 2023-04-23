@@ -1,0 +1,51 @@
+{
+  "altForBgButton": "button background",
+  "decoration": "lightning-decoration",
+  "watchFree": "Watch 30 days for free",
+  "slideButtonText": "Watch by subscription",
+  "recommended": {
+    "title": "Recommend to see"
+  },
+  "highRates": {
+    "title": "Highly rated series by subscription"
+  },
+  "modernCartoons": {
+    "title": "Modern cartoons"
+  },
+  "seriesAmediateka": {
+    "title": "TV series Amediateka"
+  },
+  "catchCriminal": {
+    "title": "Catch the criminal"
+  },
+  "goodAnimatedSeries": {
+    "title": "Good animated series"
+  },
+  "russianDetective": {
+    "title": "Russian detective series"
+  },
+  "romanticCinema": {
+    "title": "Romantic cinema"
+  },
+  "crimeDramas": {
+    "title": "Crime dramas"
+  },
+  "loveAndMore": {
+    "title": "About love and more"
+  },
+  "mostInteresting": {
+    "title": "The most interesting"
+  },
+  "foreignCartoons": {
+    "title": "Foreign cartoons"
+  },
+  "bestMoviesInSubscription": {
+    "title": "Best movies in subscription"
+  },
+  "courageCartoons": {
+    "title": "Courage cartoons"
+  },
+  "criminalThrillers": {
+    "title": "Crime thrillers"
+  }
+}
