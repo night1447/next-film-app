@@ -1,3 +1,10 @@
+@import "@/styles/vars";
 .title{
   margin-left: 24px;
+  @include adpt($desm-r){
+    margin-left: 12px;
+  }
+  @include adpt($tab-r){
+    margin-left: 0;
+  }
 }
