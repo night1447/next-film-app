@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextTranslate = require('next-translate-plugin')
+const nextTranslate = require('next-translate-plugin');
 
 module.exports = nextTranslate({
     reactStrictMode: true,
@@ -7,5 +7,11 @@ module.exports = nextTranslate({
         locales: ['en', 'ru'],
         defaultLocale: 'ru',
         localeDetection: true,
-    }
-})
+    },
+});
+
+module.exports = {
+    images: {
+        domains: ['st.kp.yandex.net'],
+    },
+};

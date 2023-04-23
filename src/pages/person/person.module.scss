@@ -1,0 +1,28 @@
+.button {
+    padding: 0;
+    color: var(--white);
+    &:hover .arrow {
+        transform: scale(1.2);
+        transition-duration: 0.3s;
+    }
+}
+
+.arrow {
+    font-family: QualityIcons;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+
+    &::before {
+        content: '\E040';
+        font-size: 20px;
+        line-height: 20px;
+    }
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+.container {
+    width: 578px;
+}
