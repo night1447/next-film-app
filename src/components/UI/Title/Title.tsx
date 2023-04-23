@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import styles from './title.module.scss';
 import Link from 'next/link';
-import { Url } from 'url';
 import { routes } from '@/routes/routes';
 
 type TitleProps = {
@@ -12,7 +11,7 @@ type TitleProps = {
         decorating?: 'arrow' | 'underline' | false,
         isWholeTitle?: boolean,
         linkedPartTitle?: string,
-        path?: Url,
+        path?: string,
         className?: string
     },
     className?: string

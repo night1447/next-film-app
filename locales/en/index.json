@@ -1,0 +1,68 @@
+{
+  "altForBgButton": "button background",
+  "decoration": "lightning-decoration",
+  "watchFree": "Watch 30 days for free",
+  "slideButtonText": "Watch by subscription",
+  "recommended": {
+    "title": "Recommend to see"
+  },
+  "highRates": {
+    "title": "Highly rated series by subscription"
+  },
+  "modernCartoons": {
+    "title": "Modern cartoons"
+  },
+  "seriesAmediateka": {
+    "title": "TV series Amediateka"
+  },
+  "catchCriminal": {
+    "title": "Catch the criminal"
+  },
+  "goodAnimatedSeries": {
+    "title": "Good animated series"
+  },
+  "russianDetective": {
+    "title": "Russian detective series"
+  },
+  "romanticCinema": {
+    "title": "Romantic cinema"
+  },
+  "crimeDramas": {
+    "title": "Crime dramas"
+  },
+  "loveAndMore": {
+    "title": "About love and more"
+  },
+  "mostInteresting": {
+    "title": "The most interesting"
+  },
+  "foreignCartoons": {
+    "title": "Foreign cartoons"
+  },
+  "bestMoviesInSubscription": {
+    "title": "Best movies in subscription"
+  },
+  "courageCartoons": {
+    "title": "Courage cartoons"
+  },
+  "criminalThrillers": {
+    "title": "Crime thrillers"
+  },
+  "description": {
+    "title": "Evie Online Cinema: Movies in good quality are always a real pleasure",
+    "displayDescription": "Every day, millions of people search for movies online, and no one wants to make things difficult for themselves - and you must be one of them! And if so, then Evie is exactly the resource that you need. Literally separates you from the best films in HD quality",
+    "paragraph": "Ivy's video library is a constantly growing collection in RuNet, which has more than 60 thousand domestic and foreign content available for viewing online. We were the first in Russia to sign contracts with the largest Hollywood studios (Walt Disney, Warner Bros., Sony, 20th Century Fox, Universal, Paramount, MGM and others) and we constantly cooperate with the largest Russian companies and TV channels",
+    "secondTitle": "Online cinema ivi.ru is:",
+    "featureList": {
+      "0": "a unique recommendation system that takes into account your preferences and offers to watch exactly what you will definitely like;",
+      "1": "one-touch viewing on any of the devices connected to your Ivy account - from smartphones to TVs with Smart TV technology;",
+      "2": "the ability to download licensed content to the memory of a mobile device and watch it without access to the Internet;",
+      "3": "unique conditions and benefits for owners of the Evie subscription, which makes movie viewing comfortable and enjoyable;",
+      "4": "convenient and advanced notification system, you will not miss the release of a cool discussed blockbuster - we will notify you of the appearance in a way suitable for you;",
+      "5": "the ability to add movies to \"watch later\" to return to them in your free time;",
+      "6": "content that does not require installing video players or looking for codecs to view;",
+      "7": "viewing online content of good resolution without registration and SMS."
+    },
+    "secondParagraph": "Discover the opportunity to watch movies online for free in excellent quality with the Ivy cinema!"
+  }
+}

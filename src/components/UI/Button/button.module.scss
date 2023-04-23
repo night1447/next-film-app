@@ -1,88 +1,91 @@
 .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 16px;
-  border-radius: 8px;
-  padding: 9px 15px;
-  border-width: 1px;
-  color: var(--white);
-  transition: background-color 0.5s, color 0.5s, border-color 0.5s, padding 0.5s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 8px;
+    padding: 9px 15px;
+    border-width: 1px;
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s, border-color 0.5s,
+        padding 0.5s;
 }
 
 .accent {
-  background-color: var(--accent);
+    background-color: var(--accent);
 
-  &:hover {
-    background-color: var(--accent-light);
-  }
+    &:hover {
+        background-color: var(--accent-light);
+    }
 }
 
 .big {
-  font-size: 15px;
-  line-height: 20px;
+    font-size: 15px;
+    line-height: 20px;
 }
 
 .border {
-  padding: 7px 11px;
-  border: 1px solid var(--border);
+    padding: 7px 11px;
+    border: 1px solid var(--border);
 
-  &:hover {
-    border-color: var(--white);
-  }
+    &:hover {
+        border-color: var(--white);
+    }
 }
 
 .gray-opacity {
-  background-color: var(--gray-opacity);
-  color: var(--btn-text);
+    background-color: var(--gray-opacity);
+    color: var(--btn-text);
 
-  &:hover {
-    background-color: var(--gray-opacity-active);
-  }
+    &:hover {
+        background-color: var(--gray-opacity-active);
+    }
 }
 
 .accent-transparent {
-  background-color: var(--acent-transparent);
+    background-color: var(--acent-transparent);
 
-  &:hover {
-    background-color: var(--accent-light);
-  }
+    &:hover {
+        background-color: var(--accent-light);
+    }
 }
 
 .transparent {
-  color: var(--btn-text);
+    color: var(--btn-text);
 
-  &:hover {
-    color: var(--white);
-  }
+    &:hover {
+        color: var(--white);
+    }
 }
 
 .violet {
-  background-color: var(--violet);
+    background-color: var(--violet);
 
-  &:hover {
-    color: var(--white);
-    background-color: var(--violet-active);
-  }
+    &:hover {
+        color: var(--white);
+        background-color: var(--violet-active);
+    }
 }
 
 .icon {
-  font-family: Icons;
-  margin-right: 6px;
+    font-family: Icons;
+    margin-right: 6px;
 
-  &::before {
-    content: attr(data-icon);
-    font-size: 16px;
-    line-height: 16px;
-  }
+    &::before {
+        content: attr(data-icon);
+        font-size: 16px;
+        line-height: 16px;
+    }
 }
-.image{
-  margin-right: 6px;
+.image {
+    margin-right: 6px;
 }
-.rounded{
-   border-radius: 50%;
-  min-height: 48px;
-  min-width: 48px;
+.rounded {
+    border-radius: 50%;
+    min-height: 40px;
+    min-width: 40px;
+    padding: 0;
 }

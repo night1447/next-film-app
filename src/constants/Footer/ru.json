@@ -1,0 +1,107 @@
+{
+    "about": {
+        "title": "О нас",
+        "links": [
+            {
+                "title": "О компании",
+                "url": "https://corp.ivi.ru/?_gl=1*17bxxo7*_ga*MTczODMyOTI3NC4xNjgxMjExNDYz*_ga_GETQ4387MJ*MTY4MTYyMjY1My43LjAuMTY4MTYyMjY1My42MC4wLjA."
+            },
+            {
+                "title": "Вакансии",
+                "url": "https://corp.ivi.ru/career/?_gl=1*1it1arv*_ga*MTczODMyOTI3NC4xNjgxMjExNDYz*_ga_GETQ4387MJ*MTY4MTYyMjY1My43LjAuMTY4MTYyMjY1My42MC4wLjA.#career-vacancy-block"
+            },
+            {
+                "title": "Программа бета-тестирования",
+                "url": "https://www.ivi.ru/pages/beta"
+            },
+            {
+                "title": "Информация для партнёров",
+                "url": "https://www.ivi.ru/info/partners"
+            },
+            {
+                "title": "Размещение рекламы",
+                "url": "https://corp.ivi.ru/advertisers/?_gl=1*1it1arv*_ga*MTczODMyOTI3NC4xNjgxMjExNDYz*_ga_GETQ4387MJ*MTY4MTYyMjY1My43LjAuMTY4MTYyMjY1My42MC4wLjA."
+            },
+            {
+                "title": "Пользовательское соглашение",
+                "url": "https://www.ivi.ru/info/agreement"
+            },
+            {
+                "title": "Политика конфиденциальности",
+                "url": "https://www.ivi.ru/info/confidential"
+            },
+            {
+                "title": "Комплеанс",
+                "url": "https://www.ivi.ru/info/goryachaya-liniya-komplaens"
+            }
+        ]
+    },
+    "sections": {
+        "title": "Разделы",
+        "links": [
+            {
+                "title": "Мой Иви",
+                "url": "/"
+            },
+            {
+                "title": "Что нового",
+                "url": "https://www.ivi.ru/new"
+            },
+            {
+                "title": "Фильмы",
+                "url": "/movies"
+            },
+            {
+                "title": "Сериалы",
+                "url": "/serials"
+            },
+            {
+                "title": "Мульфильмы",
+                "url": "/animation"
+            },
+            {
+                "title": "TV+",
+                "url": "https://www.ivi.ru/tvplus"
+            },
+            {
+                "title": "Что посмотреть",
+                "url": "https://www.ivi.ru/goodmovies"
+            }
+        ]
+    },
+    "certificateText": "Активация сертификата",
+    "service": {
+        "title": "Служба поддержки",
+        "text": "Мы всегда готовы вам помочь. Наши операторы онлайн 24/7",
+        "button": "Написать в чат",
+        "linkText": "Ответы на вопросы"
+    },
+    "widgetText": "Смотрите фильмы, сериалы и мульфильмы без рекламы",
+    "buttonGroup": [
+        {
+            "light": "Загрузить в",
+            "bold": "App Store",
+            "url": "https://go.onelink.me/app/devicesiOS",
+            "img": "appStore"
+        },
+        {
+            "light": "Доступно в",
+            "bold": "Google Play",
+            "url": "https://go.onelink.me/app/devicesAndroid",
+            "img": "googlePlay"
+        },
+        {
+            "light": "Смотрите на",
+            "bold": "Smart TV",
+            "url": "https://www.ivi.ru/pages/tvsmart",
+            "img": "E35C"
+        },
+        {
+            "light": "",
+            "bold": "Все устройства",
+            "url": "https://www.ivi.ru/devices",
+            "img": "E02B"
+        }
+    ],
+    "copyright": "© 2023 ООО «Иви.ру»"
+}

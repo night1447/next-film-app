@@ -5,6 +5,9 @@
   ],
   "defaultLocale": "ru",
   "pages": {
+    "/": [
+      "index"
+    ],
     "*": [
       "common"
     ]

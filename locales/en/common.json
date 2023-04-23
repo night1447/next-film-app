@@ -123,4 +123,40 @@
             "documentary": "Documentary"
         }
     }
+},
+  "titles": {
+    "index": "Main page Ivi"
+  },
+  "filmCard": {
+    "imageAlt": "film",
+    "srOnlyHref": "go to film"
+  },
+  "defaultSwiper": {
+    "prevSrOnly": "prev slide",
+    "nextSrOnly": "next slide"
+  },
+  "filmSlide": {
+    "image": "image film",
+    "actions": {
+      "favourite": "Watch later",
+      "similar": "Similar",
+      "evaluate": "Already watched, evaluate",
+      "dislike": "Don't like this"
+    },
+    "subscription": {
+      "false": "Free",
+      "true": "Subscription"
+    },
+    "moreSlideText": "Show all",
+    "features": {
+      "all": "all episodes at once",
+      "choice": "Evie's choice",
+      "exclusive": "exclusive",
+      "creating": "created with Evie"
+    }
+  },
+  "description": {
+    "open": "Expand",
+    "close": "Collapse"
+  }
 }
