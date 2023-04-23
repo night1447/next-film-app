@@ -1,3 +1,4 @@
+@import "@/styles/vars";
 .btn {
   display: flex;
   justify-content: center;
@@ -51,15 +52,45 @@
 .carouselSwiper {
   width: 100%;
   padding: 24px;
+  @include adpt($desm-r) {
+    padding: 16px;
+  }
+  @include adpt($tab-r) {
+    padding: 10px;
+  }
 }
 
 .carouselBtn {
   &_prev {
     left: -40px;
+    @include adpt($desm-r) {
+      left: -30px;
+    }
+    @include adpt($stab-r) {
+      left: -20px;
+    }
+    @include adpt($bmob-r) {
+      left: -10px;
+    }
+    @include adpt(400) {
+      left: -8px;
+    }
   }
 
   &_next {
     right: -40px;
+    @include adpt($desm-r) {
+      right: -30px;
+    }
+    @include adpt($stab-r) {
+      right: -20px;
+    }
+    @include adpt($bmob-r) {
+      right: -10px;
+    }
+    @include adpt(400) {
+      right: -8px;
+    }
   }
 }
 

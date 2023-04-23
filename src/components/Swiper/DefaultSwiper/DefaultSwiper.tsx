@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
-import { v4 as uuid } from 'uuid';
 import styles from './swiper.module.scss';
 import { SrOnly } from '@/components/UI/SrOnly/SrOnly';
-import { Navigation } from 'swiper';
+import { Navigation, SwiperOptions } from 'swiper';
 import useTranslation from 'next-translate/useTranslation';
+import { v4 as uuid } from 'uuid';
 
 interface DefaultSwiperProps {
     className?: string;
@@ -19,6 +19,7 @@ interface DefaultSwiperProps {
     arrowBackground: boolean;
     isCarousel?: boolean;
     initialSlide?: number;
+    breakPoints?: { [p: number]: SwiperOptions };
 }
 
 const DefaultSwiper: FC<DefaultSwiperProps> = ({
@@ -31,6 +32,7 @@ const DefaultSwiper: FC<DefaultSwiperProps> = ({
                                                    wrapperClassName,
                                                    spaceBetween,
                                                    initialSlide,
+                                                   breakPoints,
                                                    autoPlay,
                                                    isCarousel,
                                                }) => {
@@ -44,6 +46,7 @@ const DefaultSwiper: FC<DefaultSwiperProps> = ({
                     prevEl: `.${styles.btn_prev}`,
                 }
                 }
+                breakpoints={breakPoints}
                 spaceBetween={spaceBetween}
                 slidesPerView={slidesPerView}
                 centeredSlides={centered || false}

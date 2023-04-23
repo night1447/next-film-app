@@ -20,6 +20,20 @@ const getSlides = (info: FilmCardMinimize[], moreHref: string): React.ReactNode[
 const CardSwiper: FC<CardSwiperProps> = ({ info, moreHref }) => {
     return <DefaultSwiper slidesPerView={7}
                           slides={getSlides(info, moreHref)}
+                          breakPoints={{
+                              1380: {
+                                  slidesPerView: 7,
+                              },
+                              1024: {
+                                  slidesPerView: 5,
+                              },
+                              576: {
+                                  slidesPerView: 4,
+                              },
+                              120: {
+                                  slidesPerView: 2,
+                              },
+                          }}
                           spaceBetween={24}
                           isCarousel={true}
                           arrowBackground={false} />;

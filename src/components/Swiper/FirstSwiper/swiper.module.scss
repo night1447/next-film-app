@@ -1,3 +1,4 @@
+@import "@/styles/vars";
 .FirstSwiper {
   width: 100%;
   align-items: center;
@@ -28,6 +29,13 @@
     opacity: 0.3;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
   }
+
+  @include adpt($stab-r) {
+    min-height: 250px;
+  }
+  @include adpt($bmob-r) {
+    min-height: 150px;
+  }
 }
 
 .image {
@@ -44,6 +52,9 @@
   z-index: 2;
   left: 24px;
   bottom: 24px;
+  @include adpt($bmob-r) {
+    display: none;
+  }
 }
 
 .href {
@@ -57,6 +68,3 @@
   }
 }
 
-.prev, .next {
-  background-color: transparent;
-}

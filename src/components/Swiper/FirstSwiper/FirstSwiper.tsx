@@ -58,6 +58,19 @@ const FirstSwiper: FC<FirstSwiperProps> = ({ className }) => {
                           autoPlay={true}
                           arrowBackground={true}
                           slidesPerView={1.2}
+                          breakPoints={{
+                              768: {
+                                  spaceBetween: 30,
+                              },
+                              576: {
+                                  slidesPerView: 1.2,
+                                  spaceBetween: 24,
+                              },
+                              120: {
+                                  slidesPerView: 1.1,
+                                  spaceBetween: 12,
+                              },
+                          }}
                           spaceBetween={30}
                           className={className}
     />;

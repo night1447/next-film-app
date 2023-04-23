@@ -15,6 +15,20 @@ const LinkSwiper: FC<LinkSwiperProps> = ({ info }) => {
         arrowBackground={false}
         spaceBetween={24}
         slidesPerView={4}
+        breakPoints={{
+            1380: {
+                slidesPerView: 4,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+            576: {
+                slidesPerView: 2,
+            },
+            120: {
+                slidesPerView: 1.1,
+            },
+        }}
         isInfinity={false}
         isCarousel={true}
         slides={getSlides(info)} />;

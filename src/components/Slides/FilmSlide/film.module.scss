@@ -1,3 +1,4 @@
+@import "@/styles/vars";
 .film {
   position: relative;
   min-height: 250px;
@@ -111,6 +112,9 @@
   opacity: 0;
   transition: opacity 0.5s;
   top: 10px;
+  @include adpt($bmob-r) {
+    display: none;
+  }
 }
 
 .rating {
