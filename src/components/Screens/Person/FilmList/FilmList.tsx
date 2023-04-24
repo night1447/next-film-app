@@ -58,7 +58,7 @@ const FilmList: FC<FilmListProps> = ({ person }) => {
     const allCount = allMovies.length;
     const allWord = declOfNum(allCount, words);
 
-    const alsoCount = allMovies.length - 5;
+    const alsoCount = filteredMovies.length - 5;
     const alsoWord = declOfNum(alsoCount, words);
 
     return (
@@ -104,7 +104,7 @@ const FilmList: FC<FilmListProps> = ({ person }) => {
                     />
                 ))}
             </div>
-            {alsoCount > 0 && (
+            {alsoCount > 0 && !showAllMovies && (
                 <Button
                     variants="transparent"
                     onClick={() => setShowAllMovies(true)}
