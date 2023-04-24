@@ -1,23 +1,25 @@
 import React, { FC, useEffect } from 'react';
 import styles from './FilmList.module.scss';
-import { Movie, Person, Profession } from '../types';
+import { Movie, Person, Profession } from '@/models/PersonType';
 import { Button } from '@/components/UI/Button/Button';
-import Image from 'next/image';
 import useTranslation from 'next-translate/useTranslation';
 import FilmListItem from './FilmListItem/FilmListItem';
+import { declOfNum, getTranslateArrayElement } from '@/utils/string';
+import { professionsTranslate } from '@/constants/professions';
 
 interface FilmListProps {
     person: Person;
 }
 
 const FilmList: FC<FilmListProps> = ({ person }) => {
-    const { lang } = useTranslation();
+    const { t, lang } = useTranslation('person');
     const [selectedList, setSelectedList] = React.useState('все');
     const [showAllMovies, setShowAllMovies] = React.useState(false);
 
     const professions = person.professions.map((profession) =>
         profession.name.slice(0, -1),
     );
+
     const filmLists = ['все', ...professions];
 
     const allMovies: Movie[] = person.professions.reduce(
@@ -50,28 +52,21 @@ const FilmList: FC<FilmListProps> = ({ person }) => {
         ? filteredMovies
         : filteredMovies.slice(0, 5);
 
-    function declOfNum(number: number, words: [string, string, string]) {
-        return words[
-            number % 100 > 4 && number % 100 < 20
-                ? 2
-                : [2, 0, 1, 1, 1, 2][
-                      number % 10 < 5 ? Math.abs(number) % 10 : 5
-                  ]
-        ];
-    }
+    const words =
+        lang === 'ru' ? ['фильм', 'фильма', 'фильмов'] : ['film', 'films'];
 
-    function declOfNumEn(number: number, words: [string, string]) {
-        return words[number > 1 ? 1 : 0];
-    }
+    const allCount = allMovies.length;
+    const allWord = declOfNum(allCount, words);
+
+    const alsoCount = allMovies.length - 5;
+    const alsoWord = declOfNum(alsoCount, words);
 
     return (
         <div className={styles.FilmList}>
             <div className={styles.info}>
-                <h1>
-                    {lang === 'ru' ? 'Полная фильмография' : 'Full filmography'}
-                </h1>
+                <h1>{t('fullFilmography')}</h1>
                 <p>
-                    {allMovies.length} {lang === 'ru' ? 'фильмов' : 'films'}
+                    {allCount} {allWord}
                 </p>
             </div>
             <div className={styles.lists}>
@@ -84,7 +79,12 @@ const FilmList: FC<FilmListProps> = ({ person }) => {
                             list === selectedList ? styles.selected : ''
                         }`}
                     >
-                        {list}
+                        {lang === 'ru'
+                            ? list
+                            : getTranslateArrayElement(
+                                  list,
+                                  professionsTranslate,
+                              )}
                     </Button>
                 ))}
             </div>
@@ -104,25 +104,13 @@ const FilmList: FC<FilmListProps> = ({ person }) => {
                     />
                 ))}
             </div>
-            {moviesToShow.length === filteredMovies.length ? (
-                ''
-            ) : (
+            {alsoCount > 0 && (
                 <Button
                     variants="transparent"
                     onClick={() => setShowAllMovies(true)}
                     className={styles.allMovies}
                 >
-                    {lang === 'ru' ? 'Еще' : 'Also'}{' '}
-                    {filteredMovies.length - moviesToShow.length}{' '}
-                    {lang === 'ru'
-                        ? declOfNum(
-                              filteredMovies.length - moviesToShow.length,
-                              ['фильм', 'фильма', 'фильмов'],
-                          )
-                        : declOfNumEn(
-                              filteredMovies.length - moviesToShow.length,
-                              ['film', 'films'],
-                          )}
+                    {t('also')} {alsoCount} {alsoWord}
                 </Button>
             )}
         </div>

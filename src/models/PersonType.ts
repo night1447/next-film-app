@@ -1,4 +1,4 @@
-export interface Movie {
+export type Movie = {
     id: number;
     name: string;
     enName: string | null;
@@ -6,18 +6,18 @@ export interface Movie {
     rating: number;
     year: number;
     poster: string;
-}
+};
 
-export interface Profession {
+export type Profession = {
     id: number;
     name: string;
     movies: Movie[];
-}
+};
 
-export interface Person {
+export type Person = {
     id: number;
     name: string;
     enName: string;
     photo: string;
     professions: Profession[];
-}
+};

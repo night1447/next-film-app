@@ -20,7 +20,7 @@ const FilmListItem: FC<FilmListItemProps> = ({
     rating,
     href,
 }) => {
-    const { lang } = useTranslation();
+    const { t, lang } = useTranslation('person');
 
     return (
         <Link href={href} className={styles.FilmListItem}>
@@ -37,11 +37,11 @@ const FilmListItem: FC<FilmListItemProps> = ({
                     <p className={styles.year}>{year}</p>
                     <p className={styles.name}>{name}</p>
                     <p className={styles.rating}>
-                        {lang === 'ru' ? 'Рейтинг' : 'Rating'}: {rating}
+                        {t('rating')}: {rating}
                     </p>
                 </div>
                 <Button variants="violet" className={styles.button}>
-                    Подробнее
+                    {t('detail')}
                 </Button>
             </div>
         </Link>
