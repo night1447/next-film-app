@@ -1,0 +1,17 @@
+.button {
+  padding: 0;
+  color: hsla(0, 0, 100%, .88);
+}
+
+.displayDescription {
+  &::after {
+    content: "...";
+  }
+
+  &.active {
+    &::after {
+      content: "";
+    }
+  }
+}
+

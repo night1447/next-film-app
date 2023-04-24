@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    width: 840px;
+    span {
+        display: flex;
+        width: 420px;
+        a {
+            margin: 5px;
+        }
+        img {
+            border-radius: 10px;
+        }
+    }
+}
+
+.left {
+    animation: left 40s linear infinite;
+}
+.right {
+    animation: right 40s linear infinite;
+}
+
+@keyframes left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

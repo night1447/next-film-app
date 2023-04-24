@@ -1,0 +1,55 @@
+.container {
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    width: 810px;
+    padding-right: 10px;
+    div {
+        font-size: 20px;
+        line-height: 20px;
+        font-family: QualityIcons;
+    }
+    a {
+        margin: 10px;
+    }
+}
+.purchases {
+    &::before {
+        content: '\E26C';
+    }
+}
+.watch {
+    &::before {
+        content: '\E12F';
+    }
+}
+.story {
+    &::before {
+        content: '\E222';
+    }
+}
+.subscriptions {
+    &::before {
+        content: '\E307';
+    }
+}
+.certificate {
+    &::before {
+        content: '\E080';
+    }
+}
+.entrance {
+    &::before {
+        content: '\E3AD';
+    }
+}
+.payment {
+    &::before {
+        content: '\E06D';
+    }
+}
+.friends {
+    &::before {
+        content: '\E021';
+    }
+}

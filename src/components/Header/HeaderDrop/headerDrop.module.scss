@@ -1,0 +1,83 @@
+.modal {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    z-index: 10;
+    background: var(--violet);
+    border-radius: 0 0 20px 20px;
+    height: auto;
+    padding: 30px 20px;
+    width: 100%;
+    border-top: 0.3px solid var(--white);
+    max-width: 1215px;
+    border-top: 0.5px solid var(--border);
+}
+
+.tvList {
+    width: 180px;
+    height: 200px;
+}
+
+.tvButton {
+    width: 100%;
+    color: var(--white);
+}
+
+.TVprog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    border-right: 1px solid var(--border);
+}
+
+.notifications {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.notificationIcon {
+    font-family: QualityIcons;
+    font-size: 72px;
+    line-height: 72px;
+    position: relative;
+    margin: 40px 0 20px 0;
+
+    &::before {
+        content: '\E302';
+    }
+
+    &::after {
+        content: '\E301';
+        position: absolute;
+        left: 0;
+    }
+}
+
+.notificationParagraph {
+    margin-bottom: 40px;
+}
+
+.authButtons {
+    padding-left: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.authShell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.authButton {
+    padding: 0;
+}

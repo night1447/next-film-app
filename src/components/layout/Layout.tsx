@@ -1,12 +1,24 @@
 import { FC, PropsWithChildren } from 'react';
-import Footer from './Footer/Footer';
+import { Meta } from '@/seo/Meta';
+import Footer from '@/components/layout/Footer/Footer';
+import Main from '@/components/layout/Main/Main';
+import { Header } from '@/components/Header/Header';
 
-const Layout: FC<PropsWithChildren<unknown>> = ({ children }) => {
+interface LayoutProps {
+    title: string;
+    description?: string;
+}
+
+export const Layout: FC<PropsWithChildren<LayoutProps>> = ({
+    title,
+    description,
+    children,
+}) => {
     return (
-        <div>
-            {children}
+        <Meta title={title} description={description}>
+            <Header />
+            <Main>{children}</Main>
             <Footer />
-        </div>
+        </Meta>
     );
 };
-export default Layout;

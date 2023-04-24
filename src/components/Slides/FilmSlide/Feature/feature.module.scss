@@ -1,0 +1,33 @@
+.feature {
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  padding: 2px 8px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  left: -4px;
+  top: 4px;
+  color: var(--white);
+  line-height: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  transition: top 0.5s;
+}
+
+.creating, .choice {
+  background-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(234, 0, 61, .4);
+}
+
+.all {
+  background-color: var(--green);
+  box-shadow: 0 4px 12px rgba(115, 163, 47, .4);
+}
+
+.exclusive {
+  background-color: var(--orange);
+  box-shadow: 0 4px 12px rgba(255, 84, 46, .4);
+}
