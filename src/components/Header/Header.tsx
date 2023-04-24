@@ -9,7 +9,12 @@ import { HeaderDrop } from './HeaderDrop/HeaderDrop';
 import { IHeaderDrop } from '@/components/Header/types';
 
 let initialType: IHeaderDrop = '';
-export const Header: FC = () => {
+
+interface HeaderProps {
+    border?: boolean;
+}
+
+export const Header: FC<HeaderProps> = ({ border }) => {
     const { t } = useTranslation();
     const [showHeaderDrop, setShowHeaderDrop] = useState(false);
     const [typeModal, setTypeModal] = useState(initialType);
@@ -30,9 +35,9 @@ export const Header: FC = () => {
     const showHeaderBottomHandler = () => setShowHeaderDrop(true);
 
     return (
-        <header className={`${style.header}`}>
+        <header className={`${style.header} ${border ? style.borderMargin : ''}`}>
             <Container>
-                <div className={`${style.wrapper} ${showHeaderDrop && style.modal}`}>
+                <div className={`${style.wrapper} ${showHeaderDrop && style.modal} ${border ? style.border : ''}`}>
                     <Logo />
                     <Navigation
                         flex={true}

@@ -20,6 +20,7 @@
 
 .selections {
   height: 100%;
+  border-left: 1px solid var(--border);
 
   ul {
     li {
@@ -42,5 +43,4 @@
 .countries {
   width: 190px;
   padding-right: 30px;
-  border-right: 1px solid var(--border);
 }
