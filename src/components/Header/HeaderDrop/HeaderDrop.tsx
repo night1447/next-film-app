@@ -22,7 +22,7 @@ export const HeaderDrop: FC<IHeaderBottom> = ({ onHover, onEver, type }) => {
                 onMouseEnter={() => onHover()}
                 onMouseLeave={() => onEver()}>
                 <List type={type} listType={'genres'} />
-                <div className={style.countries}>
+                <div className={style.border}>
                     <List type={type} listType={'countries'} />
                     <List type={type} listType={'years'} />
                 </div>
