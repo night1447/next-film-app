@@ -7,6 +7,7 @@ import { Header } from '@/components/Header/Header';
 interface LayoutProps {
     title: string;
     description?: string;
+    border?: boolean;
 }
 
 export const Layout: FC<PropsWithChildren<LayoutProps>> = ({

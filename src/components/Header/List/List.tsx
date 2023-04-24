@@ -15,7 +15,7 @@ const List: FC<ListProps> = ({ listType, type, className }) => {
     const { t } = useTranslation();
     let list = getTypeForHeaderDrop(type, listType);
     return (
-        <div className={`${styles[listType]} ${className}`}>
+        <div className={`${styles[listType]} ${className || ''}`}>
             {listType !== 'selections' ?
                 <Title
                     className={styles.title}
