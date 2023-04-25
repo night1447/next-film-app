@@ -1,14 +1,16 @@
 import { TranslateArray } from '@/models/TranslateArray';
 
-export const declOfNum = (number: number, word: string[]) => {
-    return word.length === 2
-        ? word[number > 1 ? 1 : 0]
-        : word[
-              number % 100 > 4 && number % 100 < 20
+export const declOfNum = (number: number, words: string[]) => {
+    return words.length === 2
+        ? words[number > 1 ? 1 : 0]
+        : words[
+              number % 100 > 10 && number % 100 < 15
                   ? 2
-                  : [2, 0, 1, 1, 1, 2][
-                        number % 10 < 5 ? Math.abs(number) % 10 : 5
-                    ]
+                  : number % 10 === 1
+                  ? 0
+                  : number % 10 > 1 && number % 10 < 5
+                  ? 1
+                  : 2
           ];
 };
 
