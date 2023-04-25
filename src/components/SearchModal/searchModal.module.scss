@@ -1,3 +1,4 @@
+@import "@/styles/vars";
 .searchButton {
   &::before {
     content: "\E33D";
@@ -25,7 +26,10 @@
 }
 
 .wrapper {
-  width: 80%;
+  width: 60%;
+  @include adpt($desm-r){
+    width: 90%;
+  }
 }
 
 .title {

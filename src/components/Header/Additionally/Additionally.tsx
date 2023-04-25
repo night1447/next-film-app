@@ -14,10 +14,13 @@ export const Additionally: FC<IAdditionally> = ({ onHover, onHide }) => {
     const [showSearch, setShowSearch] = useState(false);
     const openSearchHandler = () => {
         setShowSearch(true);
+        document.body.style.overflow = 'hidden';
     };
 
     const closeModalHandler = () => {
         setShowSearch(false);
+        document.body.style.overflow = '';
+
     };
 
     return (

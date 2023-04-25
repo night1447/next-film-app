@@ -8,6 +8,7 @@ interface InputProps {
     type: string;
     value: string;
     className?: string;
+    onFocus?: () => void;
     onInput?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     onBlur?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -21,6 +22,7 @@ const Input: FC<PropsWithChildren<InputProps>> = ({
                                                       title,
                                                       onInput,
                                                       onBlur,
+                                                      onFocus,
                                                       onChange,
                                                       className,
                                                   }) => (
@@ -31,6 +33,7 @@ const Input: FC<PropsWithChildren<InputProps>> = ({
                className={styles.input}
                onInput={onInput}
                onBlur={onBlur}
+               onFocus={onFocus}
                onChange={onChange}
         />
         <span className={styles.title}>{title}</span>

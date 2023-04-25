@@ -32,7 +32,14 @@ const getStringDuration = (duration: number, isSeries: boolean) => {
 
 const FilmSlide: FC<FilmSlideProps> = ({ item }) => {
     const { t } = useTranslation();
-    return (<div className={styles.film}>
+
+    const goToHrefHandler = (e: React.MouseEvent<HTMLDivElement>) => {
+        e.stopPropagation();
+        if (!(e.target as HTMLDivElement).closest(`.${styles.actions}`))
+            location.href = item.href;
+    };
+
+    return (<div className={styles.film} onClick={goToHrefHandler}>
         <div className={styles.imageWrapper}>
             {item.feature ? <Feature feature={item.feature} className={styles.feature} /> : <></>}
             <Image alt={t('common:filmSlide.image')} src={item.urlImg} fill className={styles.img} />
@@ -58,7 +65,6 @@ const FilmSlide: FC<FilmSlideProps> = ({ item }) => {
         <p className={`${styles.subscribe} ${item.isSubscribe ? styles.subscribe_active : ''}`}>
             {t(`common:filmSlide.subscription.${item.isSubscribe}`)}
         </p>
-
     </div>);
 };
 
