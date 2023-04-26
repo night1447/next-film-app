@@ -1,3 +1,5 @@
+@import '../../styles/vars';
+
 .container{
     position: fixed;
     bottom: 0;
@@ -11,7 +13,7 @@
     background-color: rgba(31, 27, 46, 0.88);
 }
 .openAppBtn {
-    background-image: linear-gradient(270deg, #ea003d, #c447ff);
+    background-image: linear-gradient(270deg, var(--accent), #c447ff);
     background-origin: border-box;
     border-color: transparent;
     color: #fff;
@@ -41,7 +43,7 @@
     top: 0;
     width: 64px;
     height: 48px;
-    background-image: url(https://solea-parent.dfs.ivi.ru/picture/7e798f,7e798f/tabBarGlow.svg);
+    background-image: url("https://solea-parent.dfs.ivi.ru/picture/7e798f,7e798f/tabBarGlow.svg");
     background-size: 64px 48px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -97,12 +99,7 @@
     }
 }
 
-@media (min-width: 1160px) {
-    .container{
-        display: none;
-    }
-}
-@media (max-width: 600px) {
+@include adpt($bmob-r){
     .btns {
         width: 100%;
     }
@@ -111,3 +108,10 @@
         left: 7.5%;
     }
 }
+
+@media (min-width: 1160px) {
+    .container{
+        display: none;
+    }
+}
+

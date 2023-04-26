@@ -1,5 +1,5 @@
 import style from './MobileMenu.module.scss';
-import React, { FC, useState } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { Button } from '@/components/UI/Button/Button';
 import { useRouter } from 'next/router';
@@ -37,7 +37,7 @@ export const MobileMenu: FC = () => {
         },
     ];
 
-    const getItem = (item: Item) => {
+    const getItem = useCallback((item: Item) => {
         return (
             <Button
                 key={item.text}
@@ -65,7 +65,7 @@ export const MobileMenu: FC = () => {
                 </div>
             </Button>
         );
-    };
+    }, [items]);
 
     return (
         <div className={style.container}>
