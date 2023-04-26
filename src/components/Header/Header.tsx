@@ -74,7 +74,8 @@ export const Header: FC<HeaderProps> = ({ border }) => {
                         ]} />
                     <Additionally
                         onHide={hideHeaderBottomHandler}
-                        onHover={hoverHandler} /></div>
+                        onHover={hoverHandler} />
+                </div>
             </Container>
             {showHeaderDrop && (
                 <HeaderDrop

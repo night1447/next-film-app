@@ -1,0 +1,78 @@
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.item {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+
+  &:hover {
+    .title {
+      color: var(--accent);
+    }
+  }
+}
+
+.title {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  transition: color 0.5s;
+}
+
+.addingInfo {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.icon {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: QualityIcons;
+  color: var(--accent);
+}
+
+.film {
+  &::before {
+    content: '\E135';
+  }
+}
+
+.tv {
+  &::before {
+    content: "\E3AD";
+  }
+}
+
+.category {
+  &::before {
+    content: "\E07C";
+  }
+}
+
+.serial {
+  &::before {
+    content: "\E34C";
+  }
+}
+
+.person {
+  &::before {
+    content: "\E282";
+  }
+}
+
+.link{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}

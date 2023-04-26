@@ -3,6 +3,7 @@
   position: relative;
   min-height: 250px;
   max-width: 300px;
+  cursor: pointer;
 }
 
 .imageWrapper {
@@ -148,4 +149,37 @@
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.href {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+  &:hover {
+    .img {
+      transform: scale(1.05) translate(0, -5px);
+    }
+
+    .feature {
+      top: -8px;
+    }
+
+    .inner {
+      opacity: 1;
+    }
+
+    .actions {
+      opacity: 1;
+    }
+
+    .imageWrapper::before {
+      opacity: 1;
+      transform: scale(1.05) translate(0, -5px);
+
+    }
+  }
 }
