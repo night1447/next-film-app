@@ -1,6 +1,6 @@
 @import '../../styles/vars';
 
-.container{
+.container {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -43,13 +43,13 @@
     top: 0;
     width: 64px;
     height: 48px;
-    background-image: url("https://solea-parent.dfs.ivi.ru/picture/7e798f,7e798f/tabBarGlow.svg");
+    background-image: url('https://solea-parent.dfs.ivi.ru/picture/7e798f,7e798f/tabBarGlow.svg');
     background-size: 64px 48px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     opacity: 0;
 }
-.active{
+.active {
     opacity: 1;
 }
 .btnText {
@@ -98,20 +98,19 @@
         content: '\E093';
     }
 }
+@include adptmob($hed-r) {
+    .container {
+        display: none;
+    }
+}
 
-@include adpt($bmob-r){
+@include adpt($bmob-r) {
     .btns {
         width: 100%;
     }
     .openAppBtn {
         width: 85%;
         left: 7.5%;
-    }
-}
-
-@media (min-width: 1160px) {
-    .container{
-        display: none;
     }
 }
 
