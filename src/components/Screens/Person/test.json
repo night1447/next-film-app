@@ -1,0 +1,92 @@
+{
+    "id": 37859,
+    "name": "Леонардо ДиКаприо",
+    "enName": "Leonardo DiCaprio",
+    "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_37859.jpg",
+    "professions": [
+        {
+            "id": 1,
+            "name": "актеры",
+            "movies": [
+                {
+                    "id": 1,
+                    "name": "Волк с Уолл-стрит",
+                    "enName": null,
+                    "type": "movie",
+                    "rating": 7.1,
+                    "year": 2020,
+                    "poster": "https://st.kp.yandex.net/images/film_big/462682.jpg"
+                },
+                {
+                    "id": 2,
+                    "name": "Начало",
+                    "enName": null,
+                    "type": "movie",
+                    "rating": 7.1,
+                    "year": 2020,
+                    "poster": "https://st.kp.yandex.net/images/film_big/447301.jpg"
+                },
+                {
+                    "id": 3,
+                    "name": "Остров проклятых",
+                    "enName": null,
+                    "type": "movie",
+                    "rating": 7.1,
+                    "year": 2020,
+                    "poster": "https://st.kp.yandex.net/images/film_big/397667.jpg"
+                },
+                {
+                    "id": 4,
+                    "name": "Титаник",
+                    "enName": null,
+                    "type": "movie",
+                    "rating": 7.1,
+                    "year": 2020,
+                    "poster": "https://st.kp.yandex.net/images/film_big/2213.jpg"
+                },
+                {
+                    "id": 5,
+                    "name": "Поймай меня, если сможешь",
+                    "enName": null,
+                    "type": "movie",
+                    "rating": 7.1,
+                    "year": 2020,
+                    "poster": "https://st.kp.yandex.net/images/film_big/324.jpg"
+                },
+                {
+                    "id": 6,
+                    "name": "Джанго освобожденный",
+                    "enName": null,
+                    "type": "movie",
+                    "rating": 7.1,
+                    "year": 2020,
+                    "poster": "https://st.kp.yandex.net/images/film_big/586397.jpg"
+                },
+                {
+                    "id": 7,
+                    "name": "Однажды в… Голливуде",
+                    "enName": null,
+                    "type": "movie",
+                    "rating": 7.1,
+                    "year": 2020,
+                    "poster": "https://st.kp.yandex.net/images/film_big/1047883.jpg"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "продюсеры",
+            "movies": [
+                {
+                    "id": 1,
+                    "name": "Волк с Уолл-стрит",
+                    "enName": null,
+                    "type": "movie",
+                    "rating": 7.1,
+                    "year": 2020,
+                    "poster": "https://st.kp.yandex.net/images/film_big/462682.jpg"
+                }
+            ]
+        }
+    ]
+}

@@ -14,35 +14,43 @@ export default function Home() {
             href: '/',
             urlImg: '/example-interactive-card.jpeg',
             title: 'Сериалы ivi',
-        }, {
+        },
+        {
             href: '/',
             urlImg: '/example-interactive-card.jpeg',
             title: 'Сериалы ivi',
-        }, {
+        },
+        {
             href: '/',
             urlImg: '/example-interactive-card.jpeg',
-        title: 'Сериалы ivi',
-    }, {
-        href: '/',
-        urlImg: '/example-interactive-card.jpeg',
-        title: 'Сериалы ivi',
-    }, {
-        href: '/',
-        urlImg: '/example-interactive-card.jpeg',
-        title: 'Сериалы ivi',
-    }, {
-        href: '/',
-        urlImg: '/example-interactive-card.jpeg',
-        title: 'Сериалы ivi',
-    }, {
-        href: '/',
-        urlImg: '/example-interactive-card.jpeg',
-        title: 'Сериалы ivi',
-    }, {
-        href: '/',
-        urlImg: '/example-interactive-card.jpeg',
-        title: 'Сериалы ivi',
-    }];
+            title: 'Сериалы ivi',
+        },
+        {
+            href: '/',
+            urlImg: '/example-interactive-card.jpeg',
+            title: 'Сериалы ivi',
+        },
+        {
+            href: '/',
+            urlImg: '/example-interactive-card.jpeg',
+            title: 'Сериалы ivi',
+        },
+        {
+            href: '/',
+            urlImg: '/example-interactive-card.jpeg',
+            title: 'Сериалы ivi',
+        },
+        {
+            href: '/',
+            urlImg: '/example-interactive-card.jpeg',
+            title: 'Сериалы ivi',
+        },
+        {
+            href: '/',
+            urlImg: '/example-interactive-card.jpeg',
+            title: 'Сериалы ivi',
+        },
+    ];
     const filmCards: FilmCardMinimize[] = [
         {
             title: 'Лунтик и его друзья',
@@ -58,7 +66,8 @@ export default function Home() {
             href: '/',
             mainGenre: 'Для детей',
             feature: 'all',
-        }, {
+        },
+        {
             title: 'Лунтик и его друзья',
             year: 2022,
             urlImg: '/luntik.jpeg',
@@ -72,7 +81,8 @@ export default function Home() {
             href: '/',
             mainGenre: 'Для детей',
             feature: 'choice',
-        }, {
+        },
+        {
             title: 'Лунтик и его друзья',
             year: 2022,
             urlImg: '/luntik.jpeg',
@@ -86,7 +96,8 @@ export default function Home() {
             href: '/',
             mainGenre: 'Для детей',
             feature: 'choice',
-        }, {
+        },
+        {
             title: 'Лунтик и его друзья',
             year: 2022,
             urlImg: '/luntik.jpeg',
@@ -100,7 +111,8 @@ export default function Home() {
             href: '/',
             mainGenre: 'Для детей',
             feature: 'choice',
-        }, {
+        },
+        {
             title: 'Лунтик и его друзья',
             year: 2022,
             urlImg: '/luntik.jpeg',
@@ -114,7 +126,8 @@ export default function Home() {
             href: '/',
             mainGenre: 'Для детей',
             feature: 'choice',
-        }, {
+        },
+        {
             title: 'Лунтик и его друзья',
             year: 2022,
             urlImg: '/luntik.jpeg',
@@ -128,7 +141,8 @@ export default function Home() {
             href: '/',
             mainGenre: 'Для детей',
             feature: 'exclusive',
-        }, {
+        },
+        {
             title: 'Лунтик и его друзья',
             year: 2022,
             urlImg: '/luntik.jpeg',
@@ -147,18 +161,23 @@ export default function Home() {
     return (
         <Layout title={t('common:titles.index')}>
             <FirstScreen />
-            <InteractiveBlock title={t('index:recommended.title')}
-                              info={filmCards}
-                              isCards={true}
-                              moreHref={'/'} />
-            <FirstDescriptionBlock />
-            {interactiveBlocks.map(block => <InteractiveBlock
-                key={uuid()}
-                title={t(`index:${block.block}.title`)}
-                isCards={block.isCard !== false} href={'/'}
-                info={block.isCard !== false ? filmCards : interestingInfo}
+            <InteractiveBlock
+                title={t('index:recommended.title')}
+                info={filmCards}
+                isCards={true}
                 moreHref={'/'}
-            />)}
+            />
+            <FirstDescriptionBlock />
+            {interactiveBlocks.map((block) => (
+                <InteractiveBlock
+                    key={uuid()}
+                    title={t(`index:${block.block}.title`)}
+                    isCards={block.isCard !== false}
+                    href={'/'}
+                    info={block.isCard !== false ? filmCards : interestingInfo}
+                    moreHref={'/'}
+                />
+            ))}
         </Layout>
     );
 }

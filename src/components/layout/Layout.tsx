@@ -10,13 +10,15 @@ interface LayoutProps {
     border?: boolean;
 }
 
-export const Layout: FC<PropsWithChildren<LayoutProps>> = ({ title, description, children, border }) => {
+export const Layout: FC<PropsWithChildren<LayoutProps>> = ({
+    title,
+    description,
+    children,
+}) => {
     return (
         <Meta title={title} description={description}>
-            <Header border={border} />
-            <Main>
-                {children}
-            </Main>
+            <Header />
+            <Main>{children}</Main>
             <Footer />
         </Meta>
     );
