@@ -102,60 +102,69 @@
             "trailers": "Trailers",
             "whatToSee": "What to see",
             "moviesInHD": "Movies in HD",
-          "iviChoice": "Ivi's Choice",
-          "subscriptionNews": "Subscription news",
-          "moviesAmediateka": "Movies Amediateka",
-          "popularFilms": "Popular films",
-          "iviFilms": "Ivi films",
-          "freeSeries": "Free series",
-          "seriesInHD": "Series in HD",
-          "seriesAmediateka": "Series Amediateka",
-          "seriesParamountPlay": "Series Paramount Play",
-          "cartoonsInHD": "Cartoons in HD",
-          "cartoonDreamworks": "Cartoons Dreamworks",
-          "cartoonParamountPlay": "Cartoons Paramount Play/Nickelodeon",
-          "cartoonsSTSKids": "Cartoons STS Kids",
-          "TVonline": "TV online",
-          "TVchannels": "TV channels",
-          "entertainment": "Entertainment",
-          "children": "Children",
-          "sportsTV": "Sports TV",
-          "documentary": "Documentary"
+            "iviChoice": "Ivi's Choice",
+            "subscriptionNews": "Subscription news",
+            "moviesAmediateka": "Movies Amediateka",
+            "popularFilms": "Popular films",
+            "iviFilms": "Ivi films",
+            "freeSeries": "Free series",
+            "seriesInHD": "Series in HD",
+            "seriesAmediateka": "Series Amediateka",
+            "seriesParamountPlay": "Series Paramount Play",
+            "cartoonsInHD": "Cartoons in HD",
+            "cartoonDreamworks": "Cartoons Dreamworks",
+            "cartoonParamountPlay": "Cartoons Paramount Play/Nickelodeon",
+            "cartoonsSTSKids": "Cartoons STS Kids",
+            "TVonline": "TV online",
+            "TVchannels": "TV channels",
+            "entertainment": "Entertainment",
+            "children": "Children",
+            "sportsTV": "Sports TV",
+            "documentary": "Documentary"
         }
     },
-  "titles": {
-    "index": "Main page Ivi"
-  },
-  "filmCard": {
-    "imageAlt": "film",
-    "srOnlyHref": "go to film"
-  },
-  "defaultSwiper": {
-    "prevSrOnly": "prev slide",
-    "nextSrOnly": "next slide"
-  },
-  "filmSlide": {
-    "image": "image film",
-    "actions": {
-      "favourite": "Watch later",
-      "similar": "Similar",
-      "evaluate": "Already watched, evaluate",
-      "dislike": "Don't like this"
+    "titles": {
+        "index": "Main page Ivi"
     },
-    "subscription": {
-      "false": "Free",
-      "true": "Subscription"
+    "filmCard": {
+        "imageAlt": "film",
+        "srOnlyHref": "go to film"
     },
-    "moreSlideText": "Show all",
-    "features": {
-      "all": "all episodes at once",
-      "choice": "Evie's choice",
-      "exclusive": "exclusive",
-      "creating": "created with Evie"
+    "defaultSwiper": {
+        "prevSrOnly": "prev slide",
+        "nextSrOnly": "next slide"
+    },
+    "filmSlide": {
+        "image": "image film",
+        "actions": {
+            "favourite": "Watch later",
+            "similar": "Similar",
+            "evaluate": "Already watched, evaluate",
+            "dislike": "Don't like this"
+        },
+        "subscription": {
+            "false": "Free",
+            "true": "Subscription"
+        },
+        "moreSlideText": "Show all",
+        "features": {
+            "all": "all episodes at once",
+            "choice": "Evie's choice",
+            "exclusive": "exclusive",
+            "creating": "created with Evie"
+        }
+    },
+    "description": {
+        "open": "Expand",
+        "close": "Collapse"
+    },
+    "mobileMenu": {
+        "ivi": "My Ivi",
+        "catalog": "Catalog",
+        "search": "search",
+        "tv": "TV+",
+        "more": "More",
+        "close": "Close",
+        "btnOpenInApp" : "Open in application"
     }
-  },
-  "description": {
-    "open": "Expand",
-    "close": "Collapse"
-  }
 }

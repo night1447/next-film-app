@@ -157,5 +157,14 @@
   "description": {
     "open": "Развернуть",
     "close": "Свернуть"
+  },
+  "mobileMenu": {
+    "ivi" :"Мой Иви",
+    "catalog" : "Каталог",
+    "search" : "Поиск",
+    "tv" : "TV+",
+    "more" : "Еще",
+    "close" : "Закрыть",
+    "btnOpenInApp" : "Открыть в приложении"
   }
 }

@@ -1,0 +1,113 @@
+.container{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 200;
+}
+.mobileMenu {
+    height: 48px;
+    backdrop-filter: blur(8px);
+    background-color: rgba(31, 27, 46, 0.88);
+}
+.openAppBtn {
+    background-image: linear-gradient(270deg, #ea003d, #c447ff);
+    background-origin: border-box;
+    border-color: transparent;
+    color: #fff;
+    height: 48px;
+    position: fixed;
+    width: 70%;
+    left: 15%;
+    bottom: 64px;
+}
+.btns {
+    margin: 0 auto;
+    height: 100%;
+    width: 600px;
+}
+.btn {
+    padding: 0;
+    width: 20%;
+    height: 100%;
+    position: relative;
+}
+.btnImg {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 0;
+    width: 64px;
+    height: 48px;
+    background-image: url(https://solea-parent.dfs.ivi.ru/picture/7e798f,7e798f/tabBarGlow.svg);
+    background-size: 64px 48px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    opacity: 0;
+}
+.active{
+    opacity: 1;
+}
+.btnText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 10px;
+    & > :first-child {
+        font-family: QualityIcons;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+
+.ivi {
+    &::before {
+        content: '\E226';
+    }
+}
+
+.search {
+    &::before {
+        content: '\E33C';
+    }
+}
+.catalog {
+    &::before {
+        content: '\E07C';
+    }
+}
+.tv {
+    &::before {
+        content: '\E3A9';
+    }
+}
+.more {
+    &::before {
+        content: '\E26A';
+    }
+}
+.close {
+    &::before {
+        content: '\E093';
+    }
+}
+
+@media (min-width: 1160px) {
+    .container{
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .btns {
+        width: 100%;
+    }
+    .openAppBtn {
+        width: 85%;
+        left: 7.5%;
+    }
+}
