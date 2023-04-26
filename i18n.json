@@ -1,15 +1,9 @@
 {
-  "locales": [
-    "en",
-    "ru"
-  ],
-  "defaultLocale": "ru",
-  "pages": {
-    "/": [
-      "index"
-    ],
-    "*": [
-      "common"
-    ]
-  }
+    "locales": ["en", "ru"],
+    "defaultLocale": "ru",
+    "pages": {
+        "/": ["index"],
+        "/person/[id]": ["person"],
+        "*": ["common"]
+    }
 }

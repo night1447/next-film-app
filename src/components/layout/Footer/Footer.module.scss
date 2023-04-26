@@ -1,5 +1,10 @@
+@import '@/styles/_vars';
+
 .Footer {
     margin-top: 48px;
+    @include adpt($desm-r) {
+        display: none;
+    }
 }
 
 .content {
