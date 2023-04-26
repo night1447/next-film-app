@@ -1,0 +1,51 @@
+@import '@/styles/_vars';
+.button {
+    margin-top: 16px;
+    padding: 0;
+    color: var(--white);
+    &:hover .arrow {
+        transform: scale(1.2);
+        transition-duration: 0.3s;
+    }
+}
+
+.arrow {
+    font-family: QualityIcons;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    text-align: left;
+
+    &::before {
+        content: '\E040';
+        font-size: 20px;
+        line-height: 20px;
+    }
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+.container {
+    max-width: 590px;
+    @include adpt($desm-r) {
+        max-width: 700px;
+    }
+    @include adpt($mtab-r) {
+        max-width: 100%;
+    }
+}
+
+.image {
+    border-radius: 10px;
+    margin: 16px 0 16px;
+}
+
+.head {
+    color: var(--white);
+    font-size: 56px;
+    font-weight: 700;
+    @include adpt($bmob-r) {
+        font-size: 40px;
+    }
+}

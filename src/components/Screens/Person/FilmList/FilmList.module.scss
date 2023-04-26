@@ -1,0 +1,45 @@
+@import '@/styles/_vars';
+.FilmList {
+    margin-top: 40px;
+}
+
+.info {
+    display: flex;
+    align-items: end;
+    margin-bottom: 16px;
+    h1 {
+        color: var(--white);
+        font-size: 24px;
+        font-weight: 700;
+        margin-right: 8px;
+    }
+    p {
+        margin-top: 4px;
+    }
+    @include adpt($bmob-r) {
+        display: block;
+    }
+}
+
+.lists {
+    border-bottom: 1px solid var(--gray-opacity-active);
+    margin-bottom: 16px;
+}
+
+.listButton {
+    padding: 0 0 12px;
+    margin-right: 20px;
+    border-radius: 0;
+}
+
+.selected {
+    border-bottom: 4px solid var(--accent);
+    color: var(--white);
+}
+
+.allMovies {
+    padding: 0;
+    color: var(--text);
+    font-weight: 400;
+    margin-bottom: 16px;
+}

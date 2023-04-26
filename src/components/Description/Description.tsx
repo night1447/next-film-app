@@ -32,7 +32,7 @@ const Description: FC<PropsWithChildren<DescriptionProps>> = ({ children, displa
 
         <Button variants={'transparent'}
                 className={styles.button}
-                onClick={toggleDescriptionHandler}>{showDescription ? t('common:description.open') : t('common:description.close')}</Button>
+                onClick={toggleDescriptionHandler}>{showDescription ? t('common:description.close') : t('common:description.open')}</Button>
     </div>;
 };
 
