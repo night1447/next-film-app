@@ -1,0 +1,16 @@
+@import "@/styles/vars";
+
+.cards {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(5, 1fr);
+  @include adpt($mtab-r) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include adpt($stab-r) {
+    grid-template-columns: repeat(3, 170px);
+  }
+  @include adpt($bmob-r) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

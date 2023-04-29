@@ -1,0 +1,34 @@
+.input {
+  cursor: pointer;
+  padding: 18px 40px 2px 12px;
+  color: var(--violet);
+  width: 100%;
+  background-color: var(--secondary);
+  font-size: 15px;
+  line-height: 20px;
+  border-radius: 8px;
+
+  &:focus, &:active {
+    outline: none;
+  }
+
+  &:focus ~ .title {
+    top: 3px;
+    font-size: 12px;
+  }
+
+  &:focus ~ button {
+    &::before {
+      color: rgba(31,27,46,.4);
+    }
+  }
+}
+
+.title {
+  position: absolute;
+  color: var(--text);
+  left: 12px;
+  font-weight: 500;
+  top: 10px;
+  transition: top 0.5s, font-size 0.5s;
+}

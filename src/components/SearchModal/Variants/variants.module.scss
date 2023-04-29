@@ -1,0 +1,33 @@
+.variants {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.variant {
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--white);
+  width: max-content;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    z-index: -1;
+    background-color: var(--violet-light);
+    transition: height 0.3s;
+  }
+
+  &:hover {
+    &::before {
+      height: 100%;
+    }
+  }
+}

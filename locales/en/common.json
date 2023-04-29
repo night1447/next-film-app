@@ -157,5 +157,8 @@
   "description": {
     "open": "Expand",
     "close": "Collapse"
+  },
+  "modal": {
+    "closeModal": "Close modal window"
   }
 }
