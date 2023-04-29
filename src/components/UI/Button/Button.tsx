@@ -4,14 +4,15 @@ import { ButtonProps } from '@/components/UI/Button/types';
 import Link from 'next/link';
 
 export const Button: FC<PropsWithChildren<ButtonProps>> = ({
-    className,
-    children,
-    type,
-    onClick,
-    isCircle,
-    variants,
-    href,
-}) => {
+                                                               className,
+                                                               children,
+                                                               type,
+                                                               onClick,
+                                                               isCircle,
+                                                               variants,
+                                                               disabled,
+                                                               href,
+                                                           }) => {
     return href ? (
         <Link
             className={`${styles.button} ${styles[variants] || ''} 
@@ -27,6 +28,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
             ${className || ''} ${isCircle ? styles.rounded : ''}`}
             type={type || 'button'}
             onClick={onClick}
+            disabled={disabled ? disabled : false}
         >
             {children}
         </button>

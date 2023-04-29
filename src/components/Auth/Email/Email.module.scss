@@ -1,0 +1,17 @@
+.input, .button {
+  min-width: 290px;
+}
+
+.icon {
+  position: absolute;
+
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 10px;
+
+  &::before {
+    font-family: QualityIcons;
+    content: "\E050";
+  }
+}

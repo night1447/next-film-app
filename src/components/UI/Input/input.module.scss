@@ -8,8 +8,16 @@
   line-height: 20px;
   border-radius: 8px;
 
+  &::-ms-reveal {
+    display: none;
+  }
+
   &:focus, &:active {
     outline: none;
+  }
+
+  &_bias {
+    padding-left: 40px;
   }
 
   &:focus ~ .title {
@@ -19,7 +27,7 @@
 
   &:focus ~ button {
     &::before {
-      color: rgba(31,27,46,.4);
+      color: rgba(31, 27, 46, .4);
     }
   }
 }
@@ -31,4 +39,24 @@
   font-weight: 500;
   top: 10px;
   transition: top 0.5s, font-size 0.5s;
+
+  &_active {
+    top: 3px;
+    font-size: 12px;
+  }
+
+  &_bias {
+    left: 38px;
+  }
 }
+
+.label {
+  background-color: var(--secondary);
+  border-radius: 8px;
+
+  &:hover {
+    color: rgba(31, 27, 46, .4);
+  }
+}
+
+

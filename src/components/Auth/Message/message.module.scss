@@ -1,0 +1,22 @@
+.block {
+  position: relative;
+  padding: 20px;
+  min-width: 471px;
+  border-radius: 16px 16px 16px 0;
+  background-color: #312b45;
+
+  &.left {
+    border-radius: 16px 16px 16px 0;
+    left: -90px;
+  }
+
+  &.right {
+    background-color: var(--violet);
+    border-radius: 16px 16px 0 16px;
+  }
+}
+
+.message {
+  font-size: 13px;
+  line-height: 15px;
+}

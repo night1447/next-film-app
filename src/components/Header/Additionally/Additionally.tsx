@@ -1,4 +1,4 @@
-import { FC, MouseEvent, useState } from 'react';
+import { FC, MouseEvent, useCallback, useState } from 'react';
 import style from './additionally.module.scss';
 import { Button } from '../../UI/Button/Button';
 import useTranslation from 'next-translate/useTranslation';
@@ -12,16 +12,15 @@ interface IAdditionally {
 export const Additionally: FC<IAdditionally> = ({ onHover, onHide }) => {
     const { t } = useTranslation();
     const [showSearch, setShowSearch] = useState(false);
-    const openSearchHandler = () => {
+
+    const openSearchHandler = useCallback(() => {
         setShowSearch(true);
-        document.body.style.overflow = 'hidden';
-    };
+    }, []);
 
-    const closeModalHandler = () => {
+    const closeModalHandler = useCallback(() => {
         setShowSearch(false);
-        document.body.style.overflow = '';
+    }, []);
 
-    };
 
     return (
         <div className={style.container}>
@@ -50,7 +49,7 @@ export const Additionally: FC<IAdditionally> = ({ onHover, onHide }) => {
                     onMouseLeave={() => onHide()}
                 ></div>
             </Button>
-            <Button type='button' variants='transparent' href='/'>
+            <Button type='button' variants='transparent' href={'/'}>
                 <div
                     data-auth={true}
                     className={style.auth}

@@ -1,11 +1,12 @@
 import style from './headerDrop.module.scss';
-import React, { FC } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 import { Subscription } from '../Subscription/Subscription';
 import useTranslation from 'next-translate/useTranslation';
 import { Button } from '@/components/UI/Button/Button';
 import { CardsAuth } from '../CardsAuth/CardsAuth';
 import List from '@/components/Header/List/List';
 import { IHeaderDrop } from '@/components/Header/types';
+import Auth from '@/components/Auth/Auth';
 
 interface IHeaderBottom {
     onHover: () => void;
@@ -15,6 +16,15 @@ interface IHeaderBottom {
 
 export const HeaderDrop: FC<IHeaderBottom> = ({ onHover, onEver, type }) => {
     const { t } = useTranslation();
+
+    const [authModal, setAuthModal] = useState(false);
+    const openAuthHandler = useCallback(() => {
+        setAuthModal(true);
+    }, []);
+
+    const closeAuthHandler = useCallback(() => {
+        setAuthModal(false);
+    }, []);
     if (type === 'movies' || type === 'series' || type === 'cartoons') {
         return (
             <div
@@ -72,11 +82,11 @@ export const HeaderDrop: FC<IHeaderBottom> = ({ onHover, onEver, type }) => {
         <div
             className={`${style.auth} ${style.modal}`}
             onMouseEnter={() => onHover()}
-            onMouseLeave={() => onEver()}
+            onMouseLeave={() => authModal ? '' : onEver()}
         >
             <CardsAuth />
             <div className={style.authButtons}>
-                <Button type='button' variants='accent-transparent'>
+                <Button type='button' variants='accent-transparent' onClick={openAuthHandler}>
                     {t('common:header.enterOrRegister')}
                 </Button>
                 <div className={style.authShell}>
@@ -96,7 +106,9 @@ export const HeaderDrop: FC<IHeaderBottom> = ({ onHover, onEver, type }) => {
                         href='https://ask.ivi.ru/'
                     >
                         {t('common:header.help')}
-                    </Button></div>
+                    </Button>
+                </div>
+                {<Auth showModal={authModal} onClose={closeAuthHandler} />}
             </div>
         </div>
     );

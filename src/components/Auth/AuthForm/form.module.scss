@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+
+  &::before {
+    font-family: QualityIcons;
+    content: "\E050";
+  }
+}
+
+
+.right {
+  position: relative;
+  right: -90px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.editIcon {
+  &::before {
+    content: "\E0D6";
+  }
+}
+
+.success {
+  background-color: var(--green) !important;
+}

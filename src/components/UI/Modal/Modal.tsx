@@ -12,8 +12,14 @@ interface ModalProps {
 
 const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, className, onCLose, showModal }) => {
     const { t } = useTranslation();
+
     if (!showModal) {
         return <></>;
+    }
+    if (showModal) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
     }
     return <Portal id={'modal'}>
         <div className={`${styles.modal} ${className || ''}`}>

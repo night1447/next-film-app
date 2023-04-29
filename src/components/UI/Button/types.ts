@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from 'react';
+import React from 'react';
 
 export type VariantButton =
     | 'accent'
@@ -12,6 +12,7 @@ export type ButtonProps = {
     className?: string;
     isCircle?: boolean;
     href?: string;
+    disabled?: boolean;
     type?: 'button' | 'submit' | 'reset';
     onClick?: (
         e:
