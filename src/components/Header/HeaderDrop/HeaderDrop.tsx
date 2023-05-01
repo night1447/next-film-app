@@ -4,7 +4,7 @@ import { Subscription } from '../Subscription/Subscription';
 import useTranslation from 'next-translate/useTranslation';
 import { Button } from '@/components/UI/Button/Button';
 import { CardsAuth } from '../CardsAuth/CardsAuth';
-import List from '@/components/Header/List/List';
+import List from '@/components/UI/List/List';
 import { IHeaderDrop } from '@/components/Header/types';
 
 interface IHeaderBottom {

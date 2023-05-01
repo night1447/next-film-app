@@ -15,14 +15,13 @@ export const Layout: FC<PropsWithChildren<LayoutProps>> = ({
     title,
     description,
     children,
+    border,
 }) => {
     return (
         <Meta title={title} description={description}>
             <Header border={border} />
-            <MobileMenu/>
-            <Main>
-                {children}
-            </Main>
+            <MobileMenu />
+            <Main>{children}</Main>
             <Header />
             <Main>{children}</Main>
             <Footer />

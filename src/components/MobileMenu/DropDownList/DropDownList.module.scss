@@ -1,0 +1,93 @@
+@import '../../../styles/vars';
+
+.container {
+    padding: 25px 32px 0;
+    a {
+        color: rgba(255, 255, 255, 0.72);
+        line-height: 20px;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+.title {
+    display: flex;
+    align-items: center;
+}
+.after {
+    font-family: QualityIcons;
+    font-size: 6px;
+    line-height: 6px;
+    margin-left: 12px;
+    color: var(--white);
+    &::before {
+        content: '\E033';
+    }
+}
+.activeAfter {
+    &::before {
+        content: '\E04C';
+    }
+}
+.dropDownBox {
+    display: none;
+    margin-top: 24px;
+    width: 100%;
+    height: auto;
+}
+.active {
+    display: block;
+}
+.filters {
+    padding-top: 24px;
+    display: flex;
+}
+.genres{
+    width: 33%;
+    height: auto;
+    ul{
+        flex-wrap: nowrap;
+        height: auto;
+    }
+}
+.box{
+    width: 66%;
+    display: flex;
+    &>*{
+        width: 50%;
+    }
+}
+
+@include adpt($stab-r) {
+    .box{
+        width: 50%;
+        flex-wrap: wrap;
+        &>*{
+            width: 100%;
+        }
+        &>:last-child{
+            margin-top: 25px;
+            border-top: 1px solid rgba(255,255,255,.16);
+            ul{
+                padding-top: 25px;
+                li{
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .genres{
+        width: 50%;
+    }
+}
+@include adpt($bmob-r) {
+    .filters{
+        flex-wrap: wrap;
+    }
+    .box{
+        margin-top: 25px;
+        width: 100%;
+    }
+    .genres{
+        width: 100%;
+    }
+}

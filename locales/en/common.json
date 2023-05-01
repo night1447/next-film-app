@@ -165,6 +165,24 @@
         "tv": "TV+",
         "more": "More",
         "close": "Close",
-        "btnOpenInApp" : "Open in application"
+        "btnOpenInApp" : "Open in application",
+        "allFilms" : "All films",
+        "allSeries" : "All series",
+        "allCartoons" : "All cartoons",
+        "new": "What`s new",
+        "whatToSee" : "What to see",
+        "ratingMovies": "Ivi.Rating movies",
+        "ratingSeries": "Ivi.Rating series",
+        "aboutUs" : {
+            "aboutUs" : "About us",
+            "aboutCompany" : "About company",
+            "jobs": "Jobs",
+            "betaProgram": "Beta Program",
+            "information": "General information for partners",
+            "advertisingPlacement": "Advertising placement",
+            "termsOfUse": "Terms of use",
+            "privacyPolicy": "Privacy Policy",
+            "compliance": "Compliance"
+        }
     }
 }

@@ -4,8 +4,8 @@ interface IObjTypes {
             href: string;
             value?: string;
             src?: string;
-        }[] ;
-    }
+        }[];
+    };
 }
 
 const objTypes: IObjTypes = {
@@ -117,6 +117,40 @@ const objTypes: IObjTypes = {
             {
                 href: 'https://www.ivi.ru/tvplus/documentalnoe',
                 value: 'common:header.selections.documentary',
+            },
+        ],
+        aboutUs: [
+            {
+                href: 'https://corp.ivi.ru/?_gl=1%2Azasegz%2A_ga%2AMTMyOTg0NjA4MS4xNjgyMzUxNzU0%2A_ga_GETQ4387MJ%2AMTY4Mjk2MjM4OS44LjEuMTY4Mjk2NTYyMC42MC4wLjA.',
+                value: 'common:mobileMenu.aboutUs.aboutCompany',
+            },
+            {
+                href: 'https://corp.ivi.ru/career/#career-vacancy-block',
+                value: 'common:mobileMenu.aboutUs.jobs',
+            },
+            {
+                href: 'https://www.ivi.ru/pages/beta/',
+                value: 'common:mobileMenu.aboutUs.betaProgram',
+            },
+            {
+                href: 'https://www.ivi.ru/info/partners',
+                value: 'common:mobileMenu.aboutUs.information',
+            },
+            {
+                href: 'https://corp.ivi.ru/advertisers/?_gl=1*h6zy6m*_ga*MTMyOTg0NjA4MS4xNjgyMzUxNzU0*_ga_GETQ4387MJ*MTY4Mjk2MjM4OS44LjEuMTY4Mjk2NzM0MC4yLjAuMA..',
+                value: 'common:mobileMenu.aboutUs.advertisingPlacement',
+            },
+            {
+                href: 'https://www.ivi.ru/info/agreement',
+                value: 'common:mobileMenu.aboutUs.termsOfUse',
+            },
+            {
+                href: 'https://www.ivi.ru/info/confidential',
+                value: 'common:mobileMenu.aboutUs.privacyPolicy',
+            },
+            {
+                href: 'https://www.ivi.ru/info/goryachaya-liniya-komplaens',
+                value: 'common:mobileMenu.aboutUs.compliance',
             },
         ],
     },

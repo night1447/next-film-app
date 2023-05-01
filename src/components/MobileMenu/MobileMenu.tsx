@@ -3,6 +3,9 @@ import React, { FC, useCallback, useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { Button } from '@/components/UI/Button/Button';
 import { useRouter } from 'next/router';
+import SearchModal from '../SearchModal/SearchModal';
+import More from './More/More';
+import MoreModal from './MoreModal/MoreModal';
 
 interface Item {
     href?: string;
@@ -14,6 +17,45 @@ export const MobileMenu: FC = () => {
     const { t } = useTranslation();
     const router = useRouter();
     const [stateBtnMore, setStateBtnMore] = useState(false);
+    const [showSearch, setShowSearch] = useState(false);
+    const [showMore, setShowMore] = useState(false);
+
+    const openSearchHandler = () => {
+        setShowSearch(true);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModalHandler = () => {
+        setShowSearch(false);
+        document.body.style.overflow = '';
+    };
+
+    const openMoreHandler = () => {
+        setShowMore(true);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeMoreHandler = () => {
+        setShowMore(false);
+        document.body.style.overflow = '';
+    };
+
+    const clickBtns = (item: Item): void => {
+        setStateBtnMore(
+            item.text === 'common:mobileMenu.close' ||
+                item.text === 'common:mobileMenu.more'
+                ? !stateBtnMore
+                : false,
+        );
+        item.text === 'common:mobileMenu.search'
+            ? openSearchHandler()
+            : closeModalHandler();
+
+        item.text === 'common:mobileMenu.close' ||
+        item.text === 'common:mobileMenu.more'
+            ? openMoreHandler()
+            : closeMoreHandler();
+    };
 
     const items: Item[] = [
         { href: '/', text: 'common:mobileMenu.ivi', className: style.ivi },
@@ -29,7 +71,6 @@ export const MobileMenu: FC = () => {
             className: style.tv,
         },
         {
-            href: '/',
             text: stateBtnMore
                 ? 'common:mobileMenu.close'
                 : 'common:mobileMenu.more',
@@ -37,35 +78,31 @@ export const MobileMenu: FC = () => {
         },
     ];
 
-    const getItem = useCallback((item: Item) => {
-        return (
-            <Button
-                key={item.text}
-                className={style.btn}
-                onClick={() => {
-                    setStateBtnMore(
-                        item.text === 'common:mobileMenu.close' ||
-                            item.text === 'common:mobileMenu.more'
-                            ? !stateBtnMore
-                            : false,
-                    );
-                }}
-                type="button"
-                variants="transparent"
-                href={item.href}
-            >
-                <div
-                    className={`${style.btnImg} ${
-                        router.pathname == item.href ? style.active : ''
-                    }`}
-                ></div>
-                <div className={style.btnText}>
-                    <div className={item.className}></div>
-                    {t(item.text)}
-                </div>
-            </Button>
-        );
-    }, [items]);
+    const getItem = useCallback(
+        (item: Item) => {
+            return (
+                <Button
+                    key={item.text}
+                    className={style.btn}
+                    onClick={() => clickBtns(item)}
+                    type="button"
+                    variants="transparent"
+                    href={item.href}
+                >
+                    <div
+                        className={`${style.btnImg} ${
+                            router.pathname == item.href ? style.active : ''
+                        }`}
+                    ></div>
+                    <div className={style.btnText}>
+                        <div className={item.className}></div>
+                        {t(item.text)}
+                    </div>
+                </Button>
+            );
+        },
+        [items],
+    );
 
     return (
         <div className={style.container}>
@@ -82,6 +119,13 @@ export const MobileMenu: FC = () => {
                     {items.map((item) => getItem(item))}
                 </div>
             </div>
+            {
+                <SearchModal
+                    showSearch={showSearch}
+                    onCloseModal={closeModalHandler}
+                />
+            }
+            {<MoreModal showMore={showMore}/>}
         </div>
     );
 };

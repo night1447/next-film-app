@@ -1,0 +1,114 @@
+.btnsSubscription {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 112px;
+    padding: 32px 10px;
+    border-bottom: 1px solid rgba(255,255,255,.16);
+    border-top: 1px solid rgba(255,255,255,.16)
+}
+
+.subscribe {
+    height: 48px;
+    width: 47%;
+    justify-content: start;
+        div {
+            font-family: QualityIcons;
+            font-size: 20px;
+            height: 20px;
+            width: 20px;
+            line-height: 20px;
+            color: var(--border);
+            margin-right: 12px;
+            &::before{
+                content: '\E307';
+            }
+        }
+}
+.certificate{
+    height: 48px;
+    width: 48%;
+    justify-content: start;
+        div {
+            font-family: QualityIcons;
+            font-size: 20px;
+            height: 20px;
+            width: 20px;
+            line-height: 20px;
+            color: var(--border);
+            margin-right: 12px;
+            &::before{
+                content: "\E07F";
+            }
+        }
+}
+
+.movies {
+    font-family: QualityIcons;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    margin-right: 12px;
+    color: var(--white);
+    &::before {
+        content: "\E135";
+    }
+}
+
+.series {
+    font-family: QualityIcons;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    margin-right: 12px;
+    color: var(--white);
+    &::before {
+        content: "\E34C";
+    }
+}
+
+.cartoons {
+    font-family: QualityIcons;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    margin-right: 12px;
+    color: var(--white);
+    &::before {
+        content: "\E070";
+    }
+}
+
+.tv {
+    font-family: QualityIcons;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    margin-right: 12px;
+    color: var(--white);
+    &::before {
+        content: "\E3A9";
+    }
+}
+
+.navigations{
+
+}
+
+.btn{
+    display: block;
+    color: var(--white);
+    padding: 20px 32px 0;
+}
+
+.rating{
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(255,255,255,.16);
+    border-top: 1px solid rgba(255,255,255,.16);
+    padding-bottom: 20px;
+}
