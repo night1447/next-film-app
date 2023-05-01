@@ -1,0 +1,48 @@
+@import "@/styles/vars";
+.searchButton {
+  &::before {
+    content: "\E33D";
+  }
+}
+
+.button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &::before {
+    transition: color 0.5s;
+    font-size: 20px;
+    color: var(--text);
+    font-family: QualityIcons;
+  }
+}
+
+.closeButton {
+  &::before {
+    content: "\E093";
+  }
+}
+
+.wrapper {
+  width: 60%;
+  @include adpt($desm-r){
+    width: 90%;
+  }
+}
+
+.title {
+  margin-bottom: 40px;
+}
+
+.search {
+  margin-bottom: 35px;
+}
+
+.active {
+  span {
+    top: 3px;
+    font-size: 12px;
+  }
+}

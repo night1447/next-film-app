@@ -10,7 +10,6 @@
     height: auto;
     padding: 30px 20px;
     width: 100%;
-    border-top: 0.3px solid var(--white);
     max-width: 1215px;
     border-top: 0.5px solid var(--border);
 }
@@ -80,4 +79,8 @@
 
 .authButton {
     padding: 0;
+}
+
+.border {
+    border-right: 1px solid var(--border);
 }
