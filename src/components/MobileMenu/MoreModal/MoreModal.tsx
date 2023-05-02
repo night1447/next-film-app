@@ -1,51 +1,22 @@
-import React, { ChangeEvent, FC, useState } from 'react';
-import Modal from '@/components/UI/Modal/Modal';
-import Title from '@/components/UI/Title/Title';
-import Input from '@/components/UI/Input/Input';
+import React, { FC } from 'react';
 import { Button } from '@/components/UI/Button/Button';
 import styles from './MoreModal.module.scss';
-import Variants from '@/components/SearchModal/Variants/Variants';
-import ResultList from '@/components/SearchModal/ResultList/ResultList';
-import CardList from '@/components/SearchModal/CardList/CardList';
 import More from '../More/More';
 import { Header } from '@/components/Header/Header';
 import DropDownList from '../DropDownList/DropDownList';
-import List from '@/components/UI/List/List';
-import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
+import BlockBtns from '../BlockBtns/BlockBtns';
+import imgSmart from '../../../../public/icons/smart_tv_light.svg';
+import imgDevices from '../../../../public/icons/all_devices_light.svg';
+import { socials } from '@/constants/Footer';
+import Image from 'next/image';
 
-interface SearchModalProps {
+interface MoreModalProps {
     showMore: boolean;
-    onCloseModal?: () => void;
 }
 
-const MoreModal: FC<SearchModalProps> = ({ showMore, onCloseModal }) => {
+const MoreModal: FC<MoreModalProps> = ({showMore}) => {
     const { t } = useTranslation();
-
-    const [value, setValue] = useState('');
-    const [showResult, setShowResult] = useState('');
-    const [focus, setFocus] = useState(false);
-    const inputChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setValue(e.target.value);
-    };
-
-    const clearValueHandler = () => {
-        setValue('');
-        setShowResult('');
-    };
-
-    const setCurrentValueHandler = (value: string) => {
-        setValue(value);
-        setShowResult(value);
-    };
-
-    const focusHandler = () => {
-        setFocus(true);
-    };
-
-    function blurHandler() {
-        setFocus(false);
-    }
 
     const typesLists = [
         { type: 'movies', className: styles.movies },
@@ -54,28 +25,39 @@ const MoreModal: FC<SearchModalProps> = ({ showMore, onCloseModal }) => {
         { type: 'tv', className: styles.tv },
     ];
 
+    const btnsTop = [
+        {
+            href: 'https://www.ivi.ru/subscribe?from=top_menu&redirect_url=%2Fmovies',
+            className: styles.subscribe,
+            text: 'common:mobileMenu.connectSubscription',
+        },
+        {
+            href: 'https://www.ivi.ru/cert',
+            className: styles.certificate,
+            text: 'common:mobileMenu.certificateActivation',
+        },
+    ];
+
+    const btnsAboutUs = [
+        {
+            href: 'https://www.ivi.ru/pages/tvsmart/',
+            className: styles.smartTV,
+            text: 'common:mobileMenu.watchSmartTv',
+            img: imgSmart,
+        },
+        {
+            href: 'https://www.ivi.ru/devices',
+            className: styles.allDevices,
+            text: 'common:mobileMenu.allDevices',
+            img: imgDevices,
+        },
+    ];
+
     return (
         <More showModal={showMore}>
             <Header />
-            <div className={styles.btnsSubscription}>
-                <Button
-                    className={styles.subscribe}
-                    type="button"
-                    variants="violet"
-                    href="https://www.ivi.ru/subscribe?from=top_menu&redirect_url=%2Fmovies"
-                >
-                    <div></div>Подключить подписку
-                </Button>
-                <Button
-                    className={styles.certificate}
-                    type="button"
-                    variants="violet"
-                    href="https://www.ivi.ru/cert"
-                >
-                    <div></div>Активация сертификата
-                </Button>
-            </div>
-            <div className={styles.navigations}>
+            <BlockBtns items={btnsTop} />
+            <div>
                 <Button
                     className={styles.btn}
                     type="button"
@@ -126,12 +108,56 @@ const MoreModal: FC<SearchModalProps> = ({ showMore, onCloseModal }) => {
                     {t('common:mobileMenu.ratingSeries')}
                 </Button>
             </div>
-            <div className={styles.a}>
+            <div>
                 <DropDownList
                     className={styles.aboutUs}
-                    key={"aboutUs"}
-                    type={"aboutUs"}
+                    key={'aboutUs'}
+                    type={'aboutUs'}
                 />
+                <Button
+                    className={styles.btn}
+                    type="button"
+                    href="https://www.ivi.ru/series/all?ivi_rating_10_gte=7&sort=ivi&rating_part=main&rating_model=ready"
+                    variants="transparent"
+                >
+                    <div className={styles.btn_entrance}></div>
+                    {t('common:mobileMenu.entranceByCode')}
+                </Button>
+                <BlockBtns items={btnsAboutUs} />
+            </div>
+            <div>
+                <DropDownList
+                    className={styles.support}
+                    key={'support'}
+                    type={'support'}
+                />
+            </div>
+            <div className={styles.socials}>
+                <div className={styles.socials_btns}>
+                    {socials.map((social, index) => {
+                        return (
+                            <Button
+                                key={index}
+                                variants="violet"
+                                type="button"
+                                isCircle
+                                href={social.url}
+                            >
+                                <Image
+                                    src={social.img}
+                                    alt=""
+                                    width={16}
+                                    height={16}
+                                />
+                            </Button>
+                        );
+                    })}
+                </div>
+                <p>
+                    © 2023 ООО «Иви.ру» <br />
+                    HBO ® and related service marks are the property of Home Box
+                    Office, Inc
+                </p>
             </div>
         </More>
     );

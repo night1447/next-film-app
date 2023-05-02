@@ -1,47 +1,26 @@
-.btnsSubscription {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 112px;
-    padding: 32px 10px;
-    border-bottom: 1px solid rgba(255,255,255,.16);
-    border-top: 1px solid rgba(255,255,255,.16)
-}
-
 .subscribe {
-    height: 48px;
-    width: 47%;
-    justify-content: start;
-        div {
-            font-family: QualityIcons;
-            font-size: 20px;
-            height: 20px;
-            width: 20px;
-            line-height: 20px;
-            color: var(--border);
-            margin-right: 12px;
-            &::before{
-                content: '\E307';
-            }
-        }
+    font-family: QualityIcons;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    color: var(--border);
+    margin-right: 12px;
+    &::before {
+        content: '\E307';
+    }
 }
-.certificate{
-    height: 48px;
-    width: 48%;
-    justify-content: start;
-        div {
-            font-family: QualityIcons;
-            font-size: 20px;
-            height: 20px;
-            width: 20px;
-            line-height: 20px;
-            color: var(--border);
-            margin-right: 12px;
-            &::before{
-                content: "\E07F";
-            }
-        }
+.certificate {
+    font-family: QualityIcons;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    color: var(--border);
+    margin-right: 12px;
+    &::before {
+        content: '\E07F';
+    }
 }
 
 .movies {
@@ -53,7 +32,7 @@
     margin-right: 12px;
     color: var(--white);
     &::before {
-        content: "\E135";
+        content: '\E135';
     }
 }
 
@@ -66,7 +45,7 @@
     margin-right: 12px;
     color: var(--white);
     &::before {
-        content: "\E34C";
+        content: '\E34C';
     }
 }
 
@@ -79,7 +58,7 @@
     margin-right: 12px;
     color: var(--white);
     &::before {
-        content: "\E070";
+        content: '\E070';
     }
 }
 
@@ -92,23 +71,91 @@
     margin-right: 12px;
     color: var(--white);
     &::before {
-        content: "\E3A9";
+        content: '\E3A9';
+    }
+}
+.aboutUs {
+    font-family: QualityIcons;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    margin-right: 12px;
+    color: var(--white);
+    &::before {
+        content: '\E00B';
     }
 }
 
-.navigations{
-
-}
-
-.btn{
+.btn {
     display: block;
     color: var(--white);
     padding: 20px 32px 0;
 }
+.btn_entrance {
+    display: inline-block;
+    font-family: QualityIcons;
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+    width: 20px;
+    margin-right: 12px;
+    color: var(--white);
+    position: relative;
+    &::before {
+        content: '\E3AD';
+        position: absolute;
+        top: 3px;
+    }
+}
 
-.rating{
+.rating {
     margin-top: 20px;
-    border-bottom: 1px solid rgba(255,255,255,.16);
-    border-top: 1px solid rgba(255,255,255,.16);
     padding-bottom: 20px;
+}
+
+.smartTV {
+    height: 20px;
+    width: 20px;
+    margin-right: 12px;
+}
+
+.allDevices {
+    height: 20px;
+    width: 20px;
+    margin-right: 12px;
+}
+
+.support {
+    font-family: QualityIcons;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    margin-right: 12px;
+    color: var(--white);
+    &::before {
+        content: '\E25E';
+    }
+}
+
+.socials {
+    margin-top: 20px;
+    padding: 10px 32px 0;
+    & > :last-child {
+        margin-top: 40px;
+        font-size: 15px;
+        line-height: 30px;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+.socials_btns {
+    & > :not(:last-child) {
+        margin-right: 10px;
+    }
+    & > * {
+        margin-top: 10px;
+    }
 }

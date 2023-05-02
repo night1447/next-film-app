@@ -1,0 +1,32 @@
+@import '../../../styles/vars';
+
+.btnsSubscription {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    padding: 32px 10px;
+}
+
+.btn {
+    height: 48px;
+    width: 48%;
+    justify-content: start;
+}
+
+.btnCenter{
+    justify-content: center;
+}
+
+@include adpt($bmob-r) {
+    .btnsSubscription {
+        flex-wrap: wrap;
+        &>*:not(:last-child){
+            margin-bottom: 15px;
+        }
+    }
+    .btn {
+        width: 100%;
+    }
+}

@@ -19,5 +19,6 @@ export const getTitleAndLink = (type: string): any => {
         };
     if (type === 'tv') return 'common:header.tv';
     if (type === 'aboutUs') return 'common:mobileMenu.aboutUs.aboutUs';
+    if (type === 'support') return 'common:mobileMenu.support.support';
     return '';
 };

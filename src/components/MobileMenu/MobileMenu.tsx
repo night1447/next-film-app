@@ -4,7 +4,6 @@ import useTranslation from 'next-translate/useTranslation';
 import { Button } from '@/components/UI/Button/Button';
 import { useRouter } from 'next/router';
 import SearchModal from '../SearchModal/SearchModal';
-import More from './More/More';
 import MoreModal from './MoreModal/MoreModal';
 
 interface Item {
@@ -48,12 +47,12 @@ export const MobileMenu: FC = () => {
                 : false,
         );
         item.text === 'common:mobileMenu.search'
-            ? openSearchHandler()
+            ? showSearch ? closeModalHandler() : openSearchHandler()
             : closeModalHandler();
 
         item.text === 'common:mobileMenu.close' ||
         item.text === 'common:mobileMenu.more'
-            ? openMoreHandler()
+            ? showMore ? closeMoreHandler() : openMoreHandler()
             : closeMoreHandler();
     };
 
@@ -91,7 +90,7 @@ export const MobileMenu: FC = () => {
                 >
                     <div
                         className={`${style.btnImg} ${
-                            router.pathname == item.href ? style.active : ''
+                            router.pathname == item.href || showMore || showSearch ? style.active : ''
                         }`}
                     ></div>
                     <div className={style.btnText}>

@@ -183,6 +183,18 @@
             "termsOfUse": "Пользовательское соглашение",
             "privacyPolicy": "Политика конфиденциальности",
             "compliance": "Комплаенс"
+        },
+        "entranceByCode" : "Вход по коду",
+        "connectSubscription" : "Подключить подписку",
+        "certificateActivation" : "Активация сертификата",
+        "watchSmartTv": "Смотреть на Smart TV",
+        "allDevices" : "Все устройства",
+        "support": {
+            "support" : "Служба поддержки",
+            "message" : "Мы всегда готовы вам помочь. Наши операторы онлайн 24/7",
+            "writeInChat" : "Написать в чате",
+            "freeInRussia" : "Бесплатно по России",
+            "answers" : "Ответы на вопросы"
         }
     }
 }

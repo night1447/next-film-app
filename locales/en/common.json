@@ -183,6 +183,19 @@
             "termsOfUse": "Terms of use",
             "privacyPolicy": "Privacy Policy",
             "compliance": "Compliance"
+        },
+        "entranceByCode" : "Entrance by code",
+        "connectSubscription" : "Connect subscription",
+        "certificateActivation" : "Certificate activation",
+        "watchSmartTv": "Watch Smart TV",
+        "allDevices" : "All devices",
+        "support": {
+            "support" : "Support service",
+            "message" : "We are always ready to help you. Our operators are online 24/7",
+            "writeInChat" : "Write in chat",
+            "freeInRussia" : "Free in Russia",
+            "answers" : "Answers on questions"
         }
+
     }
 }
