@@ -1,0 +1,57 @@
+@import '../../../styles/vars';
+@mixin icon($content, $color) {
+    font-family: QualityIcons;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    color: $color;
+    margin-right: 12px;
+    &::before {
+        content: $content;
+    }
+}
+
+.subscribe {
+    @include icon ('\E307', var(--border))
+}
+.certificate {
+    @include icon ('\E07F', var(--border))
+}
+
+.smartTV,.allDevices {
+    height: 20px;
+    width: 20px;
+    margin-right: 12px;
+}
+
+.btnsSubscription {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    padding: 32px 10px;
+}
+
+.btn {
+    height: 48px;
+    width: 48%;
+    justify-content: start;
+}
+
+.btnCenter{
+    justify-content: center;
+}
+
+@include adpt($bmob-r) {
+    .btnsSubscription {
+        flex-wrap: wrap;
+        &>*:not(:last-child){
+            margin-bottom: 15px;
+        }
+    }
+    .btn {
+        width: 100%;
+    }
+}

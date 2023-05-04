@@ -102,63 +102,100 @@
             "trailers": "Trailers",
             "whatToSee": "What to see",
             "moviesInHD": "Movies in HD",
-          "iviChoice": "Ivi's Choice",
-          "subscriptionNews": "Subscription news",
-          "moviesAmediateka": "Movies Amediateka",
-          "popularFilms": "Popular films",
-          "iviFilms": "Ivi films",
-          "freeSeries": "Free series",
-          "seriesInHD": "Series in HD",
-          "seriesAmediateka": "Series Amediateka",
-          "seriesParamountPlay": "Series Paramount Play",
-          "cartoonsInHD": "Cartoons in HD",
-          "cartoonDreamworks": "Cartoons Dreamworks",
-          "cartoonParamountPlay": "Cartoons Paramount Play/Nickelodeon",
-          "cartoonsSTSKids": "Cartoons STS Kids",
-          "TVonline": "TV online",
-          "TVchannels": "TV channels",
-          "entertainment": "Entertainment",
-          "children": "Children",
-          "sportsTV": "Sports TV",
-          "documentary": "Documentary"
+            "iviChoice": "Ivi's Choice",
+            "subscriptionNews": "Subscription news",
+            "moviesAmediateka": "Movies Amediateka",
+            "popularFilms": "Popular films",
+            "iviFilms": "Ivi films",
+            "freeSeries": "Free series",
+            "seriesInHD": "Series in HD",
+            "seriesAmediateka": "Series Amediateka",
+            "seriesParamountPlay": "Series Paramount Play",
+            "cartoonsInHD": "Cartoons in HD",
+            "cartoonDreamworks": "Cartoons Dreamworks",
+            "cartoonParamountPlay": "Cartoons Paramount Play/Nickelodeon",
+            "cartoonsSTSKids": "Cartoons STS Kids",
+            "TVonline": "TV online",
+            "TVchannels": "TV channels",
+            "entertainment": "Entertainment",
+            "children": "Children",
+            "sportsTV": "Sports TV",
+            "documentary": "Documentary"
         }
     },
-  "titles": {
-    "index": "Main page Ivi"
-  },
-  "filmCard": {
-    "imageAlt": "film",
-    "srOnlyHref": "go to film"
-  },
-  "defaultSwiper": {
-    "prevSrOnly": "prev slide",
-    "nextSrOnly": "next slide"
-  },
-  "filmSlide": {
-    "image": "image film",
-    "actions": {
-      "favourite": "Watch later",
-      "similar": "Similar",
-      "evaluate": "Already watched, evaluate",
-      "dislike": "Don't like this"
+    "titles": {
+        "index": "Main page Ivi"
     },
-    "subscription": {
-      "false": "Free",
-      "true": "Subscription"
+    "filmCard": {
+        "imageAlt": "film",
+        "srOnlyHref": "go to film"
     },
-    "moreSlideText": "Show all",
-    "features": {
-      "all": "all episodes at once",
-      "choice": "Evie's choice",
-      "exclusive": "exclusive",
-      "creating": "created with Evie"
+    "defaultSwiper": {
+        "prevSrOnly": "prev slide",
+        "nextSrOnly": "next slide"
+    },
+    "filmSlide": {
+        "image": "image film",
+        "actions": {
+            "favourite": "Watch later",
+            "similar": "Similar",
+            "evaluate": "Already watched, evaluate",
+            "dislike": "Don't like this"
+        },
+        "subscription": {
+            "false": "Free",
+            "true": "Subscription"
+        },
+        "moreSlideText": "Show all",
+        "features": {
+            "all": "all episodes at once",
+            "choice": "Evie's choice",
+            "exclusive": "exclusive",
+            "creating": "created with Evie"
+        }
+    },
+    "description": {
+        "open": "Expand",
+        "close": "Collapse"
+    },
+    "mobileMenu": {
+        "ivi": "My Ivi",
+        "catalog": "Catalog",
+        "search": "search",
+        "tv": "TV+",
+        "more": "More",
+        "close": "Close",
+        "btnOpenInApp" : "Open in application",
+        "allFilms" : "All films",
+        "allSeries" : "All series",
+        "allCartoons" : "All cartoons",
+        "new": "What`s new",
+        "whatToSee" : "What to see",
+        "ratingMovies": "Ivi.Rating movies",
+        "ratingSeries": "Ivi.Rating series",
+        "aboutUs" : {
+            "aboutUs" : "About us",
+            "aboutCompany" : "About company",
+            "jobs": "Jobs",
+            "betaProgram": "Beta Program",
+            "information": "General information for partners",
+            "advertisingPlacement": "Advertising placement",
+            "termsOfUse": "Terms of use",
+            "privacyPolicy": "Privacy Policy",
+            "compliance": "Compliance"
+        },
+        "entranceByCode" : "Entrance by code",
+        "connectSubscription" : "Connect subscription",
+        "certificateActivation" : "Certificate activation",
+        "watchSmartTv": "Watch Smart TV",
+        "allDevices" : "All devices",
+        "support": {
+            "support" : "Support service",
+            "message" : "We are always ready to help you. Our operators are online 24/7",
+            "writeInChat" : "Write in chat",
+            "freeInRussia" : "Free in Russia",
+            "answers" : "Answers on questions"
+        }
+
     }
-  },
-  "description": {
-    "open": "Expand",
-    "close": "Collapse"
-  },
-  "modal": {
-    "closeModal": "Close modal window"
-  }
 }

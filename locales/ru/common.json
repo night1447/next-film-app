@@ -123,42 +123,78 @@
             "documentary": "Документальное"
         }
     },
-  "titles": {
-    "index": "Главная страница Ivi"
-  },
-  "filmCard": {
-    "imageAlt": "фильм",
-    "srOnlyHref": "перейти к фильму"
-  },
-  "defaultSwiper": {
-    "prevSrOnly": "предыдущий слайд",
-    "nextSrOnly": "следующий слайд"
-  },
-  "filmSlide": {
-    "image": "картинка фильма",
-    "actions": {
-      "favourite": "Смотреть позже",
-      "similar": "Похожее",
-      "evaluate": "Уже смотрел, оценить",
-      "dislike": "Не нравится такое"
+    "titles": {
+        "index": "Главная страница Ivi"
     },
-    "subscription": {
-      "false": "Бесплатно",
-      "true": "Подписка"
+    "filmCard": {
+        "imageAlt": "фильм",
+        "srOnlyHref": "перейти к фильму"
     },
-    "moreSlideText": "Показать все",
-    "features": {
-      "all": "все серии сразу",
-      "choice": "выбор Иви",
-      "exclusive": "эксклюзив",
-      "creating": "создано с Иви"
+    "defaultSwiper": {
+        "prevSrOnly": "предыдущий слайд",
+        "nextSrOnly": "следующий слайд"
+    },
+    "filmSlide": {
+        "image": "картинка фильма",
+        "actions": {
+            "favourite": "Смотреть позже",
+            "similar": "Похожее",
+            "evaluate": "Уже смотрел, оценить",
+            "dislike": "Не нравится такое"
+        },
+        "subscription": {
+            "false": "Бесплатно",
+            "true": "Подписка"
+        },
+        "moreSlideText": "Показать все",
+        "features": {
+            "all": "все серии сразу",
+            "choice": "выбор Иви",
+            "exclusive": "эксклюзив",
+            "creating": "создано с Иви"
+        }
+    },
+    "description": {
+        "open": "Развернуть",
+        "close": "Свернуть"
+    },
+    "mobileMenu": {
+        "ivi": "Мой Иви",
+        "catalog": "Каталог",
+        "search": "Поиск",
+        "tv": "TV+",
+        "more": "Еще",
+        "close": "Закрыть",
+        "btnOpenInApp": "Открыть в приложении",
+        "allFilms": "Все фильмы",
+        "allSeries": "Все сериалы",
+        "allCartoons": "Все мультфильмы",
+        "new": "Что нового",
+        "whatToSee" : "Что посмотреть",
+        "ratingMovies": "Иви.Рейтинг фильмы",
+        "ratingSeries": "Иви.Рейтинг сериалы",
+        "aboutUs" : {
+            "aboutUs" : "О нас",
+            "aboutCompany" : "О компании",
+            "jobs": "Вакансии",
+            "betaProgram": "Программа бета-тестирования",
+            "information": "Общая информация для партнеров",
+            "advertisingPlacement": "Размещение рекламы",
+            "termsOfUse": "Пользовательское соглашение",
+            "privacyPolicy": "Политика конфиденциальности",
+            "compliance": "Комплаенс"
+        },
+        "entranceByCode" : "Вход по коду",
+        "connectSubscription" : "Подключить подписку",
+        "certificateActivation" : "Активация сертификата",
+        "watchSmartTv": "Смотреть на Smart TV",
+        "allDevices" : "Все устройства",
+        "support": {
+            "support" : "Служба поддержки",
+            "message" : "Мы всегда готовы вам помочь. Наши операторы онлайн 24/7",
+            "writeInChat" : "Написать в чате",
+            "freeInRussia" : "Бесплатно по России",
+            "answers" : "Ответы на вопросы"
+        }
     }
-  },
-  "description": {
-    "open": "Развернуть",
-    "close": "Свернуть"
-  },
-  "modal": {
-    "closeModal": "Закрыть модальное окно"
-  }
 }

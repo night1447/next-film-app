@@ -6,6 +6,7 @@ import { InteractiveType } from '@/models/InteractiveType';
 import { v4 as uuid } from 'uuid';
 import { interactiveBlocks } from '@/constants/Index';
 import FirstDescriptionBlock from '@/components/FirstDescriptionBlock/FirstDescriptionBlock';
+import { MobileMenu } from '@/components/MobileMenu/MobileMenu';
 
 export default function Home() {
     const { t } = useTranslation();
@@ -179,5 +180,6 @@ export default function Home() {
                 />
             ))}
         </Layout>
+        // <MobileMenu/>
     );
 }

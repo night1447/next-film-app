@@ -1,0 +1,73 @@
+@mixin icon($content, $color) {
+    font-family: QualityIcons;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    color: $color;
+    margin-right: 12px;
+    &::before {
+        content: $content;
+    }
+}
+
+.movies {
+    @include icon('\E135', var(--white));
+}
+.series {
+    @include icon('\E34C', var(--white));
+}
+.cartoons {
+    @include icon('\E070', var(--white));
+}
+.tv {
+    @include icon('\E3A9', var(--white));
+}
+.aboutUs {
+    @include icon('\E00B', var(--white));
+}
+
+.btn {
+    display: block;
+    color: var(--white);
+    padding: 20px 32px 0;
+}
+.btn_entrance {
+    @include icon('\E3AD', var(--white));
+    display: inline-block;
+    position: relative;
+    &::before {
+        position: absolute;
+        top: 3px;
+    }
+}
+
+.rating {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.support {
+    @include icon('\E25E', var(--white));
+}
+
+.socials {
+    margin-top: 20px;
+    padding: 10px 32px 0;
+    & > :last-child {
+        margin-top: 40px;
+        font-size: 15px;
+        line-height: 30px;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+.socials_btns {
+    & > :not(:last-child) {
+        margin-right: 10px;
+    }
+    & > * {
+        margin-top: 10px;
+    }
+}
