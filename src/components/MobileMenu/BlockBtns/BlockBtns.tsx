@@ -28,7 +28,7 @@ const BlockBtns: FC<IIBlockBtns> = ({ items }) => {
                     variants="violet"
                     href={item.href}
                 >
-                    <div className={item.className}>
+                    <div className={styles[item.className]}>
                         {item.img && <Image src={item.img} width={20} height={20} alt='icon'/>}
                     </div>{t(item.text)}
                 </Button>

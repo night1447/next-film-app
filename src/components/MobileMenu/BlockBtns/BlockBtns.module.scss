@@ -1,4 +1,29 @@
 @import '../../../styles/vars';
+@mixin icon($content, $color) {
+    font-family: QualityIcons;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    color: $color;
+    margin-right: 12px;
+    &::before {
+        content: $content;
+    }
+}
+
+.subscribe {
+    @include icon ('\E307', var(--border))
+}
+.certificate {
+    @include icon ('\E07F', var(--border))
+}
+
+.smartTV,.allDevices {
+    height: 20px;
+    width: 20px;
+    margin-right: 12px;
+}
 
 .btnsSubscription {
     width: 100%;

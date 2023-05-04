@@ -1,90 +1,30 @@
-.subscribe {
+@mixin icon($content, $color) {
     font-family: QualityIcons;
     font-size: 20px;
     height: 20px;
     width: 20px;
     line-height: 20px;
-    color: var(--border);
+    color: $color;
     margin-right: 12px;
     &::before {
-        content: '\E307';
-    }
-}
-.certificate {
-    font-family: QualityIcons;
-    font-size: 20px;
-    height: 20px;
-    width: 20px;
-    line-height: 20px;
-    color: var(--border);
-    margin-right: 12px;
-    &::before {
-        content: '\E07F';
+        content: $content;
     }
 }
 
 .movies {
-    font-family: QualityIcons;
-    font-size: 20px;
-    height: 20px;
-    width: 20px;
-    line-height: 20px;
-    margin-right: 12px;
-    color: var(--white);
-    &::before {
-        content: '\E135';
-    }
+    @include icon('\E135', var(--white));
 }
-
 .series {
-    font-family: QualityIcons;
-    font-size: 20px;
-    height: 20px;
-    width: 20px;
-    line-height: 20px;
-    margin-right: 12px;
-    color: var(--white);
-    &::before {
-        content: '\E34C';
-    }
+    @include icon('\E34C', var(--white));
 }
-
 .cartoons {
-    font-family: QualityIcons;
-    font-size: 20px;
-    height: 20px;
-    width: 20px;
-    line-height: 20px;
-    margin-right: 12px;
-    color: var(--white);
-    &::before {
-        content: '\E070';
-    }
+    @include icon('\E070', var(--white));
 }
-
 .tv {
-    font-family: QualityIcons;
-    font-size: 20px;
-    height: 20px;
-    width: 20px;
-    line-height: 20px;
-    margin-right: 12px;
-    color: var(--white);
-    &::before {
-        content: '\E3A9';
-    }
+    @include icon('\E3A9', var(--white));
 }
 .aboutUs {
-    font-family: QualityIcons;
-    font-size: 20px;
-    height: 20px;
-    width: 20px;
-    line-height: 20px;
-    margin-right: 12px;
-    color: var(--white);
-    &::before {
-        content: '\E00B';
-    }
+    @include icon('\E00B', var(--white));
 }
 
 .btn {
@@ -93,17 +33,10 @@
     padding: 20px 32px 0;
 }
 .btn_entrance {
+    @include icon('\E3AD', var(--white));
     display: inline-block;
-    font-family: QualityIcons;
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px;
-    width: 20px;
-    margin-right: 12px;
-    color: var(--white);
     position: relative;
     &::before {
-        content: '\E3AD';
         position: absolute;
         top: 3px;
     }
@@ -114,29 +47,8 @@
     padding-bottom: 20px;
 }
 
-.smartTV {
-    height: 20px;
-    width: 20px;
-    margin-right: 12px;
-}
-
-.allDevices {
-    height: 20px;
-    width: 20px;
-    margin-right: 12px;
-}
-
 .support {
-    font-family: QualityIcons;
-    font-size: 20px;
-    height: 20px;
-    width: 20px;
-    line-height: 20px;
-    margin-right: 12px;
-    color: var(--white);
-    &::before {
-        content: '\E25E';
-    }
+    @include icon('\E25E', var(--white));
 }
 
 .socials {
