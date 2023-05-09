@@ -1,0 +1,92 @@
+.back {
+    margin-top: 16px;
+    padding: 0;
+    color: var(--white);
+    &:hover .arrow {
+        transform: scale(1.2);
+        transition-duration: 0.3s;
+    }
+}
+.arrow {
+    font-family: QualityIcons;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    text-align: left;
+
+    &::before {
+        content: '\E040';
+        font-size: 20px;
+        line-height: 20px;
+    }
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+.container {
+    margin-top: 56px;
+    margin-bottom: 24px;
+    height: 20px;
+    align-items: center;
+    display: flex;
+    & > *:not(:last-child) {
+        margin-left: 4px;
+        &::after {
+            content: '/';
+            margin-left: 4px;
+            border-bottom: none;
+        }
+    }
+    & > *:last-child {
+        margin-left: 4px;
+    }
+}
+
+.containerMoviePage {
+    margin-top: 56px;
+    margin-bottom: 24px;
+    height: 20px;
+    align-items: center;
+    display: flex;
+    & > *:not(:last-child) {
+        margin-left: 4px;
+        position: relative;
+        &::after {
+            content: '.';
+            position: absolute;
+            bottom: 4px;
+            right: -9px;
+        }
+    }
+    & > *:last-child {
+        margin-left: 14px;
+    }
+}
+.boxBtn {
+    &::after {
+        color: var(--white);
+    }
+}
+.button {
+    border-bottom: 2px solid var(--secondary-dark);
+    line-height: 13px;
+    font-weight: 500;
+    padding: 0;
+    border-radius: 0;
+    color: var(--white);
+    transition: background 0.2s;
+    &:hover {
+        background: var(--secondary-dark);
+    }
+}
+.btnMoviePage {
+    padding: 0;
+    line-height: 15px;
+    font-weight: 500;
+}
+.location {
+    line-height: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.56);
+}

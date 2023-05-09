@@ -3,12 +3,12 @@ import useTranslation from 'next-translate/useTranslation';
 import { Layout } from '@/components/layout/Layout';
 import Container from '@/components/UI/Container/Container';
 import styles from './Person.module.scss';
-import { Button } from '@/components/UI/Button/Button';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import test from './test.json';
 import { Person } from '@/models/PersonType';
 import FilmList from './FilmList/FilmList';
+import { BreadCrumbs } from '@/components/UI/BreadCrumbs/BreadCrumbs';
 
 const Person = () => {
     const { t, lang } = useTranslation('person');
@@ -19,14 +19,7 @@ const Person = () => {
     return (
         <Layout title={name}>
             <Container>
-                <Button
-                    variants="transparent"
-                    className={styles.button}
-                    onClick={() => router.back()}
-                >
-                    <div className={styles.arrow} />
-                    <p>{t('back')}</p>
-                </Button>
+                <BreadCrumbs/>
             </Container>
             <Container className={styles.container}>
                 <Image
@@ -41,6 +34,7 @@ const Person = () => {
                 <FilmList person={person} />
             </Container>
         </Layout>
+
     );
 };
 
