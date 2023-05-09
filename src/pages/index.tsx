@@ -6,7 +6,6 @@ import { InteractiveType } from '@/models/InteractiveType';
 import { v4 as uuid } from 'uuid';
 import { interactiveBlocks } from '@/constants/Index';
 import FirstDescriptionBlock from '@/components/FirstDescriptionBlock/FirstDescriptionBlock';
-import { signIn, useSession } from 'next-auth/react';
 
 export default function Home() {
     const { t } = useTranslation();
@@ -159,14 +158,9 @@ export default function Home() {
             feature: 'creating',
         },
     ];
-    const { data } = useSession();
     return (
         <Layout title={t('common:titles.index')}>
             <FirstScreen />
-            <>
-                Not signed in <br />
-                <button onClick={() => signIn()}>Sign in</button>
-            </>
             <InteractiveBlock
                 title={t('index:recommended.title')}
                 info={filmCards}

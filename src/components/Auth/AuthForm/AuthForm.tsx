@@ -6,6 +6,8 @@ import Message from '@/components/Auth/Message/Message';
 import Email from '@/components/Auth/Email/Email';
 import Login from '@/components/Auth/Login/Login';
 import Registration from '@/components/Auth/Registration/Registration';
+import { useAppDispatch, useTypedSelector } from '@/store';
+import { loginUser } from '@/store/reducers/auth/actions';
 
 interface AuthFormProps {
     stage: IStage;
@@ -25,9 +27,9 @@ export interface AuthProps {
 const AuthForm: FC<AuthFormProps> = ({ stage, setEmail, email, onChangeStage, setUser }) => {
 
     const [password, setPassword] = useState('');
-    const [loading, setLoading] = useState(false);
     const [isAuth, setIsAuth] = useState(false);
-
+    const loading = useTypedSelector(state => state.auth.authData.isLoading);
+    const dispatch = useAppDispatch();
     const changePasswordHandler = useCallback((value: string) => {
         setPassword(value);
     }, []);
@@ -37,18 +39,10 @@ const AuthForm: FC<AuthFormProps> = ({ stage, setEmail, email, onChangeStage, se
         setUser('');
     }, [onChangeStage, setUser]);
 
-    const submitFormHandler = useCallback((e: FormEvent<HTMLFormElement>) => {
+    const submitFormHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setLoading(true);
-        setTimeout(() => {
-            setIsAuth(true);
-            onChangeStage('complete');
-            setTimeout(() => {
-                location.href = '/';
-            }, 1000);
-        }, 2000);
-    }, []);
-
+        dispatch(loginUser({ email, password }));
+    };
     return <form className={styles.form} onSubmit={submitFormHandler}>
         <Message isActive={stage === 'begin'}
                  rotation={'left'}
