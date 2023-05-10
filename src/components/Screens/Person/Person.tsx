@@ -8,7 +8,7 @@ import Image from 'next/image';
 import test from './test.json';
 import { Person } from '@/models/PersonType';
 import FilmList from './FilmList/FilmList';
-import { BreadCrumbs } from '@/components/UI/BreadCrumbs/BreadCrumbs';
+import { Breadcrumbs } from '@/components/UI/Breadcrumbs/Breadcrumbs';
 
 const Person = () => {
     const { t, lang } = useTranslation('person');
@@ -19,7 +19,7 @@ const Person = () => {
     return (
         <Layout title={name}>
             <Container>
-                <BreadCrumbs/>
+                <Breadcrumbs />
             </Container>
             <Container className={styles.container}>
                 <Image
@@ -34,7 +34,6 @@ const Person = () => {
                 <FilmList person={person} />
             </Container>
         </Layout>
-
     );
 };
 

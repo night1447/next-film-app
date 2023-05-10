@@ -1,3 +1,5 @@
+@import '@/styles/_vars';
+
 .back {
     margin-top: 16px;
     padding: 0;
@@ -30,16 +32,19 @@
     height: 20px;
     align-items: center;
     display: flex;
-    & > *:not(:last-child) {
+    & > *:not(:first-child) {
         margin-left: 4px;
-        &::after {
+        &::before {
             content: '/';
-            margin-left: 4px;
+            margin-right: 4px;
             border-bottom: none;
         }
     }
     & > *:last-child {
         margin-left: 4px;
+    }
+    @include adpt($bmob-r) {
+        display: none;
     }
 }
 
@@ -89,4 +94,13 @@
     line-height: 13px;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.56);
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.backMoviePage {
+    p {
+        display: none;
+    }
 }

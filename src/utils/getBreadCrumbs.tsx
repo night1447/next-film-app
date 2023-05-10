@@ -3,10 +3,10 @@ import { useRouter } from 'next/router';
 
 
 
-export const getBreadCrumbs = (
+export const getBreadcrumbs = (
     type: string,
     moviePage: boolean,
-    styles: any,
+    styles: {[key:string]:string},
     filters?: { genres?: string[] | undefined; years?: string | undefined },
 ) => {
     const router = useRouter();
@@ -17,23 +17,20 @@ export const getBreadCrumbs = (
             <Button
                 variants="transparent"
                 className={styles.btnMoviePage}
-                onClick={() => router.push(`/${type}`)}
+                href={`/${type}`}
             >
                 <p>{type}</p>
             </Button>
         );
     if (filters) {
-        const genres =
-            filters.genres!.length > 3
-                ? `${filters.genres!.slice(0, 3).join(', ')}...`
-                : filters.genres!.join(', ');
+        const genres = filters.genres!.join(', ')
         return (
             <>
                 <div className={styles.boxBtn}>
                     <Button
                         variants="transparent"
                         className={styles.button}
-                        onClick={() => router.push(`/${type}`)}
+                        href={`/${type}`}
                     >
                         <p>{type}</p>
                     </Button>
@@ -52,9 +49,7 @@ export const getBreadCrumbs = (
                                 <Button
                                     variants="transparent"
                                     className={styles.button}
-                                    onClick={() =>
-                                        router.push(`/${type}/${genres}`)
-                                    }
+                                    href={`/${type}/${genres}`}
                                 >
                                     <p>{genres}</p>
                                 </Button>

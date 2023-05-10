@@ -1,41 +1,49 @@
 import React, { FC } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
-import styles from './BreadCrumbs.module.scss';
+import styles from './Breadcrumbs.module.scss';
 import { Button } from '../Button/Button';
 import Container from '../Container/Container';
-import { getBreadCrumbs } from '@/utils/getBreadCrumbs';
+import { getBreadcrumbs } from '@/utils/getBreadcrumbs';
+import { useWindowSize } from '@/hooks/useWendowSize';
 
-interface IBreadCrumbs {
+interface IBreadcrumbs {
     type?: 'movies' | 'series' | 'cartoons';
     filters?: { genres?: string[]; years?: string };
     moviePage?: boolean;
 }
 
-export const BreadCrumbs: FC<IBreadCrumbs> = ({
+export const Breadcrumbs: FC<IBreadcrumbs> = ({
     type,
     filters,
     moviePage = false,
 }) => {
     const router = useRouter();
     const { t } = useTranslation();
-    const stylesForGetBreadCrumbs = {
+    const size = useWindowSize();
+    const stylesForGetBreadcrumbs = {
         location: styles.location,
         btnMoviePage: styles.btnMoviePage,
         boxBtn: styles.boxBtn,
         button: styles.button,
     };
 
-    if (router.pathname.includes('person')) {
+    if (router.pathname.includes('person') || moviePage && size.width! <= 600) {
         return (
-            <Button
-                variants="transparent"
-                className={styles.back}
-                onClick={() => router.back()}
+            <Container
+                className={
+                    moviePage ? styles.containerMoviePage : styles.container
+                }
             >
-                <div className={styles.arrow} />
-                <p>{t('common:back')}</p>
-            </Button>
+                <Button
+                    variants="transparent"
+                    className={moviePage ? styles.backMoviePage : styles.back}
+                    onClick={() => router.back()}
+                >
+                    <div className={styles.arrow} />
+                    <p>{t('common:back')}</p>
+                </Button>
+            </Container>
         );
     }
 
@@ -54,7 +62,7 @@ export const BreadCrumbs: FC<IBreadCrumbs> = ({
                     <p>{t('common:header.ivi')}</p>
                 </Button>
             </div>
-            {getBreadCrumbs(type, moviePage, stylesForGetBreadCrumbs, filters)}
+            {getBreadcrumbs(type, moviePage, stylesForGetBreadcrumbs, filters)}
         </Container>
     );
 };

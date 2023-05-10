@@ -6,7 +6,7 @@ import { InteractiveType } from '@/models/InteractiveType';
 import { v4 as uuid } from 'uuid';
 import { interactiveBlocks } from '@/constants/Index';
 import FirstDescriptionBlock from '@/components/FirstDescriptionBlock/FirstDescriptionBlock';
-import { BreadCrumbs } from '@/components/UI/BreadCrumbs/BreadCrumbs';
+import { Breadcrumbs } from '@/components/UI/Breadcrumbs/Breadcrumbs';
 import { useRouter } from 'next/router';
 
 export default function Home() {
@@ -164,8 +164,6 @@ export default function Home() {
     ];
     return (
         <Layout title={t('common:titles.index')}>
-            <BreadCrumbs type='series' filters={{genres: ['comedy'], years: "2021 year"}} />
-            <button onClick={() => router.push('/person/:id')}>hgjkfls</button>
             <FirstScreen />
             <InteractiveBlock
                 title={t('index:recommended.title')}
